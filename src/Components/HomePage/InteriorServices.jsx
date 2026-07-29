@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Commercial & Office Interiors",
-    image: "/Commercial & OfficeInteriors.webp",
+    image: "/Commercial.webp",
     description:
       "We design productive and visually appealing commercial interiors focused on functionality, branding, and modern workspace concepts.",
     points: [
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: "False Ceiling & Decorative Design",
-    image: "/False Ceiling & Decorative Design.webp",
+    image: "/False-Ceiling-Decorative-Design.webp",
     description:
       "Enhance your interiors with modern ceiling concepts, decorative lighting, elegant wall finishes, and contemporary decorative elements.",
     points: [
