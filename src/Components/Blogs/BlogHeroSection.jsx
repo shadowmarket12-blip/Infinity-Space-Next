@@ -1,0 +1,147 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { FiChevronRight } from "react-icons/fi";
+
+export default function BlogHeroSection() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/blogbanner.avif"
+          alt="Blog Background"
+          fill
+          priority
+          className="h-full w-full object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/45" />
+      </div>
+
+      {/* GLOW */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 80, -40, 0],
+          y: [0, -40, 40, 0],
+        }}
+        transition={{
+          duration: 14,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-[-120px] top-[-120px] h-[350px] w-[350px] rounded-full bg-[rgba(1,101,63,0.25)] blur-[120px]"
+      />
+
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-[1450px] items-center px-4 py-28 sm:px-6 lg:px-14">
+        <div className="max-w-4xl">
+          {/* BREADCRUMB */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-md"
+          >
+            <Link href="/">
+              <span className="cursor-pointer transition hover:text-white/80">
+                Home
+              </span>
+            </Link>
+            <FiChevronRight className="text-sm" />
+            <span className="text-white/70">Blogs</span>
+          </motion.div>
+
+          {/* TITLE */}
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-8 text-2xl font-black leading-tight tracking-[-0px] text-white sm:text-3xl md:text-4xl xl:text-5xl"
+          >
+            Blogs Infinity Space
+          </motion.h1>
+
+          {/* SUBTITLE */}
+          <Link href="/">
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-6 max-w-3xl text-sm font-bold leading-9 text-white/90 sm:text-xl md:text-2xl"
+            >
+              Creating Spaces That Feel Personal, Practical & Timeless
+            </motion.h2>
+          </Link>
+
+          {/* BUTTONS */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-12 flex flex-col gap-5 sm:flex-row sm:flex-wrap"
+          >
+            <Link href="/projects">
+              <motion.div
+                whileHover={{ y: -6, scale: 1.03 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-[22px] px-[2px] py-[2px]"
+              >
+                {/* ANIMATED BORDER */}
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,#01653f,#4ade80,#01653f)]"
+                />
+
+                {/* BUTTON INNER */}
+                <div className="relative flex items-center gap-3 overflow-hidden rounded-[20px] bg-[rgba(1,101,63,1)] px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-[0_20px_45px_rgba(1,101,63,0.35)]">
+                  {/* GLOW */}
+                  <div className="absolute inset-0 opacity-0 transition-all duration-500 group-hover:opacity-100">
+                    <div className="absolute left-[-30%] top-[-50%] h-40 w-40 rounded-full bg-white/20 blur-3xl" />
+                  </div>
+
+                  {/* SHINE */}
+                  <span className="absolute left-[-120%] top-0 h-full w-20 rotate-12 bg-white/20 blur-xl transition-all duration-1000 group-hover:left-[120%]" />
+
+                  <span className="relative z-10">Explore Projects</span>
+                </div>
+              </motion.div>
+            </Link>
+
+            <Link href="/contact">
+              <motion.div
+                whileHover={{ y: -6, scale: 1.03 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-[22px] border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-xl"
+              >
+                {/* HOVER BACKGROUND */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileHover={{ scale: 8 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute h-10 w-10 rounded-full bg-white"
+                />
+
+                {/* TEXT */}
+                <span className="relative z-10 transition-all duration-500 group-hover:text-white">
+                  Get Free Consultation
+                </span>
+              </motion.div>
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
