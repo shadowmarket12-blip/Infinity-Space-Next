@@ -18,15 +18,12 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   /* ================= NAVLINKS ================= */
+  // NOTE: give each service a REAL unique path once those pages exist.
+  // Using "/services" for all of them is what was causing the duplicate
+  // React key warning/error when the mobile dropdown rendered.
   const navLinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "About Us",
-      path: "/about-us",
-    },
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
     {
       name: "Services",
       path: "/services/overview",
@@ -36,32 +33,47 @@ export default function Navbar() {
           name: "Residential Interior Design",
           path: "/services/residential-interior-design",
         },
-        { name: "Living Room Interior Design", path: "/services" },
-        { name: "Bedroom Interior Design", path: "/services" },
-        { name: "Modular Kitchen Design", path: "/services" },
-        { name: "Pooja Room Interior Design", path: "/services" },
-        { name: "Kids Room Interior Design", path: "/services" },
-        { name: "Commercial & Office Interior Design", path: "/services" },
-        { name: "Customized Furniture Solutions", path: "/services" },
+        {
+          name: "Living Room Interior Design",
+          path: "/services/living-room-interior-design",
+        },
+        {
+          name: "Bedroom Interior Design",
+          path: "/services/bedroom-interior-design",
+        },
+        {
+          name: "Modular Kitchen Design",
+          path: "/services/modular-kitchen-design",
+        },
+        {
+          name: "Pooja Room Interior Design",
+          path: "/services/pooja-room-interior-design",
+        },
+        {
+          name: "Kids Room Interior Design",
+          path: "/services/kids-room-interior-design",
+        },
+        {
+          name: "Commercial & Office Interior Design",
+          path: "/services/commercial-office-interior-design",
+        },
+        {
+          name: "Customized Furniture Solutions",
+          path: "/services/customized-furniture-solutions",
+        },
         {
           name: "False Ceiling & Decorative Interior Design",
-          path: "/services",
+          path: "/services/false-ceiling-decorative-interior-design",
         },
-        { name: "Turnkey Interior Solutions", path: "/services" },
+        {
+          name: "Turnkey Interior Solutions",
+          path: "/services/turnkey-interior-solutions",
+        },
       ],
     },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-    {
-      name: "Blogs",
-      path: "/blogs",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
+    { name: "Projects", path: "/projects" },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
   ];
 
   /* ================= SOCIAL ICONS ================= */
@@ -119,6 +131,15 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [dropdownOpen]);
 
+  // Reset the mobile accordion state whenever the drawer itself closes,
+  // so it doesn't reopen "already expanded" next time.
+  useEffect(() => {
+    if (!mobileMenu) {
+      const t = setTimeout(() => setServiceOpen(false), 300);
+      return () => clearTimeout(t);
+    }
+  }, [mobileMenu]);
+
   const headerClass = `fixed top-0 left-0 z-50 w-full border-b transition-all duration-500 ${scrolled ? "border-black/10 bg-white shadow-sm backdrop-blur-xl" : "border-black/5 bg-white/95 backdrop-blur-xl"}`;
 
   const containerClass =
@@ -139,6 +160,25 @@ export default function Navbar() {
 
   const backdropClass =
     "fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden";
+
+  // Smooth spring for the drawer sliding in/out
+  const drawerTransition = { type: "spring", stiffness: 320, damping: 32 };
+
+  // Stagger container/item variants for the mobile accordion links
+  const accordionListVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.045, delayChildren: 0.05 },
+    },
+  };
+  const accordionItemVariants = {
+    hidden: { opacity: 0, x: -12 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.28, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -170,7 +210,7 @@ export default function Navbar() {
 
                 if (link.dropdown) {
                   return (
-                    <div key={index} className="relative dropdown-wrapper">
+                    <div key={link.name} className="relative dropdown-wrapper">
                       <button
                         onClick={() => setDropdownOpen(!dropdownOpen)}
                         onMouseEnter={() => setDropdownOpen(true)}
@@ -179,7 +219,7 @@ export default function Navbar() {
                         {link.name}
                         <motion.span
                           animate={{ rotate: dropdownOpen ? 180 : 0 }}
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
                           className="inline-block ml-0.5"
                         >
                           <svg
@@ -204,17 +244,17 @@ export default function Navbar() {
                       <AnimatePresence>
                         {dropdownOpen && (
                           <motion.div
-                            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                            initial={{ opacity: 0, y: -10, scale: 0.97 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                            transition={{ duration: 0.15 }}
+                            exit={{ opacity: 0, y: -10, scale: 0.97 }}
+                            transition={{ duration: 0.22, ease: "easeOut" }}
                             onMouseLeave={() => setDropdownOpen(false)}
                             className="absolute left-1/2 -translate-x-1/2 mt-2 w-[800px] max-w-[90vw] rounded-2xl border border-black/5 bg-white shadow-2xl shadow-black/10 p-4 z-50"
                           >
                             <div className="grid grid-cols-3 gap-2">
-                              {link.dropdown.map((item, idx) => (
+                              {link.dropdown.map((item) => (
                                 <Link
-                                  key={idx}
+                                  key={item.path}
                                   href={item.path}
                                   onClick={() => {
                                     setDropdownOpen(false);
@@ -242,7 +282,7 @@ export default function Navbar() {
 
                 return (
                   <Link
-                    key={index}
+                    key={link.name}
                     href={link.path}
                     className={`relative rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${isActive ? "bg-green-50 text-green-700" : "text-gray-700 hover:font-bold"}`}
                   >
@@ -290,24 +330,34 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
               className={backdropClass}
             />
 
             {/* RIGHT DRAWER */}
             <motion.div
-              initial={{ x: 350 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.07 }}
+              initial={{ x: "100%", opacity: 0.6 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0.6 }}
+              transition={drawerTransition}
               className={mobileMenuClass}
             >
               <div className="p-5">
-                <div className="space-y-3">
+                <motion.div
+                  variants={accordionListVariants}
+                  initial="hidden"
+                  animate="show"
+                  className="space-y-3"
+                >
                   {navLinks.map((link) => {
                     const isActive = pathname === link.path;
 
                     if (link.dropdown) {
                       return (
-                        <div key={link.name}>
+                        <motion.div
+                          key={link.name}
+                          variants={accordionItemVariants}
+                        >
                           <button
                             onClick={() => setServiceOpen(!serviceOpen)}
                             className={`flex w-full items-center justify-between rounded-2xl px-3 py-3 font-medium transition-all duration-300 ${serviceOpen ? "bg-green-50 text-green-700 border border-green-100" : "bg-[#f8f8f8] text-gray-700 border border-transparent"}`}
@@ -315,64 +365,84 @@ export default function Navbar() {
                             <span>{link.name}</span>
                             <motion.div
                               animate={{ rotate: serviceOpen ? 90 : 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.25, ease: "easeInOut" }}
                             >
                               <FiArrowRight />
                             </motion.div>
                           </button>
 
-                          <AnimatePresence>
+                          <AnimatePresence initial={false}>
                             {serviceOpen && (
                               <motion.div
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.25 }}
+                                transition={{
+                                  duration: 0.3,
+                                  ease: "easeInOut",
+                                }}
                                 className="overflow-hidden"
                               >
-                                <div className="ml-4 mt-2 space-y-2">
-                                  {link.dropdown.map((item) => (
-                                    <Link
-                                      key={item.path}
-                                      href={item.path}
-                                      onClick={() => {
-                                        setMobileMenu(false);
-                                        setServiceOpen(false);
-                                        router.push(item.path);
-                                      }}
-                                      className="flex items-center justify-between rounded-xl border border-green-100 bg-white px-3 py-2 text-sm text-gray-700 transition-all duration-300 hover:bg-green-50 hover:text-green-700"
+                                <motion.div
+                                  variants={accordionListVariants}
+                                  initial="hidden"
+                                  animate="show"
+                                  className="ml-4 mt-2 space-y-2 pb-1"
+                                >
+                                  {link.dropdown.map((item, idx) => (
+                                    <motion.div
+                                      key={`${item.path}-${idx}`}
+                                      variants={accordionItemVariants}
                                     >
-                                      {item.name}
-                                      <FiArrowRight />
-                                    </Link>
+                                      <Link
+                                        href={item.path}
+                                        onClick={() => {
+                                          setMobileMenu(false);
+                                          router.push(item.path);
+                                        }}
+                                        className="flex items-center justify-between rounded-xl border border-green-100 bg-white px-3 py-2 text-sm text-gray-700 transition-all duration-300 hover:bg-green-50 hover:text-green-700"
+                                      >
+                                        {item.name}
+                                        <FiArrowRight />
+                                      </Link>
+                                    </motion.div>
                                   ))}
-                                </div>
+                                </motion.div>
                               </motion.div>
                             )}
                           </AnimatePresence>
-                        </div>
+                        </motion.div>
                       );
                     }
 
                     return (
-                      <Link
+                      <motion.div
                         key={link.name}
-                        href={link.path}
-                        onClick={() => {
-                          setMobileMenu(false);
-                          setServiceOpen(false);
-                        }}
-                        className={`flex items-center justify-between rounded-2xl px-3 py-3 transition-all duration-300 ${isActive ? "bg-green-50 text-green-700 border border-green-100" : "bg-[#f8f8f8] text-gray-700 border border-transparent"}`}
+                        variants={accordionItemVariants}
                       >
-                        {link.name}
-                        <FiArrowRight />
-                      </Link>
+                        <Link
+                          href={link.path}
+                          onClick={() => {
+                            setMobileMenu(false);
+                            setServiceOpen(false);
+                          }}
+                          className={`flex items-center justify-between rounded-2xl px-3 py-3 transition-all duration-300 ${isActive ? "bg-green-50 text-green-700 border border-green-100" : "bg-[#f8f8f8] text-gray-700 border border-transparent"}`}
+                        >
+                          {link.name}
+                          <FiArrowRight />
+                        </Link>
+                      </motion.div>
                     );
                   })}
-                </div>
+                </motion.div>
 
                 {/* SOCIAL ICONS */}
-                <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.15 }}
+                  className="mt-8 flex flex-wrap justify-center gap-3"
+                >
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -384,7 +454,7 @@ export default function Navbar() {
                       {social.icon}
                     </a>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </>

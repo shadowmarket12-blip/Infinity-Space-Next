@@ -4,43 +4,37 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus, FaQuestionCircle } from "react-icons/fa";
 
-export default function ResidentialFaq() {
+export default function LivingRoomFaq() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
     {
-      question: "What is the cost of home interior design in Bhubaneswar?",
+      question:
+        "What is the cost of living room interior design in Bhubaneswar?",
       answer:
-        "Home interior design in Bhubaneswar costs between Rs. 1.80 Lakhs for a compact 1BHK and Rs. 18 Lakhs or more for a full 3BHK with premium finishes. A 2BHK typically ranges from Rs. 3.50 to Rs. 10 Lakhs depending on scope and materials. Infinity Space Odisha provides free, itemised quotations with zero hidden charges.",
+        "Living room interior design in Bhubaneswar costs between Rs. 1.00 Lakh and Rs. 3.50 Lakhs for a full living and dining area — TV unit, feature wall, false ceiling with cove lighting, crockery unit, and foyer design. Individual elements start from Rs. 18,000. Infinity Space provides free itemised quotations with zero hidden charges.",
     },
     {
       question:
-        "Which is the best interior design company in Bhubaneswar for home interiors?",
+        "How long does a living room interior design project take in Bhubaneswar?",
       answer:
-        "The best interior design company in Bhubaneswar combines local expertise, design quality, transparent pricing, and reliable execution. Infinity Space Odisha offers full-home residential interior design across all localities in Bhubaneswar — backed by free 3D visualisation, a 5-year workmanship warranty, and a track record of 200+ completed projects across Odisha.",
+        "A standard living room project in Bhubaneswar — TV unit, feature wall, false ceiling, and crockery unit — takes 20 to 35 days from design approval to handover. The initial consultation and 3D design phase takes a further 10 to 15 days. Larger scope or civil work may extend the timeline, agreed upfront.",
+    },
+    {
+      question: "Do living room designers in Bhubaneswar follow Vastu Shastra?",
+      answer:
+        "Yes. Infinity Space integrates Vastu principles into every living room design — main sofa facing north or east, TV wall on the south or southwest, northeast corner kept light and open. These are incorporated naturally from the first floor plan draft without compromising the modern layout or aesthetics.",
+    },
+    {
+      question: "Can I see my living room design in 3D before work starts?",
+      answer:
+        "Yes — and this is included as standard on every Infinity Space project, not as a paid add-on. We provide photorealistic 3D renders of your living room from multiple viewpoints before any fabrication or material ordering begins. You review, request changes, and approve when you are fully satisfied.",
     },
     {
       question:
-        "How long does a home interior design project take in Bhubaneswar?",
+        "What living room design styles are popular in Bhubaneswar in 2026?",
       answer:
-        "A single room such as a modular kitchen or bedroom takes 15–30 days. A 2BHK full-home interior typically takes 35–50 days and a 3BHK takes 55–75 days. Infinity Space Odisha provides a milestone-based project timeline at the quotation stage and adheres to it throughout execution",
-    },
-    {
-      question:
-        "Do interior designers in Bhubaneswar include Vastu Shastra in home design?",
-      answer:
-        "Yes. Infinity Space Odisha integrates Vastu Shastra from the earliest planning stage — kitchen in the southeast, master bedroom in the southwest, pooja room in the northeast. These placements are built naturally into modern floor plans without compromising the overall design aesthetic or functional layout of your home.",
-    },
-    {
-      question: "Can I see my home design in 3D before work begins?",
-      answer:
-        "Yes. Infinity Space Odisha provides free, detailed 3D visualisations covering every room before any material is ordered or work begins. You review, suggest changes, and approve the design digitally at multiple angles. Work only starts once you are completely satisfied — eliminating surprises and ensuring the final result matches your vision exactly.",
-    },
-    {
-      question:
-        "What materials are best for home interiors in Bhubaneswar's climate?",
-      answer:
-        "Bhubaneswar's heat and monsoon humidity require marine-grade BWP/BWR plywood, heat-resistant laminates, waterproof edge-banding, and anti-termite treatment on all woodwork. For hardware, brands like Hettich, Hafele, and Blum are rated for high-humidity environments. Infinity Space Odisha specifies all materials with Bhubaneswar's tropical climate in mind as a standard practice.",
+        "The most popular styles in Bhubaneswar in 2026 are Contemporary Indian Modern — warm wood tones, neutral walls, layered lighting — and Traditional Odia-Modern with Kalinga-inspired wooden panel accents and earthy palettes. Warm Minimalist and Biophilic designs with cane furniture and indoor plants are also rising fast in Bhubaneswar's premium apartment segment.",
     },
   ];
 
@@ -50,10 +44,6 @@ export default function ResidentialFaq() {
 
   return (
     <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
-      {/* ====================================================== */}
-      {/* BACKGROUND */}
-      {/* ====================================================== */}
-
       {/* Gradient Glow */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
