@@ -110,7 +110,7 @@ export default function sitemap() {
 
   const blogUrls = blogs.map((blog) => ({
     url: `${BASE_URL}/blogs/${blog.slug}`,
-    lastModified: new Date(blog.updatedAt),
+    lastModified: new Date(blog.updatedAt || blog.date || Date.now()),
     changeFrequency: "monthly",
     priority: 0.8,
   }));
