@@ -1,13 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const LivingPricing = () => {
   const [activePricingTab, setActivePricingTab] = useState(
     "Custom TV Unit (full-wall)",
   );
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+  const tabsContainerRef = useRef(null);
 
   const phoneNumber = "7077797720";
 
@@ -20,51 +24,89 @@ const LivingPricing = () => {
       budget: "Rs. 30,000 – 55,000",
       premium: "Rs. 55,000 – 1.20 Lakhs",
       size: "Full-wall TV Unit",
-      image: "/Residentialimages/1 BHK Flat.webp",
+      image: "/Living room page/Custom-TV-Unit-full-wall.webp",
       popular: true,
     },
     "Feature Wall": {
       budget: "Rs. 18,000 – 35,000",
       premium: "Rs. 35,000 – 90,000",
       size: "Accent Feature Wall",
-      image: "/Residentialimages/2 BHK Flat.webp",
+      image: "/Living room page/Feature-Wall-Design.webp",
       popular: false,
     },
     "False Ceiling + Cove Lighting": {
       budget: "Rs. 35,000 – 55,000",
       premium: "Rs. 55,000 – 1.10 Lakhs",
       size: "Ceiling with Cove Lighting",
-      image: "/Residentialimages/3 BHK Flat.webp",
+      image: "/Living room page/False-Ceiling-Design.webp",
       popular: true,
     },
     "Crockery / Display Unit": {
       budget: "Rs. 18,000 – 32,000",
       premium: "Rs. 32,000 – 65,000",
       size: "Crockery Display Unit",
-      image: "/Residentialimages/4 BHK Flat.webp",
+      image: "/Living room page/Crockery-Display-Unit.webp",
       popular: false,
     },
     "Foyer Design": {
       budget: "Rs. 15,000 – 28,000",
       premium: "Rs. 28,000 – 60,000",
       size: "Foyer Entrance Design",
-      image: "/Residentialimages/Independent Villa.webp",
+      image: "/Living room page/Foyer-Design.webp",
       popular: false,
     },
     "Full Living Room + Dining": {
       budget: "Rs. 1.00 – 1.60 Lakhs",
       premium: "Rs. 1.60 – 3.50 Lakhs",
       size: "Complete Living & Dining",
-      image: "/Residentialimages/Modular Kitchen.webp",
+      image: "/Living room page/Full-Living-Room-Dining.webp",
       popular: true,
     },
     "Per sq.ft (carpet area)": {
       budget: "Rs. 900 – 1,400/sq.ft",
       premium: "Rs. 1,400 – 2,500/sq.ft",
       size: "Per Square Foot Rate",
-      image: "/Residentialimages/Bedroom Interior Design.webp",
+      image: "/Living room page/Per-sq-ft-carpet-area.webp",
       popular: false,
     },
+  };
+
+  // Check scroll position for arrows
+  const checkScroll = () => {
+    const container = tabsContainerRef.current;
+    if (container) {
+      setShowLeftArrow(container.scrollLeft > 10);
+      setShowRightArrow(
+        container.scrollLeft <
+          container.scrollWidth - container.clientWidth - 10,
+      );
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const container = tabsContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+    }
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", checkScroll);
+      }
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, []);
+
+  const scrollTabs = (direction) => {
+    const container = tabsContainerRef.current;
+    if (container) {
+      const scrollAmount = 200;
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -93,23 +135,54 @@ const LivingPricing = () => {
 
           {/* Pricing Cards */}
           <div className="max-w-6xl mx-auto mb-12">
-            {/* Pricing Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 lg:mb-10">
-              {Object.keys(pricingData).map((key) => (
-                <motion.button
-                  key={key}
-                  onClick={() => setActivePricingTab(key)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`relative px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
-                    activePricingTab === key
-                      ? "bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25"
-                      : "bg-white text-stone-600 hover:bg-green-50 border border-stone-200 hover:border-green-300"
-                  }`}
+            {/* Pricing Tabs - Horizontal Scroll Container */}
+            <div className="relative mb-8 lg:mb-10">
+              {/* Left Arrow */}
+              {showLeftArrow && (
+                <button
+                  onClick={() => scrollTabs("left")}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-white shadow-lg rounded-full border border-stone-200 hover:bg-green-50 hover:border-green-300 transition-all duration-300 hidden md:flex"
+                  aria-label="Scroll left"
                 >
-                  {key}
-                </motion.button>
-              ))}
+                  <ChevronLeft className="w-4 h-4 text-stone-600" />
+                </button>
+              )}
+
+              {/* Tabs Container */}
+              <div
+                ref={tabsContainerRef}
+                className="flex gap-2 sm:gap-3 overflow-x-auto scroll-smooth pb-2 md:px-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                style={{
+                  WebkitOverflowScrolling: "touch",
+                }}
+              >
+                {Object.keys(pricingData).map((key) => (
+                  <motion.button
+                    key={key}
+                    onClick={() => setActivePricingTab(key)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`relative px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                      activePricingTab === key
+                        ? "bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25"
+                        : "bg-white text-stone-600 hover:bg-green-50 border border-stone-200 hover:border-green-300"
+                    }`}
+                  >
+                    {key}
+                  </motion.button>
+                ))}
+              </div>
+
+              {/* Right Arrow */}
+              {showRightArrow && (
+                <button
+                  onClick={() => scrollTabs("right")}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-white shadow-lg rounded-full border border-stone-200 hover:bg-green-50 hover:border-green-300 transition-all duration-300 hidden md:flex"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-4 h-4 text-stone-600" />
+                </button>
+              )}
             </div>
 
             {/* Active Pricing Card */}

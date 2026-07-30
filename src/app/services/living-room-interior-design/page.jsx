@@ -2,6 +2,7 @@ import LivingRoomFaq from "@/Components/LivingRoomInterior/LivingFaq";
 import LivingRoomAreas from "@/Components/LivingRoomInterior/LivingLocation";
 import LivingProcess from "@/Components/LivingRoomInterior/LivingProcess";
 import LivingRoomServiceCovers from "@/Components/LivingRoomInterior/LivingRommService";
+import LivingRoomContent from "@/Components/LivingRoomInterior/LivingRoomContent";
 import LivingRoomCta from "@/Components/LivingRoomInterior/LivingRoomCta";
 import LivingRoomHero from "@/Components/LivingRoomInterior/LivingRoomHero";
 import LivingPricing from "@/Components/LivingRoomInterior/LivingRoomPrice";
@@ -185,6 +186,7 @@ export default function LivingRoomInterior() {
 
       <main className="overflow-hidden text-black">
         <LivingRoomHero />
+        <LivingRoomContent />
         <LivingRoomServiceCovers />
         <WhyLivingRoom />
         <LivingPricing />

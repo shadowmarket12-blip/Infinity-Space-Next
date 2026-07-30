@@ -363,23 +363,25 @@ const ProcessPricingSection = () => {
 
           {/* Pricing Cards - New Design */}
           <div className="max-w-6xl mx-auto mb-12">
-            {/* Pricing Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 lg:mb-10">
-              {Object.keys(pricingData).map((key) => (
-                <motion.button
-                  key={key}
-                  onClick={() => setActivePricingTab(key)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`relative px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
-                    activePricingTab === key
-                      ? "bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25"
-                      : "bg-white text-stone-600 hover:bg-green-50 border border-stone-200 hover:border-green-300"
-                  }`}
-                >
-                  {key}
-                </motion.button>
-              ))}
+            {/* Pricing Tabs — scrollable on mobile/tablet, wrapped+centered on desktop */}
+            <div className="mb-8 lg:mb-10 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+              <div className="flex lg:flex-wrap items-center gap-2 sm:gap-3 overflow-x-auto lg:overflow-visible lg:justify-center pb-2 lg:pb-0 scrollbar-hide snap-x snap-mandatory lg:snap-none">
+                {Object.keys(pricingData).map((key) => (
+                  <motion.button
+                    key={key}
+                    onClick={() => setActivePricingTab(key)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`relative flex-shrink-0 whitespace-nowrap snap-start px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                      activePricingTab === key
+                        ? "bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg shadow-green-500/25"
+                        : "bg-white text-stone-600 hover:bg-green-50 border border-stone-200 hover:border-green-300"
+                    }`}
+                  >
+                    {key}
+                  </motion.button>
+                ))}
+              </div>
             </div>
 
             {/* Active Pricing Card - Redesigned */}

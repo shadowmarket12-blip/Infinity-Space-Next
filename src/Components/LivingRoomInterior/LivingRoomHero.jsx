@@ -66,7 +66,7 @@ export default function LivingRoomHero() {
               Services
             </Link>
             <FiChevronRight className="text-sm" />
-            <span className="text-white/70">Residential Interior Design</span>
+            <span className="text-white/70">Living Room Interior Design</span>
           </motion.div>
 
           {/* TITLE */}
@@ -114,17 +114,7 @@ export default function LivingRoomHero() {
             >
               Custom TV units, statement feature walls, designer false ceilings
               — and space planning built for how Bhubaneswar families actually
-              live. At Infinity Space, we design living rooms that do more than
-              look beautiful. As a trusted interior design company in
-              Bhubaneswar, we build spaces that hold your daily life and your
-              most important celebrations with equal ease — from quiet evenings
-              to Durga Puja gatherings. Every design decision we make is
-              grounded in this city's climate, its culture, and the way Odia
-              families truly use their homes. Whether you have a compact
-              apartment in Khandagiri or a spacious villa in Nayapalli, our
-              living room interior designers in Bhubaneswar create spaces that
-              are proportioned to your floor plan, personalised to your taste,
-              and built to last through every Odisha season.
+              live.
             </motion.h2>
           </Link>
 
