@@ -71,31 +71,16 @@ const LivingRoomServiceCovers = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6 tracking-wider uppercase"
-          >
-            Our Services
-          </motion.span>
-
-          <h2 className="mt-4 sm:mt-6 text-[24px] sm:text-[36px] lg:text-[50px] font-black leading-[1.1] text-stone-900">
+          <h2 className="text-[20px] font-black leading-[1.15] text-black sm:text-[42px] lg:text-[56px]">
             What Our Living Room{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 text-emerald-600">
+              <span className="relative z-10 text-green-700">
                 Design Service Covers
               </span>
-              <motion.span
-                initial={{ width: 0 }}
-                animate={isInView ? { width: "100%" } : {}}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="absolute bottom-0 left-0 h-3 sm:h-4 bg-emerald-200/50 -z-10"
-              ></motion.span>
             </span>
           </h2>
 
-          <p className="text-stone-600 mt-5 sm:mt-6 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-black font-light leading-relaxed max-w-3xl mx-auto mt-6">
             Our living room interior design services in Bhubaneswar cover every
             element of the space — designed together as one unified composition,
             not assembled as separate purchases:

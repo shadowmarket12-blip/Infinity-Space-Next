@@ -14,7 +14,7 @@ const LivingProcess = () => {
       icon: "🤝",
       description:
         "We visit your home or meet at our studio — assess the space, understand your vision, discuss your budget honestly",
-      image: "/Residentialimages/Free Consultation & Site Visit.webp",
+      image: "/Residentialimages/Free Consultation-Site Visit.webp",
     },
     {
       step: "02",
@@ -22,7 +22,7 @@ const LivingProcess = () => {
       icon: "🎨",
       description:
         "Complete living room concept: floor plan, photorealistic 3D renders, material board, and lighting plan",
-      image: "/Residentialimages/Design Concept & Free 3D Visualisation.webp",
+      image: "/Residentialimages/Design Concept-Free 3D Visualisation.webp",
     },
     {
       step: "03",
@@ -46,7 +46,7 @@ const LivingProcess = () => {
       icon: "✨",
       description:
         "Full pre-handover inspection. Every snag resolved. Living room handed over ready to live in — and photograph",
-      image: "/Residentialimages/Quality Walkthrough & Handover.webp",
+      image: "/Quality-Walkthrough-Handover.webp",
     },
   ];
 

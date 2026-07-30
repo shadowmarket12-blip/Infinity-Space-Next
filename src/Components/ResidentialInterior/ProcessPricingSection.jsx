@@ -93,7 +93,7 @@ const ProcessPricingSection = () => {
         "Documentation & warranty handover",
         "Continued after-service support",
       ],
-      image: "/Residentialimages/Quality Walkthrough-Handover.webp",
+      image: "/Quality-Walkthrough-Handover.webp",
     },
   ];
 

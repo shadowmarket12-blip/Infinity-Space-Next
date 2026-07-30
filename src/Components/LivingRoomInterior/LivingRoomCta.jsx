@@ -2,26 +2,29 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const LivingRoomCta = () => {
-  const phoneNumber = "7077797720";
-  const emailAddress = "hello@infinityspaceodisha.com";
-  const studioAddress = "Plot No. 123, Patia, Bhubaneswar, Odisha - 751024";
+  const phoneNumber1 = "7077797720";
+  const phoneNumber2 = "7846981020";
+  const emailAddress = "infinityspaceodisha@gmail.com";
+  const studioAddress =
+    "FA 1/63, Barabhuja market complex, Khandagiri, Bhubaneswar, Odisha 751030";
 
-  const handleCallNow = () => {
-    window.location.href = `tel:${phoneNumber}`;
+  const handleCallNow1 = () => {
+    window.location.href = `tel:${phoneNumber1}`;
+  };
+
+  const handleCallNow2 = () => {
+    window.location.href = `tel:${phoneNumber2}`;
   };
 
   const handleEmail = () => {
     window.location.href = `mailto:${emailAddress}`;
   };
 
-  const handleBookConsultation = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
-
   return (
-    <section className="relative  py-16 sm:py-20 lg:py-28 overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main Card */}
@@ -30,17 +33,18 @@ const LivingRoomCta = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative bg-white rounded-2xl sm:rounded-3xl  shadow-2xl shadow-stone-900/5 overflow-hidden"
+            className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl shadow-stone-900/5 border border-stone-200 overflow-hidden"
           >
-            <div className="p-6 sm:p-8 lg:p-12">
+            <div className="relative p-6 sm:p-8 lg:p-12">
               {/* Header */}
-              <div className="text-center mb-10 sm:mb-12">
-                <h2 className="mb-4 mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[56px]">
+              <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+                <h2 className="mb-4 mt-4 text-[22px] sm:text-[36px] lg:text-[56px] font-black leading-[1.1] text-stone-900">
                   Book Your Free Living Room{" "}
                   <span className="relative inline-block">
                     <span className="relative z-10 text-green-700">
                       Design Consultation
                     </span>
+                    <span className="absolute bottom-1 sm:bottom-2 left-0 w-full h-2 sm:h-3 bg-green-200/50 -z-10"></span>
                   </span>{" "}
                   Today
                 </h2>
@@ -51,10 +55,10 @@ const LivingRoomCta = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="max-w-3xl mx-auto text-center mb-10 sm:mb-12"
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16"
               >
-                <p className="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                <p className="text-black text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
                   The living room is where your home announces itself - to your
                   guests, and to you, every single day. It deserves more than a
                   catalogue selection and a rushed installation. It deserves
@@ -62,142 +66,248 @@ const LivingRoomCta = () => {
                   creative attention that only a genuinely invested design team
                   can offer.
                 </p>
-                <p className="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+                <p className="text-black text-sm sm:text-base lg:text-lg leading-relaxed">
                   Infinity Space Odisha is ready to design your living room. Our
                   interior designers in Bhubaneswar will visit your space,
                   listen to your vision, and show you exactly what your living
                   room could look like in 3D before you commit a single rupee.
-                  <span className="font-bold text-emerald-700">
-                    The first consultation is completely free. Contact us today.
-                  </span>
+                  The first consultation is completely free. Contact us today.
                 </p>
               </motion.div>
 
-              {/* Contact Cards */}
+              {/* Contact Details - Column Layout */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-10 sm:mb-12"
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="max-w-2xl mx-auto mb-10 sm:mb-12 lg:mb-16"
               >
-                {/* Phone */}
-                <button
-                  onClick={handleCallNow}
-                  className="group relative bg-stone-50 hover:bg-emerald-50 rounded-2xl p-5 sm:p-6 border border-stone-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/5 text-left"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      📞
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1">
-                        Call / WhatsApp
-                      </span>
-                      <span className="block text-sm sm:text-base font-bold text-stone-900 group-hover:text-emerald-700 transition-colors duration-300">
-                        {phoneNumber}
-                      </span>
-                    </div>
-                  </div>
-                </button>
+                <div className="bg-stone-50 border border-stone-200 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10">
+                  <div className="space-y-6 sm:space-y-8">
+                    {/* Phone Numbers */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                      {/* Phone 1 */}
+                      <button
+                        onClick={handleCallNow1}
+                        className="group flex items-center gap-4 p-4 rounded-xl bg-white hover:bg-green-50 border border-stone-200 hover:border-green-300 transition-all duration-300 text-left"
+                      >
+                        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-green-100 border border-green-200 flex items-center justify-center group-hover:bg-green-200 group-hover:border-green-300 transition-all duration-300">
+                          <svg
+                            className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="block text-xs font-semibold uppercase tracking-wider text-black mb-1">
+                            Primary Phone
+                          </span>
+                          <span className="block text-base sm:text-lg font-bold text-black group-hover:text-green-700 transition-colors duration-300">
+                            {phoneNumber1}
+                          </span>
+                        </div>
+                        <svg
+                          className="w-5 h-5 text-black group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
 
-                {/* Email */}
-                <button
-                  onClick={handleEmail}
-                  className="group relative bg-stone-50 hover:bg-blue-50 rounded-2xl p-5 sm:p-6 border border-stone-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/5 text-left"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      📧
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1">
-                        Email Us
-                      </span>
-                      <span className="block text-sm sm:text-base font-bold text-stone-900 group-hover:text-blue-700 transition-colors duration-300 truncate">
-                        {emailAddress}
-                      </span>
+                      {/* Phone 2 */}
+                      <button
+                        onClick={handleCallNow2}
+                        className="group flex items-center gap-4 p-4 rounded-xl bg-white hover:bg-green-50 border border-stone-200 hover:border-green-300 transition-all duration-300 text-left"
+                      >
+                        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-green-100 border border-green-200 flex items-center justify-center group-hover:bg-green-200 group-hover:border-green-300 transition-all duration-300">
+                          <svg
+                            className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1">
+                            Alternate Number
+                          </span>
+                          <span className="block text-base sm:text-lg font-bold text-stone-900 group-hover:text-green-700 transition-colors duration-300">
+                            {phoneNumber2}
+                          </span>
+                        </div>
+                        <svg
+                          className="w-5 h-5 text-stone-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
                     </div>
-                  </div>
-                </button>
 
-                {/* Studio */}
-                <div className="group relative bg-stone-50 hover:bg-amber-50 rounded-2xl p-5 sm:p-6 border border-stone-200 hover:border-amber-300 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/5">
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      📍
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1">
-                        Visit Our Studio
-                      </span>
-                      <span className="block text-sm font-bold text-stone-900 group-hover:text-amber-700 transition-colors duration-300 leading-snug">
-                        {studioAddress}
-                      </span>
+                    {/* Divider */}
+                    <div className="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent"></div>
+
+                    {/* Email */}
+                    <button
+                      onClick={handleEmail}
+                      className="group flex items-center gap-4 p-4 rounded-xl bg-white hover:bg-green-50 border border-stone-200 hover:border-green-300 transition-all duration-300 text-left w-full"
+                    >
+                      <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-green-100 border border-green-200 flex items-center justify-center group-hover:bg-green-200 group-hover:border-green-300 transition-all duration-300">
+                        <svg
+                          className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1">
+                          Email Address
+                        </span>
+                        <span className="block text-sm sm:text-base font-bold text-stone-900 group-hover:text-green-700 transition-colors duration-300 truncate">
+                          {emailAddress}
+                        </span>
+                      </div>
+                      <svg
+                        className="w-5 h-5 text-stone-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* Divider */}
+                    <div className="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent"></div>
+
+                    {/* Address */}
+                    <div className="group flex items-start gap-4 p-4 rounded-xl bg-white hover:bg-green-50 border border-stone-200 hover:border-green-300 transition-all duration-300">
+                      <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-green-100 border border-green-200 flex items-center justify-center group-hover:bg-green-200 group-hover:border-green-300 transition-all duration-300">
+                        <svg
+                          className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="flex-1 min-w-0 pt-1">
+                        <span className="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-1.5">
+                          Visit Our Studio
+                        </span>
+                        <span className="block text-sm sm:text-base font-medium text-stone-600 group-hover:text-stone-900 transition-colors duration-300 leading-relaxed">
+                          {studioAddress}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* CTA Button */}
+              {/* CTA Button - Now links to Contact Us page */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
                 className="text-center"
               >
-                <button
-                  onClick={handleBookConsultation}
-                  className="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-stone-900 via-stone-800 to-stone-900 text-white font-bold text-sm sm:text-base rounded-full shadow-xl shadow-stone-900/20 hover:shadow-2xl hover:shadow-stone-900/30 transition-all duration-300 overflow-hidden"
-                >
-                  {/* Hover shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <Link href="/contact" passHref>
+                  <div className="group relative inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-green-600 hover:bg-green-700 text-white font-bold text-sm sm:text-base rounded-full shadow-xl shadow-green-500/20 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center cursor-pointer">
+                    {/* Hover shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                  <span className="relative z-10 flex items-center gap-3">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    Book Your Free Consultation — Response Within 24 Hours
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                    <span className="relative z-10 flex items-center gap-2 sm:gap-3">
+                      <svg
+                        className="w-5 h-5 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="whitespace-nowrap">
+                        Book Your Free Consultation — Response Within 24 Hours
+                      </span>
+                      <svg
+                        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
-
-          {/* Bottom Trust Text */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="text-center text-stone-400 text-xs sm:text-sm mt-6"
-          >
-            No obligation • Free 3D design included • Response within 24 hours
-          </motion.p>
         </div>
       </div>
     </section>

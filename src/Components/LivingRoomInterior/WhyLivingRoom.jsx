@@ -15,7 +15,7 @@ const WhyChooseUsPremium = () => {
       id: "01",
       icon: (
         <svg
-          className="w-7 h-7"
+          className="w-5 h-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -44,7 +44,7 @@ const WhyChooseUsPremium = () => {
       id: "02",
       icon: (
         <svg
-          className="w-7 h-7"
+          className="w-5 h-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -74,7 +74,7 @@ const WhyChooseUsPremium = () => {
       id: "03",
       icon: (
         <svg
-          className="w-7 h-7"
+          className="w-5 h-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -103,7 +103,7 @@ const WhyChooseUsPremium = () => {
       id: "04",
       icon: (
         <svg
-          className="w-7 h-7"
+          className="w-5 h-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -139,7 +139,7 @@ const WhyChooseUsPremium = () => {
       id: "05",
       icon: (
         <svg
-          className="w-7 h-7"
+          className="w-5 h-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -307,6 +307,26 @@ const WhyChooseUsPremium = () => {
                   ></div>
 
                   <div className="relative p-6 sm:p-8 lg:p-10">
+                    {/* Icon with Background - Smaller Size */}
+                    <div className="mb-6">
+                      <motion.div
+                        key={`icon-${activeFeature}`}
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 20,
+                          duration: 0.6,
+                        }}
+                        className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${features[activeFeature].gradient} shadow-lg shadow-${features[activeFeature].color}-500/25 rotate-3 hover:rotate-0 transition-transform duration-300`}
+                      >
+                        <span className="text-white">
+                          {features[activeFeature].icon}
+                        </span>
+                      </motion.div>
+                    </div>
+
                     {/* Badge */}
                     {features[activeFeature].badge && (
                       <div className="mb-4">
@@ -333,6 +353,13 @@ const WhyChooseUsPremium = () => {
 
                     {/* Content */}
                     <div className="space-y-4">
+                      {/* Subtitle */}
+                      <p
+                        className={`text-sm font-semibold ${features[activeFeature].textAccent} uppercase tracking-wider`}
+                      >
+                        {features[activeFeature].subtitle}
+                      </p>
+
                       <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-stone-900 leading-tight">
                         {features[activeFeature].title}
                       </h3>

@@ -42,7 +42,7 @@ const services = [
   {
     id: "commercial-office",
     title: "Commercial & Office Interior Design",
-    image: "/service page service section/Commercial & Office Interiors.webp",
+    image: "/service page service section/Commercial-Office Interiors.webp",
     description:
       "We provide affordable commercial interior design services for offices, clinics, salons, retail stores, showrooms, and professional workspaces. Our office interior designers in Bhubaneswar focus on efficient space utilization, workflow planning, employee comfort, and professional aesthetics.",
     points: [
@@ -74,8 +74,7 @@ const services = [
   {
     id: "false-ceiling",
     title: "False Ceiling & Decorative Interior Concepts",
-    image:
-      "/service page service section/False Ceiling & Decorative Design.webp",
+    image: "/service page service section/False Ceiling-Decorative Design.webp",
     description:
       "Decorative detailing helps create a more balanced and visually comfortable environment. Our false ceiling and decorative concepts focus on lighting enhancement, depth, visual balance, and modern styling.",
     points: [

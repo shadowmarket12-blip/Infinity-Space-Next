@@ -3,7 +3,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { residentialImages } from "./Residata";
+
+// Renders a description string, and if a `link` ({ text, href }) is provided
+// AND that exact text exists inside the description, wraps that phrase in a
+// bold, clickable Next.js <Link>. Falls back to plain text otherwise.
+const renderDescriptionWithLink = (description, link) => {
+  if (!link?.text || !link?.href) return description;
+
+  const index = description.indexOf(link.text);
+  if (index === -1) return description; // phrase not found, render plainly
+
+  const before = description.slice(0, index);
+  const after = description.slice(index + link.text.length);
+
+  return (
+    <>
+      {before}
+      <Link
+        href={link.href}
+        className="font-bold text-green-700 hover:text-green-800 underline decoration-green-300 hover:decoration-green-600 underline-offset-2 transition-colors"
+      >
+        {link.text}
+      </Link>
+      {after}
+    </>
+  );
+};
 
 const ServicesSection = () => {
   const services = [
@@ -50,6 +77,12 @@ const ServicesSection = () => {
         "Your living room is the first impression of your home — the space where family gathers and guests form their opinion of your taste. Our living room interior designers in Bhubaneswar create spaces that are open, bright, and deeply personal. We balance aesthetics with practicality, designing rooms that are as functional for a weeknight family dinner as they are impressive for Dussehra celebrations.",
       highlight:
         "Functional for a weeknight family dinner, impressive for Dussehra celebrations",
+      // 👇 This is what makes the phrase bold + clickable inside the description above.
+      // Replace href with your actual Living Room service page route.
+      link: {
+        text: "Our living room interior designers in Bhubaneswar",
+        href: "/services/living-room-interior-design",
+      },
       features: [
         {
           title: "Feature Walls",
@@ -352,7 +385,10 @@ const ServicesSection = () => {
                     )}
 
                     <p className="text-stone-600 text-sm sm:text-base leading-relaxed mt-3 lg:mt-4">
-                      {service.description}
+                      {renderDescriptionWithLink(
+                        service.description,
+                        service.link,
+                      )}
                     </p>
 
                     <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600 p-3 sm:p-4 rounded-r-xl mt-5">

@@ -151,13 +151,6 @@ export default function Footer() {
                   </a>
                   {" | "}
                   <a
-                    href="tel:+917077797703"
-                    className="hover:text-white transition-colors"
-                  >
-                    7077797703
-                  </a>
-                  <br />
-                  <a
                     href="tel:+917077797729"
                     className="hover:text-white transition-colors"
                   >
