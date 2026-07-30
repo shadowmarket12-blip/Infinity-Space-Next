@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const LivingRoomCta = () => {
   const phoneNumber1 = "7077797720";
-  const phoneNumber2 = "7846981020";
+  const phoneNumber2 = " 7077797729";
   const emailAddress = "infinityspaceodisha@gmail.com";
   const studioAddress =
     "FA 1/63, Barabhuja market complex, Khandagiri, Bhubaneswar, Odisha 751030";
