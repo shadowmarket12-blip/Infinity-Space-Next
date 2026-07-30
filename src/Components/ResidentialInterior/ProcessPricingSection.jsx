@@ -30,7 +30,7 @@ const ProcessPricingSection = () => {
         "Natural light & ventilation assessment",
         "Honest budget & timeline discussion",
       ],
-      image: "/Residentialimages/Free Consultation & Site Visit.webp",
+      image: "/Residentialimages/Free Consultation-Site Visit.webp",
     },
     {
       step: "02",
@@ -46,7 +46,7 @@ const ProcessPricingSection = () => {
         "Material & color boards",
         "Unlimited design revisions",
       ],
-      image: "/Residentialimages/Design Concept & Free 3D Visualisation.webp",
+      image: "/Residentialimages/Design Concept-Free 3D Visualisation.webp",
     },
     {
       step: "03",
@@ -93,7 +93,7 @@ const ProcessPricingSection = () => {
         "Documentation & warranty handover",
         "Continued after-service support",
       ],
-      image: "/Residentialimages/Quality Walkthrough & Handover.webp",
+      image: "/Residentialimages/Quality Walkthrough-Handover.webp",
     },
   ];
 
