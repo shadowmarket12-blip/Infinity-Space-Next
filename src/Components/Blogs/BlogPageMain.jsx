@@ -24,7 +24,7 @@ export default function BlogPageMain() {
 
   return (
     <div>
-      <div className="overflow-hidden bg-[#FAFAF9] text-[#000000]">
+      <div className="overflow-hidden bg-[#ffffff] text-[#000000]">
         <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-20 lg:px-8">
           <div className="mb-10 flex flex-col gap-6 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
             <div>

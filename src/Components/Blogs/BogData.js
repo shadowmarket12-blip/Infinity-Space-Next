@@ -1,4 +1,4 @@
-// app/blogs/BlogData.jsx
+// app/blogs/BlogData.js
 
 export const categories = [
   "All",
@@ -27,8 +27,6 @@ const blogsData = [
     image: "/Residentialimages/blogsimage.webp",
     tags: ["bhubaneswar", "interior-design", "vastu", "home-renovation"],
     featured: true,
-
-    // --- SEO fields ---
     metaTitle: "Best Interior Design Company in Bhubaneswar | Infinity Space",
     metaDescription:
       "Learn how to choose the best interior design company in Bhubaneswar with these 10 essential questions every homeowner must ask before hiring an interior designer.",
@@ -43,7 +41,6 @@ const blogsData = [
       "Vastu interior design",
       "interior designer near me Bhubaneswar",
     ],
-
     content: [
       {
         type: "paragraph",
@@ -134,7 +131,6 @@ const blogsData = [
         text: "At Infinity Space Odisha, that's the standard behind every residential project we take on — from 1BHK interiors in Patia to full villas in Chandrasekharpur — backed by climate-smart materials, integrated Vastu planning, itemised pricing, free 3D visualisation, and a 5-year warranty on woodwork.",
       },
     ],
-
     faq: [
       {
         question:
@@ -172,71 +168,238 @@ const blogsData = [
       },
     ],
   },
-  // {
-  //   id: 2,
-  //   slug: "quiet-power-of-minimalist-interiors",
-  //   title: "The Quiet Power of Minimalist Interiors",
-  //   excerpt:
-  //     "Why the calmest rooms are the ones you stop noticing — and how restraint became the hardest skill in interior design.",
-  //   category: "Design",
-  //   author: {
-  //     name: "Ananya Rao",
-  //     avatar: "https://i.pravatar.cc/150?img=32",
-  //     role: "Interior Design Lead",
-  //   },
-  //   date: "2026-06-18",
-  //   readTime: 6,
-  //   image:
-  //     "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1400&auto=format&fit=crop",
-  //   tags: ["interior-design", "minimalism", "living-room"],
-  //   featured: true,
-  //   metaTitle:
-  //     "The Quiet Power of Minimalist Interiors | Infinity Space Odisha",
-  //   metaDescription:
-  //     "Why the calmest, best-designed rooms are the ones you stop noticing — and how restraint became the hardest skill in interior design.",
-  //   content: [
-  //     {
-  //       type: "paragraph",
-  //       text: "There is a particular kind of silence in a well-designed room. Nothing shouts for attention, yet everything is exactly where it should be. The best interiors work the same way.",
-  //     },
-  //     { type: "heading", text: "Restraint is a decision, not an absence" },
-  //     {
-  //       type: "paragraph",
-  //       text: "Removing a piece of furniture is rarely the easy option. Every side table, cushion, and shelf has a reason someone added it. Minimalism isn't about emptying a room until nothing is left — it's about defending the few pieces that actually earn their place.",
-  //     },
-  //     {
-  //       type: "quote",
-  //       text: "A room is finished when there is nothing left to remove.",
-  //     },
-  //     {
-  //       type: "paragraph",
-  //       text: "When a home feels calm, it's usually because dozens of small decisions were made in favor of how the space is lived in, not how it photographs.",
-  //     },
-  //     { type: "heading", text: "The cost of every extra object" },
-  //     {
-  //       type: "paragraph",
-  //       text: "Each additional object in a room competes for the same finite visual attention. The most livable homes understand this trade and spend it deliberately, choosing texture and light over clutter.",
-  //     },
-  //   ],
-  //   faq: [
-  //     {
-  //       question:
-  //         "Is minimalist design more expensive than traditional interiors?",
-  //       answer:
-  //         "Not necessarily. Minimalist interiors often cost less because fewer materials and fixtures are used — but each chosen piece tends to be higher quality, so the budget shifts rather than shrinks.",
-  //     },
-  //     {
-  //       question: "Will a minimalist home feel cold or empty?",
-  //       answer:
-  //         "Only if texture and lighting are ignored. Good minimalist design leans on natural materials, warm lighting, and layered textiles so the space feels calm rather than bare.",
-  //     },
-  //     {
-  //       question: "Can minimalist design work in a small apartment?",
-  //       answer:
-  //         "Yes — it's often the best fit for small spaces, since removing visual clutter makes a compact room feel larger and easier to move through.",
-  //     },
-  //   ],
-  // },
+  {
+    id: 2,
+    slug: "cost-of-living-room-interior-design-in-bhubaneswar",
+    title: "Cost of Living Room Interior Design in Bhubaneswar",
+    excerpt:
+      "Planning a living room makeover and worried about the price? Learn the cost of living room interior design in Bhubaneswar, key pricing factors, and expert tips from Infinity Space.",
+    category: "Design",
+    author: {
+      name: "Infinity Space Odisha",
+      avatar: "/Living room-blog.avif",
+      role: "Design Team",
+    },
+    date: "2026-08-02",
+    readTime: 7,
+    image: "/Living room-blog.avif",
+    tags: [
+      "cost-of-living-room-interior-design-in-bhubaneswar",
+      "living-room-interior-design-in-bhubaneswar",
+      "living-room-interior-cost",
+      "trusted-interior-designers-in-bhubaneswar",
+      "modern-living-room-interior-design",
+      "luxury-living-room-interior",
+      "tv-unit-design",
+      "false-ceiling-design",
+      "custom-living-room-interiors",
+    ],
+    featured: true,
+    metaTitle:
+      "Cost of Living Room Interior Design in Bhubaneswar | Infinity Space",
+    metaDescription:
+      "Planning a living room makeover and worried about the price? Learn the cost of living room interior design in Bhubaneswar, key pricing factors, and expert tips from Infinity Space.",
+    keywords: [
+      "cost of living room interior design in bhubaneswar",
+      "living room interior design in bhubaneswar",
+      "living room interior cost",
+      "trusted interior designers in bhubaneswar",
+      "modern living room interior design",
+      "luxury living room interior",
+      "tv unit design",
+      "false ceiling design",
+      "custom living room interiors",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Your living room is the heart of your home. It is where families spend quality time, guests are welcomed, and memorable moments are created. Designing this space requires careful planning, the right materials, and professional expertise to achieve both style and functionality. If you are searching for the Cost of Living Room Interior Design in Bhubaneswar, it is important to understand that there is no one-size-fits-all price. The final investment depends on your room size, design preferences, furniture requirements, materials, and level of customization.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide explains everything you need to know about the Cost of Living Room Interior Design, the factors that influence pricing, and how you can make informed decisions while planning your dream living room.",
+      },
+      {
+        type: "heading",
+        text: "What is the Cost of Living Room Interior Design in Bhubaneswar?",
+      },
+      {
+        type: "paragraph",
+        text: "The Cost of Living Room Interior Design in Bhubaneswar varies depending on the size of the living room, material selection, custom furniture, false ceiling, lighting, TV unit design, wall finishes, and the overall complexity of the project. Every home has unique requirements, so professional interior designers typically provide customized quotations after understanding your design preferences, budget, and available space.",
+      },
+      {
+        type: "heading",
+        text: "Factors That Affect the Cost of Living Room Interior Design in Bhubaneswar",
+      },
+      { type: "heading", text: "Living Room Size" },
+      {
+        type: "paragraph",
+        text: "One of the biggest factors affecting the Cost of Living Room Interior Design in Bhubaneswar is the size of the space. Larger living rooms generally require more materials, furniture, lighting fixtures, decorative elements, and labour, making them more expensive than compact spaces.",
+      },
+      { type: "heading", text: "Choice of Materials" },
+      {
+        type: "paragraph",
+        text: "Material selection plays a significant role in determining the overall budget. Premium laminates, veneers, engineered wood, natural wood, marble finishes, wallpapers, and designer paints all influence the final cost. Choosing durable, high-quality materials offers better long-term value while enhancing the appearance of your living room.",
+      },
+      { type: "heading", text: "Custom Furniture" },
+      {
+        type: "paragraph",
+        text: "Customized sofas, coffee tables, TV units, display shelves, and storage cabinets are designed specifically for your home. While custom furniture may involve a higher initial investment, it maximizes space utilization and perfectly complements your interior theme.",
+      },
+      { type: "heading", text: "False Ceiling Design" },
+      {
+        type: "paragraph",
+        text: "Modern false ceiling designs improve aesthetics while accommodating concealed lighting, air conditioning ducts, and electrical wiring. The complexity of the design, material selection, and lighting integration all contribute to the overall project cost.",
+      },
+      { type: "heading", text: "Lighting Design" },
+      {
+        type: "paragraph",
+        text: "Lighting transforms the ambience of a living room. Layered lighting using ceiling lights, LED strips, pendant lights, wall lights, and decorative fixtures creates a warm and inviting atmosphere. The number and type of fixtures selected affect the total investment.",
+      },
+      { type: "heading", text: "TV Unit Design" },
+      {
+        type: "paragraph",
+        text: "A customized TV entertainment unit serves as both a functional storage solution and a decorative focal point. The size, finish, storage options, and integrated lighting determine the cost of the TV unit.",
+      },
+      { type: "heading", text: "Wall Finishes" },
+      {
+        type: "paragraph",
+        text: "Feature walls using textured paint, wallpapers, wooden panels, stone cladding, or decorative mouldings significantly enhance the overall appearance of your living room. Premium finishes generally require a larger budget but create a luxurious visual impact.",
+      },
+      { type: "heading", text: "Flooring" },
+      {
+        type: "paragraph",
+        text: "If your interior project includes flooring upgrades such as vitrified tiles, marble, wooden flooring, or luxury vinyl flooring, the overall interior cost will naturally increase.",
+      },
+      { type: "heading", text: "Smart Home Features" },
+      {
+        type: "paragraph",
+        text: "Many homeowners now include smart lighting, automated curtains, voice-controlled systems, and integrated entertainment solutions. These technologies improve convenience while increasing the overall project investment.",
+      },
+      {
+        type: "heading",
+        text: "What Is Included in a Living Room Interior Design Package?",
+      },
+      {
+        type: "paragraph",
+        text: "A professional Living Room Interior Design in Bhubaneswar package generally includes everything required to transform your space into a comfortable and visually appealing environment.",
+      },
+      {
+        type: "paragraph",
+        text: "Typical services include: interior consultation, space planning, 3D interior design visualization, furniture layout planning, modular TV unit design, false ceiling design, lighting planning, wall treatment and decorative finishes, colour consultation, furniture customization, decorative accessories, and complete project execution and supervision. The exact inclusions depend on your design requirements and project scope.",
+      },
+      {
+        type: "heading",
+        text: "Types of Living Room Interior Designs and Their Cost Impact",
+      },
+      { type: "heading", text: "Modern Living Room Interior Design" },
+      {
+        type: "paragraph",
+        text: "Modern interiors feature clean lines, neutral colours, modular furniture, and functional layouts. These designs are highly popular because they balance elegance with practicality.",
+      },
+      { type: "heading", text: "Minimalist Living Room Interior Design" },
+      {
+        type: "paragraph",
+        text: "Minimalist interiors focus on simplicity, clutter-free spaces, smart storage, and subtle colour palettes. They require careful planning to achieve a sophisticated appearance without unnecessary decorative elements.",
+      },
+      { type: "heading", text: "Luxury Living Room Interior Design" },
+      {
+        type: "paragraph",
+        text: "Luxury interiors incorporate premium materials, custom furniture, designer lighting, imported finishes, marble surfaces, and bespoke décor. These projects involve greater customization and craftsmanship.",
+      },
+      { type: "heading", text: "Contemporary Living Room Interior Design" },
+      {
+        type: "paragraph",
+        text: "Contemporary interiors combine modern trends with timeless aesthetics. Flexible layouts, elegant textures, and stylish furniture create comfortable yet sophisticated living spaces.",
+      },
+      { type: "heading", text: "Traditional Living Room Interior Design" },
+      {
+        type: "paragraph",
+        text: "Traditional interiors include wooden furniture, intricate detailing, decorative ceilings, warm colours, and classic design elements. The level of detailing and craftsmanship influences the overall budget.",
+      },
+      {
+        type: "heading",
+        text: "How to Reduce the Cost of Living Room Interior Design Without Compromising Quality",
+      },
+      {
+        type: "paragraph",
+        text: "You can optimize the Cost of Living Room Interior Design in Bhubaneswar by making smart planning decisions: prioritize essential interior elements first, select durable materials that offer long-term value, choose modular furniture wherever possible, plan adequate storage during the initial design stage, invest in high-quality lighting instead of excessive decorative items, and work with experienced interior designers to avoid costly mistakes and redesigns. Professional planning often helps homeowners save money while achieving better design outcomes.",
+      },
+      {
+        type: "heading",
+        text: "Why Hiring Professional Interior Designers Saves Money",
+      },
+      {
+        type: "paragraph",
+        text: "Many homeowners believe professional designers increase project costs. In reality, experienced designers often help reduce unnecessary expenses by improving planning and execution.",
+      },
+      {
+        type: "paragraph",
+        text: "Professional interior designers provide accurate space planning, better budget management, material recommendations, vendor coordination, quality control, timely project completion, and long-lasting interior solutions. Working with professionals minimizes errors, prevents material wastage, and ensures every investment contributes to the overall functionality and beauty of your home.",
+      },
+      {
+        type: "heading",
+        text: "Why Choose Infinity Space for Living Room Interior Design in Bhubaneswar?",
+      },
+      {
+        type: "paragraph",
+        text: "Infinity Space delivers customized Living Room Interior Design in Bhubaneswar solutions that combine creativity, functionality, and premium craftsmanship. Every project begins with understanding the client's lifestyle, preferences, and budget before developing personalized design concepts.",
+      },
+      {
+        type: "paragraph",
+        text: "Infinity Space offers customized interior solutions, experienced design professionals, 3D design visualization, premium-quality materials, modern and luxury interior concepts, transparent project management, timely project delivery, and end-to-end execution support. Whether you are renovating an existing living room or designing a new home, Infinity Space creates interiors that perfectly reflect your style while maximizing comfort and functionality.",
+      },
+      { type: "heading", text: "Conclusion" },
+      {
+        type: "paragraph",
+        text: "Understanding the Cost of Living Room Interior Design in Bhubaneswar is the first step toward creating a beautiful and functional living space. Every project is unique, and the final investment depends on your room size, design preferences, customization, materials, and interior features. Instead of focusing only on price, homeowners should consider the long-term value of professional planning, quality materials, and expert execution. If you are looking for trusted Interior Designers in Bhubaneswar, Infinity Space offers innovative interior solutions tailored to your lifestyle, helping you create a living room that you have in your dream, that is elegant, practical, and built to last.",
+      },
+    ],
+    faq: [
+      {
+        question:
+          "What is the average Cost of Living Room Interior Design in Bhubaneswar?",
+        answer:
+          "The cost depends on factors such as room size, material quality, customization, furniture, lighting, false ceiling, and design complexity. A personalized consultation helps determine the most suitable solution for your requirements.",
+      },
+      {
+        question: "What factors increase the interior design cost?",
+        answer:
+          "Premium materials, custom furniture, designer lighting, luxury finishes, false ceilings, and smart home features generally increase the overall project cost.",
+      },
+      {
+        question: "Can I customize my living room interior design?",
+        answer:
+          "Yes. Professional interior designers create customized layouts, furniture, colour schemes, lighting plans, and decorative elements based on your lifestyle and design preferences.",
+      },
+      {
+        question: "How long does a living room interior project take?",
+        answer:
+          "Project timelines vary depending on the scope of work, customization level, material availability, and overall design complexity.",
+      },
+      {
+        question: "Is modular furniture more cost-effective?",
+        answer:
+          "Modular furniture is often a practical solution because it optimizes space, simplifies installation, and provides long-term functionality while maintaining an elegant appearance.",
+      },
+      {
+        question:
+          "Which living room interior design company should I choose in Bhubaneswar?",
+        answer:
+          "Choose a company with experienced designers, customized solutions, quality materials, and a proven portfolio like Infinity Space, which offers end-to-end Living Room Interior Design in Bhubaneswar, delivering stylish, functional, and personalized interiors with professional execution.",
+      },
+      {
+        question: "How can I reduce my interior design budget?",
+        answer:
+          "Careful planning, choosing durable materials, prioritizing essential features, and working with experienced professionals can help optimize your investment.",
+      },
+      {
+        question: "Why should I hire a professional interior designer?",
+        answer:
+          "Professional designers ensure efficient space planning, better budget management, quality execution, and interiors that enhance both functionality and aesthetics.",
+      },
+    ],
+  },
 ];
 
 export default blogsData;
