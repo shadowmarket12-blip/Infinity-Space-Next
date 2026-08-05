@@ -1,5 +1,7 @@
+import ServiceAreasSection from "@/Components/Overview/AcrooService";
 import AffordableInterior from "@/Components/Overview/AffordableInterior";
 import MyService from "@/Components/Overview/MyService";
+import OverviewProcess from "@/Components/Overview/OverviewProcess";
 import ServiceContent from "@/Components/Overview/ServiceContent";
 import Servicecta from "@/Components/Overview/ServiceCta";
 import ServiceFAQ from "@/Components/Overview/Servicefaq";
@@ -33,6 +35,8 @@ export default function ServicePage() {
           <AffordableInterior />
           <MyService />
           <WhyChooseAffordable />
+          <ServiceAreasSection />
+          <OverviewProcess />
           <ServiceFAQ />
           <Servicecta />
         </div>

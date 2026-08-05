@@ -6,9 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { residentialImages } from "./Residata";
 
-// Renders a description string, and if a `link` ({ text, href }) is provided
-// AND that exact text exists inside the description, wraps that phrase in a
-// bold, clickable Next.js <Link>. Falls back to plain text otherwise.
 const renderDescriptionWithLink = (description, link) => {
   if (!link?.text || !link?.href) return description;
 
@@ -21,10 +18,7 @@ const renderDescriptionWithLink = (description, link) => {
   return (
     <>
       {before}
-      <Link
-        href={link.href}
-        className="font-bold text-green-700 hover:text-green-800 underline decoration-green-300 hover:decoration-green-600 underline-offset-2 transition-colors"
-      >
+      <Link href={link.href} className="font-bold text-black">
         {link.text}
       </Link>
       {after}

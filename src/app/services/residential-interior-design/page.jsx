@@ -2,6 +2,7 @@ import IntroContextSection from "@/Components/ResidentialInterior/IntroContext";
 import ProcessPricingSection from "@/Components/ResidentialInterior/ProcessPricingSection";
 import ResidentialFaq from "@/Components/ResidentialInterior/ResidentialFaq";
 import ResidentialHero from "@/Components/ResidentialInterior/ResidentialHero";
+import ResidentialRoomCta from "@/Components/ResidentialInterior/ResidentialRoomCta";
 import ServicesSection from "@/Components/ResidentialInterior/ResiServices";
 import ServiceAreasTestimonials from "@/Components/ResidentialInterior/ServiceAreasTestimonials";
 import TrustSection from "@/Components/ResidentialInterior/TrustResidential";
@@ -277,6 +278,7 @@ export default function ResidentialInterior() {
         <ProcessPricingSection />
         <WhyChooseUsDesignStyles />
         <ServiceAreasTestimonials />
+        <ResidentialRoomCta />
         <ResidentialFaq />
       </main>
     </>
