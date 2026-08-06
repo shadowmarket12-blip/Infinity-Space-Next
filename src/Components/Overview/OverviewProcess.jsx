@@ -7,34 +7,34 @@ import Image from "next/image";
 
 const processData = [
   {
-    title: "Consultation & Requirement Understanding",
+    title: "Consultation & Requirement Analysis",
     description:
-      "Understanding your design expectations, lifestyle needs, budget goals, and space functionality requirements.",
-    video: "/processv/Consultation & Requirement Analysis.mp4",
+      "Understanding your space, lifestyle needs, and design expectations.",
+    video: "/processv/Consultation and Requirement Analysis.mp4",
   },
   {
-    title: "Space Planning & Design Development",
+    title: "Space Planning & 3D Visualization",
     description:
-      "Creating layouts and interior concepts that balance usability, comfort, aesthetics, and storage optimization.",
-    video: "/processv/Space Planning & 3D Visualization.mp4",
+      "Creating layouts and realistic 3D interior concepts for better visualization.",
+    video: "/processv/Space Planning and 3D Visualization.mp4",
   },
   {
-    title: "3D Visualization & Material Selection",
+    title: "Material Selection & Budget Planning",
     description:
-      "Helping clients visualize layouts, textures, colors, furniture placement, and finishes before execution begins.",
-    video: "/processv/Material Selection & Budget Planning.mp4",
+      "Helping clients choose suitable materials, finishes, textures, and lighting concepts.",
+    video: "/processv/Material Selection  and Budget Planning.mp4",
   },
   {
     title: "Execution & Installation",
     description:
-      "Managing civil work, carpentry, painting, electrical work, furniture setup, and interior execution with organized coordination.",
-    video: "/processv/Execution & Installation.mp4",
+      "Managing civil work, carpentry, painting, electrical work, furniture installation, and décor setup.",
+    video: "/processv/Execution and Installation.mp4",
   },
   {
-    title: "Final Finishing & Handover",
+    title: "Final Styling & Handover",
     description:
-      "Quality checks, detailing, finishing touches, and project completion with planned delivery.",
-    video: "/processv/Final Styling & Handover.mp4",
+      "Quality checks and final finishing before project completion and delivery.",
+    video: "/processv/Final Styling and Handover.mp4",
   },
 ];
 

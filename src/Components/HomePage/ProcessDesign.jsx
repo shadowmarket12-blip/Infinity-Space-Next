@@ -10,31 +10,31 @@ const processData = [
     title: "Consultation & Requirement Analysis",
     description:
       "Understanding your space, lifestyle needs, and design expectations.",
-    video: "/processv/Consultation & Requirement Analysis.mp4",
+    video: "/processv/Consultation and Requirement Analysis.mp4",
   },
   {
     title: "Space Planning & 3D Visualization",
     description:
       "Creating layouts and realistic 3D interior concepts for better visualization.",
-    video: "/processv/Space Planning & 3D Visualization.mp4",
+    video: "/processv/Space Planning and 3D Visualization.mp4",
   },
   {
     title: "Material Selection & Budget Planning",
     description:
       "Helping clients choose suitable materials, finishes, textures, and lighting concepts.",
-    video: "/processv/Material Selection & Budget Planning.mp4",
+    video: "/processv/Material Selection  and Budget Planning.mp4",
   },
   {
     title: "Execution & Installation",
     description:
       "Managing civil work, carpentry, painting, electrical work, furniture installation, and décor setup.",
-    video: "/processv/Execution & Installation.mp4",
+    video: "/processv/Execution and Installation.mp4",
   },
   {
     title: "Final Styling & Handover",
     description:
       "Quality checks and final finishing before project completion and delivery.",
-    video: "/processv/Final Styling & Handover.mp4",
+    video: "/processv/Final Styling and Handover.mp4",
   },
 ];
 
