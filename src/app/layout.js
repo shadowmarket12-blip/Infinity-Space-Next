@@ -77,9 +77,9 @@ export const metadata = {
     },
   },
 
-  // verification: {
-  //   google: "google-site-verification: google927414456b017fd8.html",
-  // },
+  verification: {
+    google: "sDT_C1rSvwbbIdaL0aU0Vv9ChKIUiArSabp3vAUXw9Q",
+  },
 
   openGraph: {
     title: "Best Interior Designers in Bhubaneswar | Infinity Space",
