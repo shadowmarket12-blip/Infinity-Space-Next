@@ -35,17 +35,17 @@ const KitchenLayouts = () => {
       description:
         "The most popular choice for standard apartments — two walls of cabinetry create an efficient work triangle with good natural flow between cooking, prep, and washing zones",
       gradient: "from-emerald-500 to-teal-600",
-      textAccent: "text-emerald-600",
       shape: "L",
+      image: "/modular-kitchen-page/L-Shaped Kitchen.webp",
     },
     {
       name: "U-Shaped",
       icon: <FiMaximize2 className="w-5 h-5" />,
       description:
-        "U-Shaped	Larger kitchens with 10ft+ on two adjacent walls. Maximum storage and counter space on three sides — ideal for families who cook seriously and daily",
+        "Larger kitchens with 10ft+ on two adjacent walls. Maximum storage and counter space on three sides — ideal for families who cook seriously and daily",
       gradient: "from-blue-500 to-indigo-600",
-      textAccent: "text-blue-600",
       shape: "U",
+      image: "/modular-kitchen-page/U-Shaped-Kitchen.webp",
     },
     {
       name: "Parallel / Galley",
@@ -53,17 +53,17 @@ const KitchenLayouts = () => {
       description:
         "Narrow, elongated kitchen spaces. Two facing counters make excellent use of a limited footprint without feeling cramped when well-planned",
       gradient: "from-violet-500 to-purple-600",
-      textAccent: "text-violet-600",
       shape: "II",
+      image: "/modular-kitchen-page/Parallel-Kitchen.webp",
     },
     {
       name: "Straight / Single Wall",
       icon: <FiMinimize2 className="w-5 h-5 rotate-90" />,
       description:
-        "Straight / Single Wall Compact kitchens and studio apartments. Everything on one wall — clean, affordable, and surprisingly functional with the right storage configuration",
+        "Compact kitchens and studio apartments. Everything on one wall — clean, affordable, and surprisingly functional with the right storage configuration",
       gradient: "from-amber-500 to-orange-600",
-      textAccent: "text-amber-600",
       shape: "I",
+      image: "/modular-kitchen-page/straight-kitchen-design.webp",
     },
     {
       name: "Island Kitchen",
@@ -71,8 +71,8 @@ const KitchenLayouts = () => {
       description:
         "Open-plan layouts with generous floor area. The island adds prep space, casual seating, and a strong visual centrepiece to the kitchen",
       gradient: "from-rose-500 to-pink-600",
-      textAccent: "text-rose-600",
       shape: "O",
+      image: "/modular-kitchen-page/Island-Kitchen.webp",
     },
     {
       name: "G-Shaped",
@@ -80,27 +80,16 @@ const KitchenLayouts = () => {
       description:
         "A U-shape with an additional peninsula on the fourth wall — suits large family kitchens that need a breakfast counter or extra storage built in",
       gradient: "from-teal-500 to-cyan-600",
-      textAccent: "text-teal-600",
       shape: "G",
+      image: "/modular-kitchen-page/Countertop — Granite.webp",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-stone-50"
+      className="relative py-16 sm:py-20 lg:py-10 overflow-hidden "
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25px 25px, #059669 1px, transparent 0)`,
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
@@ -109,7 +98,7 @@ const KitchenLayouts = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto mb-12 lg:mb-16"
         >
-          <h2 className="mb-4 mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
             Kitchen Layouts We Design —{" "}
             <span className="text-green-700">
               Find the Right Fit for Your Space
@@ -135,50 +124,40 @@ const KitchenLayouts = () => {
                   delay: 0.08 * index,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className="group [perspective:1000px] h-48 sm:h-52 lg:h-56"
+                className="group [perspective:1000px] h-56 sm:h-64 lg:h-72"
               >
                 <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front Face - Title Only */}
+                  {/* Front Face - Image Only */}
                   <div className="absolute inset-0 [backface-visibility:hidden]">
-                    <div className="relative w-full h-full bg-white rounded-2xl border border-stone-200 shadow-md shadow-stone-200/50 overflow-hidden flex flex-col items-center justify-center p-6">
-                      {/* Top gradient line */}
-                      <div
-                        className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${layout.gradient}`}
-                      ></div>
+                    <div className="relative w-full h-full rounded-2xl shadow-lg overflow-hidden">
+                      {/* Background Image */}
+                      <img
+                        src={layout.image}
+                        alt={layout.name}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
 
-                      {/* Decorative Shape */}
-                      <div
-                        className={`absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br ${layout.gradient} opacity-5 rounded-full`}
-                      ></div>
+                      {/* Subtle gradient at bottom for name visibility */}
+                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-                      {/* Large Shape Letter */}
-                      <span
-                        className={`text-5xl sm:text-6xl font-black ${layout.textAccent} opacity-15 mb-4 leading-none select-none`}
-                      >
-                        {layout.shape}
-                      </span>
-
-                      {/* Icon */}
-                      <div
-                        className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${layout.gradient} flex items-center justify-center shadow-lg mb-3`}
-                      >
-                        <span className="text-white">{layout.icon}</span>
+                      {/* Name overlay at bottom */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-white font-black text-lg sm:text-xl leading-tight drop-shadow-lg">
+                          {layout.name}
+                        </h3>
+                        <div
+                          className={`h-1 w-12 bg-gradient-to-r ${layout.gradient} rounded-full mt-2`}
+                        ></div>
                       </div>
 
-                      {/* Title */}
-                      <h3 className="text-lg sm:text-xl font-black text-stone-900 text-center leading-tight">
-                        {layout.name}
-                      </h3>
-
-                      {/* Hint */}
-                      <span className="absolute bottom-3 text-[10px] text-stone-400 flex items-center gap-1">
-                        Hover to see details
-                        <FiArrowRight className="w-3 h-3" />
-                      </span>
+                      {/* Hover hint */}
+                      <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <FiArrowRight className="w-4 h-4 text-white" />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Back Face - Description */}
+                  {/* Back Face - Description with Gradient */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
                     <div
                       className={`relative w-full h-full bg-gradient-to-br ${layout.gradient} rounded-2xl shadow-xl overflow-hidden flex flex-col p-6`}
@@ -189,24 +168,27 @@ const KitchenLayouts = () => {
 
                       <div className="relative flex flex-col h-full">
                         {/* Header */}
-                        <div className="flex items-center gap-3 mb-3">
+                        <div className="flex items-center gap-3 mb-4">
                           <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
                             <span className="text-white">{layout.icon}</span>
                           </div>
-                          <h3 className="text-base sm:text-lg font-black text-white leading-tight">
+                          <h3 className="text-lg sm:text-xl font-black text-white leading-tight">
                             {layout.name}
                           </h3>
                         </div>
 
                         {/* Description */}
-                        <p className="text-white/90 text-xs sm:text-sm leading-relaxed flex-1">
+                        <p className="text-white/95 text-xs sm:text-sm leading-relaxed flex-1">
                           {layout.description}
                         </p>
 
                         {/* Bottom accent */}
-                        <div className="flex items-center gap-2 mt-3">
+                        <div className="flex items-center gap-2 mt-4">
                           <div className="h-0.5 w-8 rounded-full bg-white/60"></div>
                           <div className="h-0.5 w-4 rounded-full bg-white/40"></div>
+                          <span className="text-white/70 text-xs ml-auto">
+                            Back to image
+                          </span>
                         </div>
                       </div>
                     </div>

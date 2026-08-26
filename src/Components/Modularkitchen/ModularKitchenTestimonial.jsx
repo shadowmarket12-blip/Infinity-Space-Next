@@ -72,7 +72,7 @@ const ModularKitchenTestimonial = () => {
           {/* Section Header */}
           <div className="max-w-7xl mx-auto mb-12 lg:mb-16">
             <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-4 leading-tight">
+              <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
                 What Our <span className="text-green-700">Clients Say</span>
               </h2>
               <div className="flex items-center gap-3 justify-center mt-4">

@@ -195,7 +195,7 @@ const ModularKitchenWhyUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <h2 className="mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[55px]">
+          <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.5] text-black sm:text-[32px] lg:text-[40px]">
             Why Homeowners Choose Infinity{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-green-700">

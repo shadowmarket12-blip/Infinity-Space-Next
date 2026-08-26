@@ -56,7 +56,7 @@ const ModularKitchenCover = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 sm:py-20 lg:py-28 overflow-hidden "
+      className="relative py-16 sm:py-20 lg:py-10 overflow-hidden "
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]"></div>
@@ -69,7 +69,7 @@ const ModularKitchenCover = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <h2 className="text-[20px] font-black leading-[1.15] text-black sm:text-[42px] lg:text-[50px]">
+          <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
             What Our Modular Kitchen Design
             <span className="relative inline-block">
               <span className="relative z-10 text-green-700">
@@ -160,26 +160,26 @@ const ModularKitchenCover = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 sm:mt-16 lg:mt-20 max-w-3xl mx-auto"
+          className="mt-10 sm:mt-12 lg:mt-14 max-w-2xl mx-auto"
         >
-          <div className="relative bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/50 border-2 border-emerald-200/50 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 lg:p-10 overflow-hidden group shadow-xl shadow-emerald-500/5">
+          <div className="relative bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/50 border border-emerald-200/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 overflow-hidden group shadow-lg shadow-emerald-500/5">
             {/* Background decorations */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-400/5 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-400/5 rounded-full blur-3xl"></div>
+            <div className="absolute -top-16 -right-16 w-32 h-32 bg-emerald-400/5 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-teal-400/5 rounded-full blur-2xl"></div>
 
             {/* Animated rings */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-emerald-300/20 rounded-full animate-pulse"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-emerald-300/10 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 border border-emerald-300/20 rounded-full animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 border border-emerald-300/10 rounded-full animate-pulse delay-500"></div>
 
-            <div className="relative flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <div className="relative flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
               <div className="flex-shrink-0">
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 1 }}
-                  className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-500/20 rotate-3"
+                  className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-md shadow-emerald-500/20 rotate-3"
                 >
                   <svg
-                    className="w-8 h-8 sm:w-10 sm:h-10 text-white"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -194,18 +194,18 @@ const ModularKitchenCover = () => {
                 </motion.div>
               </div>
               <div className="text-center sm:text-left">
-                <h4 className="text-stone-900 font-bold text-base sm:text-lg lg:text-xl mb-2">
+                <h4 className="text-stone-900 font-bold text-xs sm:text-sm lg:text-base mb-1.5">
                   One Complete Kitchen Package
                 </h4>
-                <p className="text-stone-600 text-xs sm:text-sm lg:text-base font-medium leading-relaxed">
+                <p className="text-stone-600 text-[11px] sm:text-xs lg:text-sm font-medium leading-relaxed">
                   Material standard: we use BWP Grade 710 plywood as the
                   substrate on every kitchen we build. It is moisture-proof and
                   termite-resistant. We specify the grade in every quotation so
                   you can verify it independently.
                   {/* <span className="font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">
-                    Free 3D visualisation is included as standard on every
-                    modular kitchen project.
-                  </span> */}
+            Free 3D visualisation is included as standard on every
+            modular kitchen project.
+          </span> */}
                 </p>
               </div>
             </div>

@@ -118,7 +118,7 @@ const ModularKitchenPricing = () => {
         >
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <h2 className="mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[50px]">
+            <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
               Modular Kitchen Design{" "}
               <span className="text-green-700">
                 Cost in Bhubaneswar — 2026 Pricing Guide

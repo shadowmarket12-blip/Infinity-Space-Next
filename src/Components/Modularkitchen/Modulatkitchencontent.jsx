@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ModularKitchenContent = () => {
   return (
-    <section className="relative py-16 lg:py-24 overflow-hidden">
+    <section className="relative py-16 lg:py-10 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Content Section */}
         <motion.div
