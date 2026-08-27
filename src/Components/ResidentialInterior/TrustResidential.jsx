@@ -63,21 +63,21 @@ const StatCard = ({ icon, value, suffix, label, delay }) => {
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
       className="relative group"
     >
-      <div className="relative rounded-3xl p-6 sm:p-8 shadow-lg shadow-stone-900/5 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 border border-stone-100 hover:border-amber-200/50">
+      <div className="relative rounded-3xl p-4 sm:p-5 md:p-6 shadow-lg shadow-stone-900/5 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 border border-stone-100 hover:border-amber-200/50">
         {/* Icon */}
-        <div className="relative mb-4 sm:mb-6"></div>
+        <div className="relative mb-3 sm:mb-4"></div>
 
         {/* Counter Value */}
         <div className="relative">
-          <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-800 tracking-tight mb-2">
+          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-stone-800 tracking-tight mb-1 sm:mb-2">
             <Counter end={parseInt(value)} suffix={suffix} />
           </div>
 
           {/* Gradient Line */}
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-green-200 rounded-full mb-3 group-hover:w-20 transition-all duration-500"></div>
+          <div className="w-10 h-0.5 sm:w-12 sm:h-1 bg-gradient-to-r from-green-400 to-green-200 rounded-full mb-2 sm:mb-3 group-hover:w-16 sm:group-hover:w-20 transition-all duration-500"></div>
 
           {/* Label */}
-          <p className="text-sm sm:text-base text-stone-600 font-medium leading-tight">
+          <p className="text-xs sm:text-sm md:text-base text-stone-600 font-medium leading-tight">
             {label}
           </p>
         </div>
@@ -171,13 +171,13 @@ const TrustSection = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-10"
           >
-            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+            <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
               Trusted by Hundreds
               <span className="text-green-700"> of Families </span>
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
             {stats.map((stat, index) => (
               <StatCard
                 key={index}

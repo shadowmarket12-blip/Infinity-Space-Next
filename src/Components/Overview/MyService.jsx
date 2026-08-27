@@ -145,7 +145,7 @@ export default function MyService() {
           </div>
 
           {/* TITLE */}
-          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Our Affordable
             <span className="text-green-700"> Interior Design Services </span>
             in Bhubaneswar
@@ -227,7 +227,7 @@ export default function MyService() {
                 <div className="mb-6 h-[4px] w-20 rounded-full bg-[rgba(1,101,63,1)]" />
 
                 {/* TITLE */}
-                <h3 className="text-3xl font-black leading-tight text-black sm:text-4xl lg:text-5xl">
+                <h3 className="text-3xl font-black leading-tight text-black sm:text-4xl lg:text-3xl">
                   {service.title}
                 </h3>
 

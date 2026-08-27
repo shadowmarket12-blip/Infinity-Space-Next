@@ -24,20 +24,26 @@ const ModularKitchenContent = () => {
                 single day. At Infinity Space, we design modular kitchens that
                 are precise in their layout, honest in their pricing, and built
                 to the material standards that actually hold up over time. As a
-                trusted interior design company in Bhubaneswar, we have
-                delivered modular kitchens across the city — in compact 1BHK
-                apartments, spacious 3BHK flats, and independent villas — each
-                one designed around the specific dimensions, habits, and
+                <Link href="/blogs" className="font-bold">
+                  trusted interior design company in Bhubaneswar,
+                </Link>
+                we have delivered modular kitchens across the city — in compact
+                1BHK apartments, spacious 3BHK flats, and independent villas —
+                each one designed around the specific dimensions, habits, and
                 priorities of the family using it.
               </p>
             </div>
             <div className="bg-gradient-to-r from-amber-50 to-transparent border-l-4 border-green-500 p-5 sm:p-6 rounded-l-2xl my-8">
               <p className="text-sm sm:text-base lg:text-lg text-stone-700 leading-relaxed">
-                If you are worried about your Modular Kitchen Design in
-                Bhubaneswar then stay stress free as every project with Infinity
-                Space starts with a free consultation and a precise site
-                measurement and ends with a 3D-approved kitchen you have signed
-                off on before we make a single cabinet.
+                If you are worried about your {""}
+                <Link href="/" className="font-bold">
+                  Modular Kitchen Design in Bhubaneswar
+                </Link>{" "}
+                {""}
+                then stay stress free as every project with Infinity Space
+                starts with a free consultation and a precise site measurement
+                and ends with a 3D-approved kitchen you have signed off on
+                before we make a single cabinet.
               </p>
             </div>
           </div>

@@ -69,7 +69,7 @@ const OverviewProcess = () => {
           viewport={{ once: true }}
           className="mb-20 text-center"
         >
-          <h2 className="mt-5 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="mt-5 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-5xl">
             Our Interior Design Process
           </h2>
         </motion.div>

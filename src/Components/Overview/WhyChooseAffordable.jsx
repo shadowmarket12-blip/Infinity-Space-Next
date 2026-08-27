@@ -66,7 +66,7 @@ export default function WhyChooseAffordable() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Why Choose Infinity Space for
             <span className="text-green-700"> Affordable Interior Design </span>
             <br className="hidden sm:block" />

@@ -118,7 +118,7 @@ export default function InteriorServicesSection() {
           }}
           className="mx-auto mb-16 max-w-4xl text-center"
         >
-          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Our Interior
             <span className="text-green-700"> Design Services </span>
             <br className="hidden sm:block" />

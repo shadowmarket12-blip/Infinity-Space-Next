@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import Link from "next/link";
 
 const LivingRoomAreas = () => {
   const [showAllAreas, setShowAllAreas] = useState(false);
@@ -82,7 +83,7 @@ const LivingRoomAreas = () => {
           {/* Section Header */}
           <div className="max-w-7xl mx-auto mb-12 lg:mb-16">
             <div className="text-center">
-              <h2 className="mb-4 mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[56px]">
+              <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
                 Living Room Design{""}
                 <span className="text-green-700">
                   {" "}
@@ -91,7 +92,10 @@ const LivingRoomAreas = () => {
               </h2>
               <p className="text-stone-700 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
                 Looking for an interior designer near me in Bhubaneswar? Explore
-                our full range of home interior design in Bhubaneswar services —
+                our full range of
+                <Link href="/services/living-room-interior-design">
+                  home interior design in Bhubaneswar services —
+                </Link>
                 or contact us directly to begin with your living room.
               </p>
             </div>

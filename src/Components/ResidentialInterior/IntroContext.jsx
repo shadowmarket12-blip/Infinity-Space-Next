@@ -21,7 +21,7 @@ const IntroContextSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-3 mb-15 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px] text-center"
+          className="mt-3 mb-15 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px] text-center"
         >
           Why Home Interior Design in{" "}
           <span className="relative inline-block">

@@ -52,7 +52,7 @@ const ServiceAreasSection = () => {
             <div className="p-6 sm:p-8 lg:p-12">
               {/* Header Section */}
               <div className="text-center mb-10 sm:mb-12 lg:mb-14">
-                <h2 className="text-[24px] sm:text-[38px] lg:text-[52px] font-black leading-[1.15] text-stone-900 mb-4 sm:mb-6">
+                <h2 className="text-[24px] sm:text-[38px] lg:text-[46px] font-black leading-[1.15] text-stone-900 mb-4 sm:mb-6">
                   Serving Clients Across{" "}
                   <span className="relative inline-block">
                     <span className="relative z-10 text-green-700">

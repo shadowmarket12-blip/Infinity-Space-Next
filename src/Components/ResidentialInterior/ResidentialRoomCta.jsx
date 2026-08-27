@@ -38,7 +38,7 @@ const ResidentialRoomCta = () => {
             <div className="relative p-6 sm:p-8 lg:p-12">
               {/* Header */}
               <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-                <h2 className="mb-4 mt-4 text-[22px] sm:text-[36px] lg:text-[56px] font-black leading-[1.1] text-stone-900">
+                <h2 className="mb-4 mt-4 text-[22px] sm:text-[36px] lg:text-[40px] font-black leading-[1.1] text-stone-900">
                   Ready to Begin Your Home Interior{" "}
                   <span className="relative inline-block">
                     <span className="relative z-10 text-green-700">

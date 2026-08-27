@@ -50,7 +50,7 @@ const LivingRoomServiceCovers = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-stone-50/50"
+      className="relative py-16 sm:py-12 lg:py-10 overflow-hidden bg-stone-50/50"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -71,7 +71,7 @@ const LivingRoomServiceCovers = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <h2 className="text-[20px] font-black leading-[1.15] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
             What Our Living Room{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-green-700">
@@ -81,9 +81,12 @@ const LivingRoomServiceCovers = () => {
           </h2>
 
           <p className="text-base sm:text-xl text-black font-light leading-relaxed max-w-3xl mx-auto mt-6">
-            Our living room interior design services in Bhubaneswar cover every
-            element of the space — designed together as one unified composition,
-            not assembled as separate purchases:
+            Every
+            <Link href="/overview">
+              modular kitchen interior design in Bhubaneswar,
+            </Link>
+            we deliver is a complete, end-to-end service — not just cabinet
+            supply. Here is what is included as standard on every project
           </p>
         </motion.div>
 

@@ -54,7 +54,7 @@ export default function AffordableInterior() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
               Cost-Effective Interior Design Is
               <span className="text-green-700"> About Smart Planning</span> -
               Not Compromising Quality

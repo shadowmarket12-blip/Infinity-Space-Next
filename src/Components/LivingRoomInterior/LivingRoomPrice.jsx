@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const LivingPricing = () => {
   const [activePricingTab, setActivePricingTab] = useState(
@@ -120,16 +121,20 @@ const LivingPricing = () => {
         >
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <h2 className="mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[50px]">
+            <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
               Living Room Interior Design{" "}
               <span className="text-green-700">
                 Cost in Bhubaneswar 2026 Guide
               </span>
             </h2>
             <p className="text-stone-700 mt-3 lg:mt-4 leading-relaxed text-sm sm:text-base">
-              Costs depend on room size, material choices, and scope of elements
-              included. Here is our transparent pricing reference for{" "}
-              <b>Bhubaneswar in 2026:</b>
+              So the
+              <Link href="/services/residential-interior-design">
+                Cost of Modular Kitchen Design In Bhubaneswar
+              </Link>
+              vary based on layout size, shutter finish, hardware brand, and
+              countertop choice. Here is a{" "}
+              <b>transparent reference to help you plan</b>
             </p>
           </div>
 

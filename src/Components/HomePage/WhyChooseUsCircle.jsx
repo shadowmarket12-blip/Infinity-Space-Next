@@ -71,7 +71,7 @@ export default function WhyChooseUsSection() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Why Infinity Space is a Preferred
             <span className="text-green-700"> Interior Design Company </span>
             <br className="hidden sm:block" />

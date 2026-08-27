@@ -144,7 +144,7 @@ const ServiceAreasTestimonials = () => {
           {/* Section Header - CENTERED */}
           <div className="max-w-7xl mx-auto mb-12 lg:mb-16">
             <div className="text-center">
-              <h2 className="mb-4 mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[56px]">
+              <h2 className="mb-4 mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[40px]">
                 Home Interior Design Services Across Bhubaneswar
                 <span className="text-green-700"> All Localities Covered</span>
               </h2>

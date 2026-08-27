@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const ModularKitchenPricing = () => {
   const [activePricingTab, setActivePricingTab] = useState("Straight Kitchen");
@@ -125,9 +126,13 @@ const ModularKitchenPricing = () => {
               </span>
             </h2>
             <p className="text-stone-700 mt-3 lg:mt-4 leading-relaxed text-sm sm:text-base">
-              So the Cost of Modular Kitchen Design In Bhubaneswar vary based on
-              layout size, shutter finish, hardware brand, and countertop
-              choice. Here is a transparent reference to help you plan:
+              So the {""}
+              <Link href="/services/residential-interior-design">
+                Cost of Modular Kitchen Design In Bhubaneswar
+              </Link>
+              vary based on layout size, shutter finish, hardware brand, and
+              countertop choice. Here is a transparent reference to help you
+              plan:
             </p>
           </div>
 

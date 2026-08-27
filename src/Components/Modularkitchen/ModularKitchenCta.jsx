@@ -261,13 +261,13 @@ const ModularKitchenCta = () => {
                 className="text-center"
               >
                 <Link href="/contact" passHref>
-                  <div className="group relative inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-green-600 hover:bg-green-700 text-white font-bold text-sm sm:text-base rounded-full shadow-xl shadow-green-500/20 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center cursor-pointer">
+                  <div className="group relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 bg-green-600 hover:bg-green-700 text-white font-bold text-xs sm:text-sm md:text-base rounded-full shadow-xl shadow-green-500/20 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 overflow-hidden w-full sm:w-auto justify-center cursor-pointer">
                     {/* Hover shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                    <span className="relative z-10 flex items-center gap-2 sm:gap-3">
+                    <span className="relative z-10 flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center">
                       <svg
-                        className="w-5 h-5 flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -279,11 +279,17 @@ const ModularKitchenCta = () => {
                           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                         />
                       </svg>
-                      <span className="whitespace-nowrap">
-                        Book Your Free Consultation — Response Within 24 Hours
+                      <span className="whitespace-nowrap text-center">
+                        <span className="block sm:inline">
+                          Book Your Free Consultation
+                        </span>
+                        <span className="hidden sm:inline"> — </span>
+                        <span className="block sm:inline text-xs sm:text-sm md:text-base">
+                          Response Within 24 Hours
+                        </span>
                       </span>
                       <svg
-                        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

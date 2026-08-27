@@ -160,7 +160,7 @@ const WhyChooseUsDesignStyles = () => {
           {/* Section Header - CENTERED */}
           <div className="max-w-6xl mx-auto mb-12 lg:mb-16">
             <div className="text-center">
-              <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+              <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[40px]">
                 Why Bhubaneswar Homeowners Choose Infinity
                 <span className="text-green-700">
                   {" "}
@@ -274,7 +274,7 @@ const WhyChooseUsDesignStyles = () => {
           {/* Section Header - CENTERED */}
           <div className="max-w-6xl mx-auto mb-12 lg:mb-16">
             <div className="text-center">
-              <h2 className="mt-4 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+              <h2 className="mt-4 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[40px]">
                 Styles We Specialise In For Every{" "}
                 <span className="text-green-700">Bhubaneswar Home</span>
               </h2>

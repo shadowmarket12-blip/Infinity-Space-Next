@@ -331,7 +331,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto mb-14 lg:mb-20"
         >
-          <h2 className="text-[20px] font-black leading-[1.15] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="text-[20px] font-black leading-[1.15] text-black sm:text-[42px] lg:text-[40px]">
             Our Home Interior Design Services in Bhubaneswar —
             <span className="block mt-3 sm:mt-4 text-green-700">
               Every Room, Every Style, Every Budget

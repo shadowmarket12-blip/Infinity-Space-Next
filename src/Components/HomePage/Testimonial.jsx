@@ -29,10 +29,6 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32">
-      {/* BACKGROUND GLOW */}
-      <div className="absolute left-[-100px] top-[-100px] h-[300px] w-[300px] rounded-full bg-[rgba(1,101,63,0.08)] blur-[120px]" />
-      <div className="absolute bottom-[-120px] right-[-120px] h-[320px] w-[320px] rounded-full bg-[rgba(1,101,63,0.08)] blur-[120px]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-5">
         {/* HEADING */}
         <motion.div
@@ -42,7 +38,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <h2 className="mt-5 text-2xl font-black leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h2 className="mt-5 text-2xl font-black leading-tight text-gray-900 sm:text-5xl lg:text-5xl">
             What Clients Say About Infinity Space
           </h2>
         </motion.div>

@@ -50,7 +50,7 @@ export default function PromoVideoSection() {
           }}
         >
           {/* HEADING */}
-          <h2 className="mt-6 text-[30px] font-black leading-[1.1] text-white sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[30px] font-black leading-[1.1] text-white sm:text-[42px] lg:text-[46px]">
             Interior Designers in Bhubaneswar for Modern Homes & Workspaces
           </h2>
 

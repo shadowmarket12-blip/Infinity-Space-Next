@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import Link from "next/link";
 
 const ModularKitchenAreas = () => {
   const [showAllAreas, setShowAllAreas] = useState(false);
@@ -90,7 +91,10 @@ const ModularKitchenAreas = () => {
                 <span className="text-green-700"> Across Bhubaneswar</span>
               </h2>
               <p className="text-stone-700 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
-                View our full range of home interior design in Bhubaneswar
+                View our full range of {""}
+                <Link href="/services/overview">
+                  home interior design in Bhubaneswar {""}
+                </Link>
                 services — or contact us directly to begin your kitchen project.
               </p>
             </div>

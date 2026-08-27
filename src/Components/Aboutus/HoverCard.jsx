@@ -96,7 +96,7 @@ export default function ServicesShowcase() {
           style={{ y: titleY }}
           className="mb-12 text-center lg:mb-20"
         >
-          <h2 className="mt-6 text-[25px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[25px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Our
             <span className="text-green-700"> Interior Design </span>
             Expertise

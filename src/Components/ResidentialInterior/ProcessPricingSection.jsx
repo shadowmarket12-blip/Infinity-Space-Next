@@ -213,7 +213,7 @@ const ProcessPricingSection = () => {
         >
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[40px]">
               How We Work — Our Home Interior{" "}
               <span className="text-green-700">
                 Design Process in Bhubaneswar
@@ -348,7 +348,7 @@ const ProcessPricingSection = () => {
         >
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <h2 className="mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[56px]">
+            <h2 className="mt-6 text-[20px] font-black leading-[1.2] text-black sm:text-[42px] lg:text-[40px]">
               Home Interior Design{" "}
               <span className="text-green-700">Cost in Bhubaneswar</span>
             </h2>

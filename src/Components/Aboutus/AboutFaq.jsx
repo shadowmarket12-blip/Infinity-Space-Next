@@ -93,7 +93,7 @@ export default function AboutFAQ() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-10">
         {/* BACKGROUND */}
         {/* Gradient Glow */}
         <div className="absolute inset-0 overflow-hidden">
@@ -164,7 +164,7 @@ export default function AboutFAQ() {
               Frequently Asked Questions
             </div>
 
-            <h2 className="mt-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="mt-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-4xl">
               Your Questions,{" "}
               <span className="text-[rgba(1,101,63,1)]">Answered</span>
             </h2>

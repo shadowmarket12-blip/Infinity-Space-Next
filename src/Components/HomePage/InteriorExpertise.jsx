@@ -52,7 +52,7 @@ export default function InteriorExpertiseSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* HEADING */}
         <div className="mx-auto mb-16 max-w-5xl text-center">
-          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
             Trusted Interior Designers in
             <span className="text-green-700"> Bhubaneswar for </span>
             <br className="hidden sm:block" />

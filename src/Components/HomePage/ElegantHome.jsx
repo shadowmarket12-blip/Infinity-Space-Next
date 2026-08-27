@@ -61,7 +61,7 @@ export default function ElegantHome() {
             </div>
 
             {/* HEADING */}
-            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
+            <h2 className="mt-6 text-[20px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]">
               Creating Elegant, Practical &
               <span className="text-green-700"> Space-Efficient </span>
               <br className="hidden sm:block" />

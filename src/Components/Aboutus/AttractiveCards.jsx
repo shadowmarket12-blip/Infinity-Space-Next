@@ -237,7 +237,7 @@ export default function WhyChooseInfinitySpace() {
               duration: 0.6,
               ease: "easeOut",
             }}
-            className="mt-6 text-[25px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[56px]"
+            className="mt-6 text-[25px] font-black leading-[1.1] text-black sm:text-[42px] lg:text-[46px]"
           >
             Why Clients Choose
             <span className="text-green-700"> Infinity Space</span>
