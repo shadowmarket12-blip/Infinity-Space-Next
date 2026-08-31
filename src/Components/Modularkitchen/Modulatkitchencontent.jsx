@@ -23,7 +23,7 @@ const ModularKitchenContent = () => {
                 A well-designed kitchen changes how you feel about cooking every
                 single day. At Infinity Space, we design modular kitchens that
                 are precise in their layout, honest in their pricing, and built
-                to the material standards that actually hold up over time. As a
+                to the material standards that actually hold up over time. As a {''}
                 <Link href="/blogs" className="font-bold">
                   trusted interior design company in Bhubaneswar,
                 </Link>

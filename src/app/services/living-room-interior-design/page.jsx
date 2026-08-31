@@ -23,7 +23,7 @@ export const metadata = {
     description:
       "Searching for the best interior designers in Bhubaneswar for your living room? Get custom TV units, feature walls, false ceilings, Vastu-compliant layouts, free 3D designs, and a FREE consultation with Infinity Space.",
     type: "website",
-    url: "https://infinityspaceodisha.com/services/residential-interior-design",
+    url: "https://infinityspaceodisha.com/services/living-room-interior-design",
     siteName: "Infinity Space Odisha",
   },
   twitter: {
@@ -35,7 +35,7 @@ export const metadata = {
   },
   alternates: {
     canonical:
-      "https://infinityspaceodisha.com/services/residential-interior-design",
+      "https://infinityspaceodisha.com/services/living-room-interior-design",
   },
 };
 
@@ -134,27 +134,27 @@ export default function LivingRoomInterior() {
         "@type": "ListItem",
         position: 3,
         name: "Living Room Interior Design in Bhubaneswar",
-        item: "https://infinityspaceodisha.com/home-interior-design-in-bhubaneswar",
+        item: "https://infinityspaceodisha.com/services/living-room-interior-design",
       },
     ],
   };
 
   // AggregateRating Schema
-  const aggregateRatingSchema = {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    itemReviewed: {
-      "@type": "Service",
-      name: "Living Room Interior Design in Bhubaneswar",
-      provider: {
-        "@type": "LocalBusiness",
-        name: "Infinity Space Odisha",
-      },
-    },
-    ratingValue: "4.8",
-    bestRating: "5",
-    ratingCount: "200",
-  };
+  // const aggregateRatingSchema = {
+  //   "@context": "https://schema.org",
+  //   "@type": "AggregateRating",
+  //   itemReviewed: {
+  //     "@type": "Service",
+  //     name: "Living Room Interior Design in Bhubaneswar",
+  //     provider: {
+  //       "@type": "LocalBusiness",
+  //       name: "Infinity Space Odisha",
+  //     },
+  //   },
+  //   ratingValue: "4.8",
+  //   bestRating: "5",
+  //   ratingCount: "200",
+  // };
 
   return (
     <>
@@ -177,12 +177,12 @@ export default function LivingRoomInterior() {
       />
 
       {/* Schema Markup: AggregateRating */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(aggregateRatingSchema),
         }}
-      />
+      /> */}
 
       <main className="overflow-hidden text-black">
         <LivingRoomHero />

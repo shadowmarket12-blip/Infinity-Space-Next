@@ -60,7 +60,7 @@ export default function InteriorExpertiseSection() {
           </h2>
 
           <p className="text-black mt-10">
-            Infinity Space is a{" "}
+            Infinity Space is a{" "} 
             <Link
               href="/about-us"
               className="font-bold hover:text-green-700 transition-colors"

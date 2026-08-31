@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Get modular kitchen design in Bhubaneswar with smart layouts, premium materials, transparent pricing, free 3D designs, and 15–25 day delivery with Infinity Space.",
     type: "website",
-    url: "https://infinityspaceodisha.com/modular-kitchen-design-in-bhubaneswar",
+    url: "https://infinityspaceodisha.com/services/modular-kitchen-design",
     siteName: "Infinity Space Odisha",
   },
   twitter: {
@@ -36,7 +36,7 @@ export const metadata = {
   },
   alternates: {
     canonical:
-      "https://infinityspaceodisha.com/modular-kitchen-design-in-bhubaneswar",
+      "https://infinityspaceodisha.com/services/modular-kitchen-design",
   },
 };
 
@@ -135,27 +135,27 @@ export default function ResidentialInterior() {
         "@type": "ListItem",
         position: 3,
         name: "Modular Kitchen Design in Bhubaneswar",
-        item: "https://infinityspaceodisha.com/modular-kitchen-design-in-bhubaneswar",
+        item: "https://infinityspaceodisha.com/services/modular-kitchen-design",
       },
     ],
   };
 
   // AggregateRating Schema
-  const aggregateRatingSchema = {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    itemReviewed: {
-      "@type": "Service",
-      name: "Modular Kitchen Design in Bhubaneswar",
-      provider: {
-        "@type": "LocalBusiness",
-        name: "Infinity Space Odisha",
-      },
-    },
-    ratingValue: "4.8",
-    bestRating: "5",
-    ratingCount: "200",
-  };
+  // const aggregateRatingSchema = {
+  //   "@context": "https://schema.org",
+  //   "@type": "AggregateRating",
+  //   itemReviewed: {
+  //     "@type": "Service",
+  //     name: "Modular Kitchen Design in Bhubaneswar",
+  //     provider: {
+  //       "@type": "LocalBusiness",
+  //       name: "Infinity Space Odisha",
+  //     },
+  //   },
+  //   ratingValue: "4.8",
+  //   bestRating: "5",
+  //   ratingCount: "200",
+  // };
 
   return (
     <>
@@ -178,12 +178,12 @@ export default function ResidentialInterior() {
       />
 
       {/* Schema Markup: AggregateRating */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(aggregateRatingSchema),
         }}
-      />
+      /> */}
 
       <main className="overflow-hidden text-black">
         <ModularKitchenHero />
