@@ -81,12 +81,12 @@ const LivingRoomServiceCovers = () => {
           </h2>
 
           <p className="text-base sm:text-xl text-black font-light leading-relaxed max-w-3xl mx-auto mt-6">
-            Every
-            <Link href="/overview">
-              modular kitchen interior design in Bhubaneswar,
+            Our {""}
+            <Link href="/services/residential-interior-design">
+              living room interior design services in Bhubaneswar {""}
             </Link>
-            we deliver is a complete, end-to-end service — not just cabinet
-            supply. Here is what is included as standard on every project
+            cover every element of the space — designed together as one unified
+            composition, not assembled as separate purchases:
           </p>
         </motion.div>
 

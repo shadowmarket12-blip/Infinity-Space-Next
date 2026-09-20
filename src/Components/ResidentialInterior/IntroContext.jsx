@@ -89,7 +89,7 @@ const IntroContextSection = () => {
                 Infinity Space Odisha
               </span>
               . As a{" "}
-              <Link href="/services/overview" className="font-bold text-black">
+              <Link href="/" className="font-bold text-black">
                 trusted interior design company in Bhubaneswar
               </Link>{" "}
               with roots in this city, we bring every one of these insights to

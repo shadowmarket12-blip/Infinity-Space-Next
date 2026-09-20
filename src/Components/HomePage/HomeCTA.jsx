@@ -27,18 +27,18 @@ export default function HomeCTA() {
             Transform your home, office, or commercial space with Infinity
             Space. From{" "}
             <Link
-              href="/services#modular-kitchen"
+              href="/services/modular-kitchen-design"
               className="text-[rgba(1,101,63,1)] hover:underline"
             >
               modular kitchens
             </Link>{" "}
             and{" "}
-            <Link
+            {/* <Link
               href="/services"
               className="text-[rgba(1,101,63,1)] hover:underline"
-            >
-              wardrobe designs to office setup
-            </Link>{" "}
+            > */}
+            wardrobe designs to office setup
+            {/* </Link>{" "} */}
             interiors and luxury living spaces, we create interiors that combine
             functionality, comfort, and modern aesthetics.
           </p>

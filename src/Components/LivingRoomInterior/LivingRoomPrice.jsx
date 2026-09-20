@@ -128,13 +128,11 @@ const LivingPricing = () => {
               </span>
             </h2>
             <p className="text-stone-700 mt-3 lg:mt-4 leading-relaxed text-sm sm:text-base">
-              So the
+              Costs depend on room size,
               <Link href="/services/residential-interior-design">
-                Cost of Modular Kitchen Design In Bhubaneswar
+                material choices, and scope of elements included. Here is our
+                transparent pricing reference for Bhubaneswar in 2026
               </Link>
-              vary based on layout size, shutter finish, hardware brand, and
-              countertop choice. Here is a{" "}
-              <b>transparent reference to help you plan</b>
             </p>
           </div>
 

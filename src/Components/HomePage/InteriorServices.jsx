@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
     title: "Residential Interior Design",
     image: "/ResidentialInteriorDesign.webp",
+    link: "/services/residential-interior-design",
     description:
       "We create elegant and functional residential interiors designed for comfort, aesthetics, smart storage, and modern living.",
     points: [
@@ -21,6 +23,7 @@ const services = [
   {
     title: "Modular Kitchen Interiors",
     image: "/ModularKitchenInteriors.webp",
+    link: "/services/modular-kitchen-design",
     description:
       "Our modular kitchen interiors combine efficient layouts, premium finishes, and optimized storage solutions for contemporary homes.",
     points: [
@@ -35,6 +38,7 @@ const services = [
   {
     title: "Commercial & Office Interiors",
     image: "/Commercial.webp",
+    link: "/commercial-office-interiors",
     description:
       "We design productive and visually appealing commercial interiors focused on functionality, branding, and modern workspace concepts.",
     points: [
@@ -49,6 +53,7 @@ const services = [
   {
     title: "Customized Furniture Solutions",
     image: "/Customized Furniture Solutions.webp",
+    link: "/customized-furniture-solutions",
     description:
       "Customized furniture solutions designed according to your interior style, storage needs, and space requirements.",
     points: [
@@ -63,6 +68,7 @@ const services = [
   {
     title: "False Ceiling & Decorative Design",
     image: "/False-Ceiling-Decorative-Design.webp",
+    link: "/false-ceiling-decorative-design",
     description:
       "Enhance your interiors with modern ceiling concepts, decorative lighting, elegant wall finishes, and contemporary decorative elements.",
     points: [
@@ -77,6 +83,7 @@ const services = [
   {
     title: "Turnkey Interior Solutions",
     image: "/Turnkey Interior Solutions.webp",
+    link: "/turnkey-interior-solutions",
     description:
       "Complete turnkey interior solutions covering design, planning, execution, installation, and finishing under one roof.",
     points: [
@@ -150,8 +157,9 @@ export default function InteriorServicesSection() {
               }`}
             >
               {/* IMAGE */}
-              <div
-                className={`relative overflow-hidden ${
+              <Link
+                href={service.link}
+                className={`relative block overflow-hidden ${
                   index % 2 === 0 ? "lg:order-1" : "lg:order-2"
                 }`}
               >
@@ -166,7 +174,7 @@ export default function InteriorServicesSection() {
 
                 {/* OVERLAY */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-              </div>
+              </Link>
 
               {/* CONTENT */}
               <div
@@ -178,9 +186,14 @@ export default function InteriorServicesSection() {
                 <div className="absolute right-[-60px] top-[-60px] h-44 w-44 rounded-full bg-[rgba(1,101,63,0.08)] blur-[90px]" />
 
                 {/* TITLE */}
-                <h3 className="relative z-10 text-2xl font-black leading-tight text-black sm:text-4xl">
-                  {service.title}
-                </h3>
+                <Link
+                  href={service.link}
+                  className="relative z-10 inline-block"
+                >
+                  <h3 className="text-2xl font-black leading-tight text-black transition-colors duration-300 hover:text-green-700 sm:text-4xl">
+                    {service.title}
+                  </h3>
+                </Link>
 
                 {/* DESCRIPTION */}
                 <p className="relative z-10 mt-5 text-[13px] leading-8 text-gray-600 sm:text-[16px]">

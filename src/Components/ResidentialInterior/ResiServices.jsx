@@ -61,248 +61,248 @@ const ServicesSection = () => {
         },
       ],
     },
-    {
-      id: 2,
-      title: "Living Room Interior Design",
-      subtitle: "in Bhubaneswar",
-      image: residentialImages.livingRoom,
-      category: "Living Spaces",
-      description:
-        "Your living room is the first impression of your home — the space where family gathers and guests form their opinion of your taste. Our living room interior designers in Bhubaneswar create spaces that are open, bright, and deeply personal. We balance aesthetics with practicality, designing rooms that are as functional for a weeknight family dinner as they are impressive for Dussehra celebrations.",
-      highlight:
-        "Functional for a weeknight family dinner, impressive for Dussehra celebrations",
-      // 👇 This is what makes the phrase bold + clickable inside the description above.
-      // Replace href with your actual Living Room service page route.
-      link: {
-        text: "Our living room interior designers in Bhubaneswar",
-        href: "/services/living-room-interior-design",
-      },
-      features: [
-        {
-          title: "Feature Walls",
-          desc: "Wooden panelling, textured plaster, natural stone cladding, or Pipli-inspired motif tiles",
-        },
-        {
-          title: "TV Unit Design",
-          desc: "TV unit design with concealed wiring, integrated storage, and backlit niches",
-        },
-        {
-          title: "False Ceiling & Lighting",
-          desc: "False ceiling with layered cove, spot, and pendant lighting systems",
-        },
-        {
-          title: "Furniture Layout",
-          desc: "Furniture layout optimised for natural airflow — critical in Bhubaneswar's warm climate",
-        },
-        {
-          title: "Styling & Coordination",
-          desc: "Sofa, rug, cushion, and curtain coordination to complete the design story",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Bedroom Interior Design",
-      subtitle: "in Bhubaneswar",
-      image: residentialImages.bedroom,
-      category: "Private Spaces",
-      description:
-        "Sleep, rest, and privacy are non-negotiable — and your bedroom should support all three without compromise. Our bedroom interior design in Bhubaneswar creates restful sanctuaries for every family member, from the master suite to the children's room. We specialise in making bedrooms feel generous even when square footage is limited, using design techniques that open up space visually while filling it with smart, concealed storage.",
-      highlight: "Bedrooms feel generous even when square footage is limited",
-      features: [
-        {
-          title: "Custom Wardrobes",
-          desc: "Custom wardrobe design: sliding shutters, swing doors, internal organiser systems, and full-length mirrors",
-        },
-        {
-          title: "Headboard & Bed-Back Panel",
-          desc: "Headboard and bed-back panel design in laminate, fabric, leatherette, or solid wood finish",
-        },
-        {
-          title: "Under-Bed Storage",
-          desc: "Under-bed storage drawer systems — essential space-saving in Bhubaneswar apartments",
-        },
-        {
-          title: "Ambient Lighting",
-          desc: "False ceiling with ambient and adjustable bedside lighting circuits",
-        },
-        {
-          title: "Children's Rooms",
-          desc: "Children's bedroom design: study zones, bunk configurations, and bright, safe material choices",
-        },
-        {
-          title: "Guest & Family Rooms",
-          desc: "Guest bedroom and daughter/son's room design as part of full-home projects",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Modular Kitchen Design",
-      subtitle: "in Bhubaneswar",
-      image: residentialImages.kitchen,
-      category: "Culinary Spaces",
-      description:
-        "The kitchen is where Odia homes come most alive — the fragrance of Pakhala, the sound of morning chai, the rhythm of daily family life. Our modular kitchen designs in Bhubaneswar honour that centrality by creating kitchens that are as efficient as they are beautiful. We design for the way you actually cook: Indian cooking generates heat, oil, and steam at levels that most European kitchen systems are not built for — our material and ventilation specifications account for this from the start.",
-      highlight:
-        "Material and ventilation specifications built to handle Indian cooking, not just European kitchen systems",
-      features: [
-        {
-          title: "5 Layout Options",
-          desc: "L-shaped, straight, parallel, U-shaped, and island kitchen configurations",
-        },
-        {
-          title: "Cabinet Materials",
-          desc: "Cabinet materials: laminate, acrylic, membrane, and veneer finish options at every budget tier",
-        },
-        {
-          title: "Premium Hardware",
-          desc: "Hardware: soft-close hinges, Haff-channel drawers, magic-corner units, pull-out baskets",
-        },
-        {
-          title: "Countertops",
-          desc: "Countertops: granite, quartz, and high-pressure laminate options with waterproof edge-banding",
-        },
-        {
-          title: "Chimney & Plumbing",
-          desc: "Chimney placement, sink positioning, and plumbing coordination",
-        },
-        {
-          title: "Moisture-Resistant",
-          desc: "Anti-termite and moisture-resistant finishes — essential for Bhubaneswar's humidity",
-        },
-        {
-          title: "Vastu Compliant",
-          desc: "Vastu-based kitchen placement available (southeast-facing, as recommended)",
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "False Ceiling Design",
-      subtitle: "in Bhubaneswar",
-      image: residentialImages.falseCeiling,
-      category: "Architectural Details",
-      description:
-        "Few upgrades transform a room as dramatically as a well-designed false ceiling. It adds architectural definition, conceals electrical wiring and split-AC ducts, and creates the layered lighting ambience that distinguishes a professionally designed home from a plain one. Infinity Space Odisha installs all major false ceiling systems across residential projects in Bhubaneswar.",
-      highlight:
-        "All major false ceiling systems installed across residential projects in Bhubaneswar",
-      features: [
-        {
-          title: "POP False Ceiling",
-          desc: "Classic, seamless, and paint-ready — starting from Rs. 120/sq.ft",
-        },
-        {
-          title: "Gypsum Board System",
-          desc: "Lightweight, precision-fitted, ideal for living rooms and bedrooms — from Rs. 75/sq.ft",
-        },
-        {
-          title: "PVC Panel Ceiling",
-          desc: "PVC panel ceiling with integrated LED strips — low-maintenance and moisture-resistant for kitchens and bathrooms",
-        },
-        {
-          title: "Designer Cove Ceilings",
-          desc: "Designer cove ceilings with recessed, down-light, and RGB backlight combinations",
-        },
-        {
-          title: "WPC & Wooden Ceilings",
-          desc: "WPC and wooden false ceilings for study rooms, entertainment rooms, and premium bedrooms",
-        },
-      ],
-    },
-    {
-      id: 6,
-      title: "Bathroom & Toilet Interior Design",
-      subtitle: "",
-      image: residentialImages.bathroom,
-      category: "Wet Areas",
-      description:
-        "Bathrooms are the most-used rooms in any home and the most neglected in most interior plans. At Infinity Space Odisha, we give bathrooms the design attention they deserve — creating spaces that are hygienic, practical, and genuinely pleasant to spend time in. From a compact toilet in a 1BHK to a master en-suite in a luxury villa, every bathroom we design is functional first and beautiful always.",
-      highlight:
-        "Every bathroom we design is functional first and beautiful always",
-      features: [
-        {
-          title: "Tile Selection & Layout",
-          desc: "Tile selection and layout design (floor, wall, accent patterns)",
-        },
-        {
-          title: "Sanitary Fittings",
-          desc: "Sanitary fitting recommendations (EWC, basin, shower, storage units)",
-        },
-        {
-          title: "Mirror & Vanity Design",
-          desc: "Mirror, vanity unit, and under-basin cabinet design",
-        },
-        {
-          title: "Waterproofing",
-          desc: "Waterproofing consultation and material specification",
-        },
-        {
-          title: "Modular Accessories",
-          desc: "Modular bathroom accessories and towel rail coordination",
-        },
-      ],
-    },
-    {
-      id: 7,
-      title: "Pooja Room Design & Foyer Area Design",
-      subtitle: "",
-      image: residentialImages.poojaFoyer,
-      category: "Cultural Spaces",
-      description:
-        "Two spaces that define an Odia home more than any other: the foyer that delivers the first impression, and the pooja room that anchors the home's spiritual identity. Our home interior designers in Bhubaneswar treat both with the cultural sensitivity and design skill they command.",
-      highlight: "Cultural sensitivity and design skill in equal measure",
-      features: [
-        {
-          title: "Foyer Area Design",
-          desc: "Entry foyer with console tables, mirror panels, shoe storage, and a welcoming colour story that sets the tone for the whole home",
-        },
-        {
-          title: "Pooja Room Design",
-          desc: "Traditional mandir units in solid wood or engineered wood, with hand-crafted detailing, brass inlay options, recessed lighting, and vastu-directional placement",
-        },
-        {
-          title: "Pooja Niche Design",
-          desc: "Integrated sacred spaces within living rooms or bedrooms for compact apartments",
-        },
-      ],
-    },
-    {
-      id: 8,
-      title: "Turnkey Home Interior Services",
-      subtitle: "in Bhubaneswar",
-      image: residentialImages.turnkey,
-      category: "Full Service",
-      description:
-        "For clients who want a completely hands-off experience, our turnkey home interior services in Bhubaneswar offer end-to-end project management under a single contract. From the first design concept to the final furnishing installation and handover, Infinity Space Odisha manages everything — design, civil work, carpentry, electrical fittings, painting, procurement, and quality control. You hand us the keys; we hand back a move-in-ready home.",
-      highlight: "You hand us the keys; we hand back a move-in-ready home",
-      features: [
-        {
-          title: "Dedicated Project Manager",
-          desc: "Dedicated project manager as your single point of contact throughout",
-        },
-        {
-          title: "Coordinated Vendor Management",
-          desc: "Coordinated vendor management — no separate carpentry, electrical, or civil contractors for you to manage",
-        },
-        {
-          title: "Weekly Progress Updates",
-          desc: "Weekly progress updates via WhatsApp with site photos",
-        },
-        {
-          title: "Milestone-Based Timelines",
-          desc: "Strict milestone-based timelines — average 2BHK delivery in 35–50 days, 3BHK in 50–75 days",
-        },
-        {
-          title: "Final Quality Walkthrough",
-          desc: "Final quality walkthrough with full snag-resolution before keys are returned",
-        },
-        {
-          title: "Transparent Payment",
-          desc: "Transparent, milestone-linked payment schedule — no upfront lump-sum demands",
-        },
-      ],
-    },
+    // {
+    //   id: 2,
+    //   title: "Living Room Interior Design",
+    //   subtitle: "in Bhubaneswar",
+    //   image: residentialImages.livingRoom,
+    //   category: "Living Spaces",
+    //   description:
+    //     "Your living room is the first impression of your home — the space where family gathers and guests form their opinion of your taste. Our living room interior designers in Bhubaneswar create spaces that are open, bright, and deeply personal. We balance aesthetics with practicality, designing rooms that are as functional for a weeknight family dinner as they are impressive for Dussehra celebrations.",
+    //   highlight:
+    //     "Functional for a weeknight family dinner, impressive for Dussehra celebrations",
+    //   // 👇 This is what makes the phrase bold + clickable inside the description above.
+    //   // Replace href with your actual Living Room service page route.
+    //   link: {
+    //     text: "Our living room interior designers in Bhubaneswar",
+    //     href: "/services/living-room-interior-design",
+    //   },
+    //   features: [
+    //     {
+    //       title: "Feature Walls",
+    //       desc: "Wooden panelling, textured plaster, natural stone cladding, or Pipli-inspired motif tiles",
+    //     },
+    //     {
+    //       title: "TV Unit Design",
+    //       desc: "TV unit design with concealed wiring, integrated storage, and backlit niches",
+    //     },
+    //     {
+    //       title: "False Ceiling & Lighting",
+    //       desc: "False ceiling with layered cove, spot, and pendant lighting systems",
+    //     },
+    //     {
+    //       title: "Furniture Layout",
+    //       desc: "Furniture layout optimised for natural airflow — critical in Bhubaneswar's warm climate",
+    //     },
+    //     {
+    //       title: "Styling & Coordination",
+    //       desc: "Sofa, rug, cushion, and curtain coordination to complete the design story",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 3,
+    //   title: "Bedroom Interior Design",
+    //   subtitle: "in Bhubaneswar",
+    //   image: residentialImages.bedroom,
+    //   category: "Private Spaces",
+    //   description:
+    //     "Sleep, rest, and privacy are non-negotiable — and your bedroom should support all three without compromise. Our bedroom interior design in Bhubaneswar creates restful sanctuaries for every family member, from the master suite to the children's room. We specialise in making bedrooms feel generous even when square footage is limited, using design techniques that open up space visually while filling it with smart, concealed storage.",
+    //   highlight: "Bedrooms feel generous even when square footage is limited",
+    //   features: [
+    //     {
+    //       title: "Custom Wardrobes",
+    //       desc: "Custom wardrobe design: sliding shutters, swing doors, internal organiser systems, and full-length mirrors",
+    //     },
+    //     {
+    //       title: "Headboard & Bed-Back Panel",
+    //       desc: "Headboard and bed-back panel design in laminate, fabric, leatherette, or solid wood finish",
+    //     },
+    //     {
+    //       title: "Under-Bed Storage",
+    //       desc: "Under-bed storage drawer systems — essential space-saving in Bhubaneswar apartments",
+    //     },
+    //     {
+    //       title: "Ambient Lighting",
+    //       desc: "False ceiling with ambient and adjustable bedside lighting circuits",
+    //     },
+    //     {
+    //       title: "Children's Rooms",
+    //       desc: "Children's bedroom design: study zones, bunk configurations, and bright, safe material choices",
+    //     },
+    //     {
+    //       title: "Guest & Family Rooms",
+    //       desc: "Guest bedroom and daughter/son's room design as part of full-home projects",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 4,
+    //   title: "Modular Kitchen Design",
+    //   subtitle: "in Bhubaneswar",
+    //   image: residentialImages.kitchen,
+    //   category: "Culinary Spaces",
+    //   description:
+    //     "The kitchen is where Odia homes come most alive — the fragrance of Pakhala, the sound of morning chai, the rhythm of daily family life. Our modular kitchen designs in Bhubaneswar honour that centrality by creating kitchens that are as efficient as they are beautiful. We design for the way you actually cook: Indian cooking generates heat, oil, and steam at levels that most European kitchen systems are not built for — our material and ventilation specifications account for this from the start.",
+    //   highlight:
+    //     "Material and ventilation specifications built to handle Indian cooking, not just European kitchen systems",
+    //   features: [
+    //     {
+    //       title: "5 Layout Options",
+    //       desc: "L-shaped, straight, parallel, U-shaped, and island kitchen configurations",
+    //     },
+    //     {
+    //       title: "Cabinet Materials",
+    //       desc: "Cabinet materials: laminate, acrylic, membrane, and veneer finish options at every budget tier",
+    //     },
+    //     {
+    //       title: "Premium Hardware",
+    //       desc: "Hardware: soft-close hinges, Haff-channel drawers, magic-corner units, pull-out baskets",
+    //     },
+    //     {
+    //       title: "Countertops",
+    //       desc: "Countertops: granite, quartz, and high-pressure laminate options with waterproof edge-banding",
+    //     },
+    //     {
+    //       title: "Chimney & Plumbing",
+    //       desc: "Chimney placement, sink positioning, and plumbing coordination",
+    //     },
+    //     {
+    //       title: "Moisture-Resistant",
+    //       desc: "Anti-termite and moisture-resistant finishes — essential for Bhubaneswar's humidity",
+    //     },
+    //     {
+    //       title: "Vastu Compliant",
+    //       desc: "Vastu-based kitchen placement available (southeast-facing, as recommended)",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 5,
+    //   title: "False Ceiling Design",
+    //   subtitle: "in Bhubaneswar",
+    //   image: residentialImages.falseCeiling,
+    //   category: "Architectural Details",
+    //   description:
+    //     "Few upgrades transform a room as dramatically as a well-designed false ceiling. It adds architectural definition, conceals electrical wiring and split-AC ducts, and creates the layered lighting ambience that distinguishes a professionally designed home from a plain one. Infinity Space Odisha installs all major false ceiling systems across residential projects in Bhubaneswar.",
+    //   highlight:
+    //     "All major false ceiling systems installed across residential projects in Bhubaneswar",
+    //   features: [
+    //     {
+    //       title: "POP False Ceiling",
+    //       desc: "Classic, seamless, and paint-ready — starting from Rs. 120/sq.ft",
+    //     },
+    //     {
+    //       title: "Gypsum Board System",
+    //       desc: "Lightweight, precision-fitted, ideal for living rooms and bedrooms — from Rs. 75/sq.ft",
+    //     },
+    //     {
+    //       title: "PVC Panel Ceiling",
+    //       desc: "PVC panel ceiling with integrated LED strips — low-maintenance and moisture-resistant for kitchens and bathrooms",
+    //     },
+    //     {
+    //       title: "Designer Cove Ceilings",
+    //       desc: "Designer cove ceilings with recessed, down-light, and RGB backlight combinations",
+    //     },
+    //     {
+    //       title: "WPC & Wooden Ceilings",
+    //       desc: "WPC and wooden false ceilings for study rooms, entertainment rooms, and premium bedrooms",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 6,
+    //   title: "Bathroom & Toilet Interior Design",
+    //   subtitle: "",
+    //   image: residentialImages.bathroom,
+    //   category: "Wet Areas",
+    //   description:
+    //     "Bathrooms are the most-used rooms in any home and the most neglected in most interior plans. At Infinity Space Odisha, we give bathrooms the design attention they deserve — creating spaces that are hygienic, practical, and genuinely pleasant to spend time in. From a compact toilet in a 1BHK to a master en-suite in a luxury villa, every bathroom we design is functional first and beautiful always.",
+    //   highlight:
+    //     "Every bathroom we design is functional first and beautiful always",
+    //   features: [
+    //     {
+    //       title: "Tile Selection & Layout",
+    //       desc: "Tile selection and layout design (floor, wall, accent patterns)",
+    //     },
+    //     {
+    //       title: "Sanitary Fittings",
+    //       desc: "Sanitary fitting recommendations (EWC, basin, shower, storage units)",
+    //     },
+    //     {
+    //       title: "Mirror & Vanity Design",
+    //       desc: "Mirror, vanity unit, and under-basin cabinet design",
+    //     },
+    //     {
+    //       title: "Waterproofing",
+    //       desc: "Waterproofing consultation and material specification",
+    //     },
+    //     {
+    //       title: "Modular Accessories",
+    //       desc: "Modular bathroom accessories and towel rail coordination",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 7,
+    //   title: "Pooja Room Design & Foyer Area Design",
+    //   subtitle: "",
+    //   image: residentialImages.poojaFoyer,
+    //   category: "Cultural Spaces",
+    //   description:
+    //     "Two spaces that define an Odia home more than any other: the foyer that delivers the first impression, and the pooja room that anchors the home's spiritual identity. Our home interior designers in Bhubaneswar treat both with the cultural sensitivity and design skill they command.",
+    //   highlight: "Cultural sensitivity and design skill in equal measure",
+    //   features: [
+    //     {
+    //       title: "Foyer Area Design",
+    //       desc: "Entry foyer with console tables, mirror panels, shoe storage, and a welcoming colour story that sets the tone for the whole home",
+    //     },
+    //     {
+    //       title: "Pooja Room Design",
+    //       desc: "Traditional mandir units in solid wood or engineered wood, with hand-crafted detailing, brass inlay options, recessed lighting, and vastu-directional placement",
+    //     },
+    //     {
+    //       title: "Pooja Niche Design",
+    //       desc: "Integrated sacred spaces within living rooms or bedrooms for compact apartments",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 8,
+    //   title: "Turnkey Home Interior Services",
+    //   subtitle: "in Bhubaneswar",
+    //   image: residentialImages.turnkey,
+    //   category: "Full Service",
+    //   description:
+    //     "For clients who want a completely hands-off experience, our turnkey home interior services in Bhubaneswar offer end-to-end project management under a single contract. From the first design concept to the final furnishing installation and handover, Infinity Space Odisha manages everything — design, civil work, carpentry, electrical fittings, painting, procurement, and quality control. You hand us the keys; we hand back a move-in-ready home.",
+    //   highlight: "You hand us the keys; we hand back a move-in-ready home",
+    //   features: [
+    //     {
+    //       title: "Dedicated Project Manager",
+    //       desc: "Dedicated project manager as your single point of contact throughout",
+    //     },
+    //     {
+    //       title: "Coordinated Vendor Management",
+    //       desc: "Coordinated vendor management — no separate carpentry, electrical, or civil contractors for you to manage",
+    //     },
+    //     {
+    //       title: "Weekly Progress Updates",
+    //       desc: "Weekly progress updates via WhatsApp with site photos",
+    //     },
+    //     {
+    //       title: "Milestone-Based Timelines",
+    //       desc: "Strict milestone-based timelines — average 2BHK delivery in 35–50 days, 3BHK in 50–75 days",
+    //     },
+    //     {
+    //       title: "Final Quality Walkthrough",
+    //       desc: "Final quality walkthrough with full snag-resolution before keys are returned",
+    //     },
+    //     {
+    //       title: "Transparent Payment",
+    //       desc: "Transparent, milestone-linked payment schedule — no upfront lump-sum demands",
+    //     },
+    //   ],
+    // },
   ];
 
   return (

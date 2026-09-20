@@ -87,13 +87,13 @@ const LivingRoomAreas = () => {
                 Living Room Design{""}
                 <span className="text-green-700">
                   {" "}
-                  Services Across Bhubaneswar
+                  Services Across Bhubaneswar{""}
                 </span>
               </h2>
               <p className="text-stone-700 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
                 Looking for an interior designer near me in Bhubaneswar? Explore
-                our full range of
-                <Link href="/services/living-room-interior-design">
+                our full range of {""}
+                <Link href="/services/residential-interior-design">
                   home interior design in Bhubaneswar services —
                 </Link>
                 or contact us directly to begin with your living room.

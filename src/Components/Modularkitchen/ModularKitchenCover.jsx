@@ -79,8 +79,8 @@ const ModularKitchenCover = () => {
           </h2>
 
           <p className="text-base sm:text-xl text-black font-light leading-relaxed max-w-3xl mx-auto mt-6">
-            Every modular kitchen interior design in Bhubaneswar, we deliver is
-            a complete, end-to-end service — not just cabinet supply. Here is
+            Every modular kitchen interior design we deliver in Bhubaneswar, is
+            a complete end-to-end service — not just cabinet supply. Here is
             what is included as standard on every project:
           </p>
         </motion.div>

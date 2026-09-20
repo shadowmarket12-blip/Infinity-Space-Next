@@ -60,7 +60,7 @@ export default function InteriorExpertiseSection() {
           </h2>
 
           <p className="text-black mt-10">
-            Infinity Space is a{" "} 
+            Infinity Space is a{" "}
             <Link
               href="/about-us"
               className="font-bold hover:text-green-700 transition-colors"
@@ -69,10 +69,15 @@ export default function InteriorExpertiseSection() {
             </Link>
             , Odisha offering tailored residential and commercial interior
             solutions that combine aesthetics, comfort, and functionality. From
-            modular kitchens and luxury living rooms to office interiors,
-            wardrobe designs,{" "}
+            modular kitchens and{" "}
+            <Link href="/services/living-room-interior-design">
+              <span className="font-bold hover:text-green-700 transition-colors">
+                Luxury living room Interior Design{" "}
+              </span>
+              to office interiors, wardrobe {""} designs,{" "}
+            </Link>
             <Link
-              href="/services"
+              href="/services/living-room-interior-design"
               className="font-bold hover:text-green-700 transition-colors"
             >
               TV units, false ceiling concepts, and turnkey execution

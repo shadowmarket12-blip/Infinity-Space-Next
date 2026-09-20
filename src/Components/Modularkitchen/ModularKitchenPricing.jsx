@@ -128,7 +128,7 @@ const ModularKitchenPricing = () => {
             <p className="text-stone-700 mt-3 lg:mt-4 leading-relaxed text-sm sm:text-base">
               So the {""}
               <Link href="/services/residential-interior-design">
-                Cost of Modular Kitchen Design In Bhubaneswar
+                Cost of Modular Kitchen Design In Bhubaneswar {""}
               </Link>
               vary based on layout size, shutter finish, hardware brand, and
               countertop choice. Here is a transparent reference to help you
