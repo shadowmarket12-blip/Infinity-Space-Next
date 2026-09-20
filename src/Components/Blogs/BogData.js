@@ -1065,7 +1065,7 @@ const blogsData = [
     date: "2026-09-20",
     readTime: 9,
     image:
-      "/blogs/Best-Interior-Designer for-Restaurants-and-Cafes-in-Bhubaneswar.webp",
+      "/blogs/Best-Interior-Designer-for-Restaurants-and-Cafes-in-Bhubaneswar.webp",
     tags: [
       "best-interior-designer-for-restaurants-and-cafes-in-bhubaneswar",
       "restaurant-interior-designer-in-bhubaneswar",

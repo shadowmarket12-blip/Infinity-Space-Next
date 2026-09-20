@@ -114,7 +114,16 @@ export default function AboutContentSection() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <h3 className="text-lg font-semibold tracking-tight text-gray-900 sm:text-xl">
-                      {item.title}
+                      {item.title === "Modern Living, Elevated Design" ? (
+                        <Link
+                          href="/services/living-room-interior-design"
+                          className="transition-colors duration-300 hover:text-[rgba(1,101,63,1)]"
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        item.title
+                      )}
                     </h3>
                   </div>
 
