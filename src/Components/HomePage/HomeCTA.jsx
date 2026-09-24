@@ -32,15 +32,9 @@ export default function HomeCTA() {
             >
               modular kitchens
             </Link>{" "}
-            and{" "}
-            {/* <Link
-              href="/services"
-              className="text-[rgba(1,101,63,1)] hover:underline"
-            > */}
-            wardrobe designs to office setup
-            {/* </Link>{" "} */}
-            interiors and luxury living spaces, we create interiors that combine
-            functionality, comfort, and modern aesthetics.
+            and wardrobe designs to office setup, interiors and luxury living
+            spaces, we create interiors that combine functionality, comfort, and
+            modern aesthetics.
           </p>
 
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
