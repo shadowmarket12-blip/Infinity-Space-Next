@@ -20,7 +20,7 @@ const BedroomContent = () => {
           <div className="space-y-6 text-center lg:text-left">
             <div className="bg-gradient-to-r from-amber-50 to-transparent border-r-4 border-green-500 p-5 sm:p-6 rounded-r-2xl my-8">
               <p className="text-sm sm:text-base lg:text-lg text-stone-700 leading-relaxed">
-                <span className="font-bold text-stone-900">
+                <span className="font-medium text-stone-900">
                   {" "}
                   At Infinity Space,
                 </span>{" "}

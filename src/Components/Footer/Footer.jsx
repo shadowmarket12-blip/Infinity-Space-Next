@@ -83,6 +83,10 @@ export default function Footer() {
       name: "Residential Interior Design",
       path: "/services/residential-interior-design",
     },
+    {
+      name: "BedRoom Interior Design",
+      path: "/services/bedroom-interior-design",
+    },
   ];
 
   return (

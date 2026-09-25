@@ -24,7 +24,7 @@ const BedroomFinish = () => {
         "We start with a conversation about your bedroom, lifestyle, storage needs, preferred design, budget and what you want to change.",
       gradient: "from-emerald-500 to-teal-600",
       shape: "L",
-      image: "/modular-kitchen-page/L-Shaped Kitche.webp",
+      image: "/bedroom-interior-design/From-Idea-to-Finished-Space.webp",
     },
     {
       name: "We Study the Space",
@@ -33,7 +33,7 @@ const BedroomFinish = () => {
         "We look at the room dimensions, doors, windows, electrical points and available wall space to understand what can realistically be done.",
       gradient: "from-blue-500 to-indigo-600",
       shape: "U",
-      image: "/modular-kitchen-page/U-Shaped-Kitche.webp",
+      image: "/bedroom-interior-design/We-Study-the-Space.webp",
     },
     {
       name: "We Plan the Layout",
@@ -42,7 +42,7 @@ const BedroomFinish = () => {
         "The bed, wardrobe, dressing unit, storage and other furniture are planned together so that the room remains functional and comfortable.",
       gradient: "from-violet-500 to-purple-600",
       shape: "II",
-      image: "/modular-kitchen-page/Parallel-Kitche.webp",
+      image: "/bedroom-interior-design/We-Plan-the-Layout.webp",
     },
     {
       name: "We Develop the Design",
@@ -51,7 +51,7 @@ const BedroomFinish = () => {
         "Once the layout is clear, we work on the colours, materials, finishes, lighting, wall treatments and other design details.",
       gradient: "from-amber-500 to-orange-600",
       shape: "I",
-      image: "/modular-kitchen-page/straight-kitchen-desig.webp",
+      image: "/bedroom-interior-design/We-Develop-the-Design.webp",
     },
     {
       name: "We Discuss Materials and Cost",
@@ -60,7 +60,7 @@ const BedroomFinish = () => {
         "We discuss the proposed materials, finishes and scope of work and prepare the quotation based on the requirements.",
       gradient: "from-rose-500 to-pink-600",
       shape: "O",
-      image: "/modular-kitchen-page/Island-Kitche.webp",
+      image: "/bedroom-interior-design/We-Discuss-Materials-and-Cost.webp",
     },
     {
       name: "We Move Towards Execution",
@@ -69,7 +69,7 @@ const BedroomFinish = () => {
         "After the design and scope are finalised, the required furniture and interior elements move into execution and installation. Throughout the process, our focus remains on keeping the design aligned with the original requirements rather than adding unnecessary elements.",
       gradient: "from-teal-500 to-cyan-600",
       shape: "G",
-      image: "/modular-kitchen-page/Countertop — Granit.webp",
+      image: "/bedroom-interior-design/We-Move-Towards-Execution.webp",
     },
   ];
 

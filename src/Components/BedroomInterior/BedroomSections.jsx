@@ -1,45 +1,51 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import { Fraunces, Inter } from "next/font/google";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-display",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-});
 
 /*
-  IMAGE PATH
-  ----------
-  Rename your public folder from "bedroom-interior design" (has a space —
-  fragile in URLs, breaks on some hosts/CDNs) to "bedroom-interior-design"
-  and move the file to match this path, or update DEFAULT_IMAGE below to
-  match wherever the file actually lives.
-
-  Every image reference below uses DEFAULT_IMAGE as a fallback via
-  `image || DEFAULT_IMAGE`, so a blank string can never reach <Image src>
-  again — that empty "" was what threw the console error. Once you have
-  separate photos per room/storage type, just fill in each `image` field
-  and the fallback stops being used for that item.
+  SafeImage:
+  - If `src` is missing, or the image 404s, this renders a visible
+    dashed placeholder box showing the EXACT path that failed —
+    right in the page, not just the console — so you can immediately
+    see which file is missing or misnamed.
+  - Once every path below actually exists in /public with matching
+    case, you'll see the real photos instead of placeholders.
 */
-const DEFAULT_IMAGE = "/bedroom-interior-design/bedroom-interior-design.webp";
+function SafeImage({ src, alt, className = "", ...props }) {
+  const [errored, setErrored] = useState(false);
 
-/* Small helper so no <Image> can ever receive "" or undefined */
-function SafeImage({ src, alt, ...props }) {
-  return <Image src={src || DEFAULT_IMAGE} alt={alt} {...props} />;
+  if (!src || errored) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 border border-dashed border-black/30 bg-black/5 p-3 text-center">
+        <span className="text-[0.7rem] font-medium text-black/70">
+          Image not found
+        </span>
+        {src && (
+          <span className="break-all text-[0.65rem] text-black/50">{src}</span>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className={className}
+      onError={() => setErrored(true)}
+      {...props}
+    />
+  );
 }
 
 /* ---------------------------------------------------------------------- */
 /* 1. How We Plan a Bedroom Around Your Space                             */
 /* ---------------------------------------------------------------------- */
 
-export function PlanningSection() {
+export function PlanningSection({
+  image = "/bedroom-interior-design/How-We-Plan-a-Bedroom-Around-Your-Space.webp",
+}) {
   const checklist = [
     "Where the bed can be positioned comfortably",
     "How much wardrobe and storage space you actually need",
@@ -54,16 +60,14 @@ export function PlanningSection() {
   ];
 
   return (
-    <section
-      className={`${fraunces.variable} ${inter.variable} bg-white text-[#221B15] font-[family-name:var(--font-body)]`}
-    >
+    <section className="bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Image */}
           <div className="lg:col-span-6 order-1">
             <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#EFE9DD]">
               <SafeImage
-                src={DEFAULT_IMAGE}
+                src={image}
                 alt="Bedroom being planned around the available space, bed and wardrobe layout"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -75,23 +79,23 @@ export function PlanningSection() {
 
           {/* Text + checklist */}
           <div className="lg:col-span-6 order-2">
-            <span className="block h-px w-16 bg-[#8C6E3E] mb-6" />
-            <h2 className="font-[family-name:var(--font-display)] text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] leading-[1.1] font-medium">
-              How We Plan a Bedroom Around Your Space
+            <h2 className="mb-2 mt-2 text-center mx-auto text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
+              How We Plan a Bedroom{""}
+              <span className="text-green-700"> Around Your Space</span>
             </h2>
-            <p className="mt-6 max-w-[52ch] text-[1.03rem] leading-relaxed text-[#221B15]/75">
+            <p className="mt-6 max-w-[52ch] text-[1.03rem] leading-relaxed text-black">
               Every bedroom we work on has different dimensions and different
               requirements. A spacious master bedroom may need a large wardrobe
               and dressing area, while a compact apartment bedroom may need us
               to carefully use every available wall.
             </p>
-            <p className="mt-4 max-w-[52ch] text-[1.03rem] leading-relaxed text-[#221B15]/75">
+            <p className="mt-4 max-w-[52ch] text-[1.03rem] leading-relaxed text-black">
               This helps us avoid simply placing furniture wherever there is
               space. Instead, we plan the room so that the different elements
               work together.
             </p>
 
-            <p className="mt-8 text-[0.95rem] text-[#221B15]/55">
+            <p className="mt-8 text-[0.95rem] text-black">
               When we begin a bedroom project, we look at practical details such
               as:
             </p>
@@ -99,8 +103,8 @@ export function PlanningSection() {
             <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3.5">
               {checklist.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8C6E3E]" />
-                  <span className="text-[0.95rem] leading-snug text-[#221B15]/85">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
+                  <span className="text-[0.95rem] leading-snug text-black">
                     {item}
                   </span>
                 </li>
@@ -117,45 +121,44 @@ export function PlanningSection() {
 /* 2. Bedroom Interiors for Different Needs and Lifestyles                */
 /* ---------------------------------------------------------------------- */
 
-export function LifestyleSection() {
-  const rooms = [
-    {
-      tag: "Master",
-      title: "Master Bedroom Interiors",
-      text: "For a master bedroom, we can bring together a comfortable bed, customised wardrobe, dressing unit, bedside storage and lighting while keeping enough space for movement. Depending on your requirements, we can also incorporate an upholstered headboard, TV unit, accent wall, false ceiling or additional storage. Our focus is to make the room feel complete without making it unnecessarily crowded.",
-      image: "", // add a dedicated master-bedroom photo here later
-    },
-    {
-      tag: "Compact",
-      title: "Small and Compact Bedroom Interiors",
-      text: "When space is limited, planning becomes even more important. For compact bedrooms, we can explore solutions such as sliding wardrobes, built-in storage, hydraulic beds, loft cabinets and customised furniture. Vertical space can also be used where appropriate to increase storage without taking away too much floor area. We also consider colours, lighting and furniture proportions so that a small bedroom does not feel visually heavy.",
-      image: "",
-    },
-    {
-      tag: "Kids",
-      title: "Kids' Bedroom Interiors",
-      text: "For children's bedrooms, we consider more than just appearance. Storage, study requirements, safety, movement and the possibility of changing needs as the child grows are all part of our planning. A bedroom can include a bed, wardrobe, study table, bookshelves and organised storage while still leaving sufficient space for everyday activities.",
-      image: "",
-    },
-    {
-      tag: "Guest",
-      title: "Guest Bedroom Interiors",
-      text: "For guest bedrooms, we usually focus on creating a comfortable and welcoming environment without overloading the room with furniture. A well-planned bed, wardrobe, bedside storage, lighting and dressing area can provide everything a guest needs while keeping the space clean and comfortable.",
-      image: "",
-    },
-  ];
+const DEFAULT_ROOMS = [
+  {
+    tag: "Master",
+    title: "Master Bedroom Interiors",
+    text: "For a master bedroom, we can bring together a comfortable bed, customised wardrobe, dressing unit, bedside storage and lighting while keeping enough space for movement. Depending on your requirements, we can also incorporate an upholstered headboard, TV unit, accent wall, false ceiling or additional storage. Our focus is to make the room feel complete without making it unnecessarily crowded.",
+    image: "/bedroom-interior-design/Master-Bedroom-Interiors.jpg",
+  },
+  {
+    tag: "Compact",
+    title: "Small and Compact Bedroom Interiors",
+    text: "When space is limited, planning becomes even more important. For compact bedrooms, we can explore solutions such as sliding wardrobes, built-in storage, hydraulic beds, loft cabinets and customised furniture. Vertical space can also be used where appropriate to increase storage without taking away too much floor area. We also consider colours, lighting and furniture proportions so that a small bedroom does not feel visually heavy.",
+    image: "/bedroom-interior-design/Small-and-Compact-Bedroom-Interiors.jpg",
+  },
+  {
+    tag: "Kids",
+    title: "Kids' Bedroom Interiors",
+    text: "For children's bedrooms, we consider more than just appearance. Storage, study requirements, safety, movement and the possibility of changing needs as the child grows are all part of our planning. A bedroom can include a bed, wardrobe, study table, bookshelves and organised storage while still leaving sufficient space for everyday activities.",
+    image: "/bedroom-interior-design/Kids-Bedroom-Interiors.jpg",
+  },
+  {
+    tag: "Guest",
+    title: "Guest Bedroom Interiors",
+    text: "For guest bedrooms, we usually focus on creating a comfortable and welcoming environment without overloading the room with furniture. A well-planned bed, wardrobe, bedside storage, lighting and dressing area can provide everything a guest needs while keeping the space clean and comfortable.",
+    image: "/bedroom-interior-design/Guest-Bedroom-Interiors.png",
+  },
+];
 
+export function LifestyleSection({ rooms = DEFAULT_ROOMS }) {
   return (
-    <section
-      className={`${fraunces.variable} ${inter.variable} bg-white text-[#221B15] font-[family-name:var(--font-body)]`}
-    >
+    <section className="bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-        <div className="max-w-[56ch]">
-          <span className="block h-px w-16 bg-[#8C6E3E] mb-6" />
-          <h2 className="font-[family-name:var(--font-display)] text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] leading-[1.1] font-medium">
-            Bedroom Interiors for Different Needs and Lifestyles
+        <div className="">
+          {/* <span className="block h-px w-16 bg-black mb-6" /> */}
+          <h2 className="mb-4 mt-6 text-center mx-auto text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
+            Bedroom Interiors for Different{""}
+            <span className="text-green-700"> Needs and Lifestyles</span>
           </h2>
-          <p className="mt-6 text-[1.03rem] leading-relaxed text-[#221B15]/75">
+          <p className="mt-6 text-[1.03rem] leading-relaxed text-black">
             We do not follow the same bedroom design for every home. The design
             changes according to the people using the room and the space
             available.
@@ -173,14 +176,14 @@ export function LifestyleSection() {
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
-                <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#6B432B] text-[0.72rem] tracking-wide px-3 py-1 rounded-full">
+                <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black text-[0.72rem] tracking-wide px-3 py-1 rounded-full z-10">
                   {room.tag}
                 </span>
               </div>
-              <h3 className="mt-5 font-[family-name:var(--font-display)] text-[1.35rem] leading-tight font-medium">
+              <h3 className="mt-5 text-[1.35rem] leading-tight font-medium text-black">
                 {room.title}
               </h3>
-              <p className="mt-2.5 text-[0.96rem] leading-relaxed text-[#221B15]/70">
+              <p className="mt-2.5 text-[0.96rem] leading-relaxed text-black">
                 {room.text}
               </p>
             </article>
@@ -195,39 +198,70 @@ export function LifestyleSection() {
 /* 3. Bedroom Storage Solutions Designed Around What You Own              */
 /* ---------------------------------------------------------------------- */
 
-export function StorageSection() {
-  const solutions = [
-    { name: "Full-height wardrobes", image: "" },
-    { name: "Sliding wardrobes", image: "" },
-    { name: "Hinged wardrobes", image: "" },
-    { name: "Loft storage", image: "" },
-    { name: "Built-in wardrobes", image: "" },
-    { name: "Hydraulic storage beds", image: "" },
-    { name: "Bedside drawers", image: "" },
-    { name: "Dressing units with storage", image: "" },
-    { name: "Open shelves", image: "" },
-    { name: "Customised internal wardrobe organisers", image: "" },
-  ];
+const DEFAULT_SOLUTIONS = [
+  {
+    name: "Full-height wardrobes",
+    image: "/bedroom-interior-design/Full-height-wardrobes.png",
+  },
+  {
+    name: "Sliding wardrobes",
+    image: "/bedroom-interior-design/Sliding-wardrobes.png",
+  },
+  {
+    name: "Hinged wardrobes",
+    image: "/bedroom-interior-design/Hinged-wardrobes.png",
+  },
+  {
+    name: "Loft storage",
+    image: "/bedroom-interior-design/Loft-storage.png",
+  },
+  {
+    name: "Built-in wardrobes",
+    image: "/bedroom-interior-design/Built-in-wardrobes.png",
+  },
+  {
+    name: "Hydraulic storage beds",
+    image: "/bedroom-interior-design/Hydraulic-storage-beds.png",
+  },
+  {
+    name: "Bedside drawers",
+    image: "/bedroom-interior-design/Bedside-drawers.png",
+  },
+  {
+    name: "Dressing units with storage",
+    image: "/bedroom-interior-design/Dressing-units-with-storage.webp",
+  },
+  {
+    name: "Open shelves",
+    image: "/bedroom-interior-design/Open-shelves.webp",
+  },
+  {
+    name: "Customised internal wardrobe organisers",
+    image:
+      "/bedroom-interior-design/Customised-internal-wardrobe-organisers.webp",
+  },
+];
 
+export function StorageSection({ solutions = DEFAULT_SOLUTIONS }) {
   return (
-    <section
-      className={`${fraunces.variable} ${inter.variable} bg-white text-[#221B15] font-[family-name:var(--font-body)]`}
-    >
+    <section className="bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          {/* Left: heading + intro */}
+        {/* Heading at the top of the section body */}
+        <h2 className="mb-4 mt-6 text-center mx-auto text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
+          Bedroom Storage Solutions Designed{""}
+          <span className="text-green-700"> Around What You Own</span>
+        </h2>
+
+        <div className="mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          {/* Left: intro */}
           <div className="lg:col-span-4">
-            <span className="block h-px w-16 bg-[#8C6E3E] mb-6" />
-            <h2 className="font-[family-name:var(--font-display)] text-[2rem] sm:text-[2.4rem] leading-[1.12] font-medium">
-              Bedroom Storage Solutions Designed Around What You Own
-            </h2>
-            <p className="mt-6 text-[1rem] leading-relaxed text-[#221B15]/75">
+            <p className="text-[1rem] leading-relaxed text-black">
               One of the first things we discuss with homeowners is storage.
               Instead of deciding the wardrobe size first and asking you to
               adjust your belongings around it, we prefer to understand what you
               actually need to store.
             </p>
-            <ul className="mt-6 space-y-2 text-[1rem] italic font-[family-name:var(--font-display)] text-[#221B15]/70">
+            <ul className="mt-6 space-y-2 text-[1rem] italic text-black">
               <li>Do you have more hanging clothes?</li>
               <li>Do you need additional drawers?</li>
               <li>
@@ -235,7 +269,7 @@ export function StorageSection() {
                 items?
               </li>
             </ul>
-            <p className="mt-6 text-[0.92rem] leading-relaxed text-[#221B15]/55">
+            <p className="mt-6 text-[0.92rem] leading-relaxed text-black">
               For us, good storage is not simply about making a larger wardrobe.
               It is about making the available space more useful and keeping
               everyday items organised.
@@ -244,7 +278,7 @@ export function StorageSection() {
 
           {/* Right: image grid of solutions */}
           <div className="lg:col-span-8">
-            <p className="text-[0.85rem] text-[#8C6E3E] mb-5">
+            <p className="text-[0.85rem] text-black mb-5">
               Based on these requirements and the available space, we can plan
               bedroom storage solutions such as:
             </p>
@@ -260,7 +294,7 @@ export function StorageSection() {
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                     />
                   </div>
-                  <p className="mt-2.5 text-[0.85rem] leading-snug text-[#221B15]/80">
+                  <p className="mt-2.5 text-[0.85rem] leading-snug text-black">
                     {item.name}
                   </p>
                 </div>
@@ -274,15 +308,19 @@ export function StorageSection() {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Combined page export                                                   */
+/* Default export — combines all three sections                           */
 /* ---------------------------------------------------------------------- */
 
-export default function BedroomInteriorSections() {
+export default function BedroomInteriorSections({
+  planningImage,
+  rooms,
+  solutions,
+}) {
   return (
     <main className="bg-white">
-      <PlanningSection />
-      <LifestyleSection />
-      <StorageSection />
+      <PlanningSection image={planningImage} />
+      <LifestyleSection rooms={rooms} />
+      <StorageSection solutions={solutions} />
     </main>
   );
 }
