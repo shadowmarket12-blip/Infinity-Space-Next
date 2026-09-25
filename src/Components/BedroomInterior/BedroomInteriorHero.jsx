@@ -10,7 +10,7 @@ export default function BedroomInteriorHero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/bedroom-interior design/bedroom-interior-design.webp"
+          src="/bedroom-interior-design/bedroom-interior-design.webp"
           alt="Bedroom Interior Background"
           fill
           className="object-cover"

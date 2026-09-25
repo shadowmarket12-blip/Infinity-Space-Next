@@ -88,10 +88,19 @@ export function FurnitureSection() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#8C6E3E] px-6 py-3 text-[0.92rem] font-medium text-black shadow-sm transition hover:bg-[#6B432B]"
+            className="group relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-[0.92rem] font-bold text-white shadow-sm transition-all duration-300 hover:text-green-900"
           >
-            Discuss Your Project
-            <span aria-hidden>→</span>
+            {/* Background highlight layer */}
+            <span className="absolute inset-0 rounded-full bg-green-700 transition-all duration-300 group-hover:bg-green-200"></span>
+
+            {/* Content */}
+            <span className="relative z-10">Discuss Your Project</span>
+            <span
+              aria-hidden
+              className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
           </a>
         </div>
       </div>
@@ -329,7 +338,7 @@ export function CostSection() {
                 href={QUOTE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#8C6E3E] px-6 py-3 text-[0.92rem] font-medium text-black shadow-sm transition hover:bg-[#6B432B]"
+                className="mt-7 inline-flex items-center gap-2 rounded-full bg-green-700 px-6 py-3 text-[0.92rem] font-medium text-white shadow-sm transition hover:bg-[#6B432B]"
               >
                 Get A Quote
                 <span aria-hidden>→</span>

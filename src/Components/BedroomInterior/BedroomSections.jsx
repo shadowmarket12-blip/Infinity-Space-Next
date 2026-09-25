@@ -3,15 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-/*
-  SafeImage:
-  - If `src` is missing, or the image 404s, this renders a visible
-    dashed placeholder box showing the EXACT path that failed —
-    right in the page, not just the console — so you can immediately
-    see which file is missing or misnamed.
-  - Once every path below actually exists in /public with matching
-    case, you'll see the real photos instead of placeholders.
-*/
 function SafeImage({ src, alt, className = "", ...props }) {
   const [errored, setErrored] = useState(false);
 

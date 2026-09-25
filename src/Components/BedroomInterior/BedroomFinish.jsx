@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   FiArrowRight,
@@ -15,6 +15,17 @@ import {
 const BedroomFinish = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
+
+  // Tracks which cards are flipped by tap (mobile/touch).
+  // Desktop still flips on hover via CSS group-hover, independent of this state.
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const toggleFlip = (index) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
   const layouts = [
     {
@@ -93,95 +104,123 @@ const BedroomFinish = () => {
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mt-4">
             The layout is the single most important decision in modular kitchen
-            design. Hover over each card to learn more about the layout:
+            design.{" "}
+            <span className="hidden sm:inline">
+              Hover over each card to learn more about the layout:
+            </span>
+            <span className="sm:hidden">
+              Tap each card to learn more about the layout:
+            </span>
           </p>
         </motion.div>
 
         {/* Flip Cards Grid */}
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-            {layouts.map((layout, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.08 * index,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                }}
-                className="group [perspective:1000px] h-56 sm:h-64 lg:h-72"
-              >
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front Face - Image Only */}
-                  <div className="absolute inset-0 [backface-visibility:hidden]">
-                    <div className="relative w-full h-full rounded-2xl shadow-lg overflow-hidden">
-                      {/* Background Image */}
-                      <img
-                        src={layout.image}
-                        alt={layout.name}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+            {layouts.map((layout, index) => {
+              const isFlipped = !!flippedCards[index];
 
-                      {/* Subtle gradient at bottom for name visibility */}
-                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.08 * index,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                  className="group [perspective:1000px] h-56 sm:h-64 lg:h-72 cursor-pointer"
+                  onClick={() => toggleFlip(index)}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isFlipped}
+                  aria-label={`${layout.name}. Toggle to see details.`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      toggleFlip(index);
+                    }
+                  }}
+                >
+                  <div
+                    className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                      isFlipped ? "[transform:rotateY(180deg)]" : ""
+                    }`}
+                  >
+                    {/* Front Face - Image Only */}
+                    <div className="absolute inset-0 [backface-visibility:hidden]">
+                      <div className="relative w-full h-full rounded-2xl shadow-lg overflow-hidden">
+                        {/* Background Image */}
+                        <img
+                          src={layout.image}
+                          alt={layout.name}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
 
-                      {/* Name overlay at bottom */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="text-white font-black text-lg sm:text-xl leading-tight drop-shadow-lg">
-                          {layout.name}
-                        </h3>
-                        <div
-                          className={`h-1 w-12 bg-gradient-to-r ${layout.gradient} rounded-full mt-2`}
-                        ></div>
-                      </div>
+                        {/* Subtle gradient at bottom for name visibility */}
+                        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-                      {/* Hover hint */}
-                      <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <FiArrowRight className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Back Face - Description with Gradient */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                    <div
-                      className={`relative w-full h-full bg-gradient-to-br ${layout.gradient} rounded-2xl shadow-xl overflow-hidden flex flex-col p-6`}
-                    >
-                      {/* Decorative circles */}
-                      <div className="absolute -top-8 -right-8 w-24 h-24 bg-white/10 rounded-full"></div>
-                      <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full"></div>
-
-                      <div className="relative flex flex-col h-full">
-                        {/* Header */}
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
-                            <span className="text-white">{layout.icon}</span>
-                          </div>
-                          <h3 className="text-lg sm:text-xl font-black text-white leading-tight">
+                        {/* Name overlay at bottom */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <h3 className="text-white font-black text-lg sm:text-xl leading-tight drop-shadow-lg">
                             {layout.name}
                           </h3>
+                          <div
+                            className={`h-1 w-12 bg-gradient-to-r ${layout.gradient} rounded-full mt-2`}
+                          ></div>
                         </div>
 
-                        {/* Description */}
-                        <p className="text-white/95 text-xs sm:text-sm leading-relaxed flex-1">
-                          {layout.description}
-                        </p>
+                        {/* Hover/tap hint */}
+                        <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                          <FiArrowRight className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+                    </div>
 
-                        {/* Bottom accent */}
-                        <div className="flex items-center gap-2 mt-4">
-                          <div className="h-0.5 w-8 rounded-full bg-white/60"></div>
-                          <div className="h-0.5 w-4 rounded-full bg-white/40"></div>
-                          <span className="text-white/70 text-xs ml-auto">
-                            Back to image
-                          </span>
+                    {/* Back Face - Description with Gradient */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                      <div
+                        className={`relative w-full h-full bg-gradient-to-br ${layout.gradient} rounded-2xl shadow-xl overflow-hidden flex flex-col p-6`}
+                      >
+                        {/* Decorative circles */}
+                        <div className="absolute -top-8 -right-8 w-24 h-24 bg-white/10 rounded-full"></div>
+                        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full"></div>
+
+                        <div className="relative flex flex-col h-full">
+                          {/* Header */}
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                              <span className="text-white">{layout.icon}</span>
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-black text-white leading-tight">
+                              {layout.name}
+                            </h3>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-white/95 text-xs sm:text-sm leading-relaxed flex-1">
+                            {layout.description}
+                          </p>
+
+                          {/* Bottom accent */}
+                          <div className="flex items-center gap-2 mt-4">
+                            <div className="h-0.5 w-8 rounded-full bg-white/60"></div>
+                            <div className="h-0.5 w-4 rounded-full bg-white/40"></div>
+                            <span className="text-white/70 text-xs ml-auto">
+                              <span className="hidden sm:inline">
+                                Back to image
+                              </span>
+                              <span className="sm:hidden">Tap to go back</span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>
