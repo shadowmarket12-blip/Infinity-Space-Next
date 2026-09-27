@@ -103,14 +103,8 @@ const BedroomFinish = () => {
           </h2>
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mt-4">
-            The layout is the single most important decision in modular kitchen
-            design.{" "}
-            <span className="hidden sm:inline">
-              Hover over each card to learn more about the layout:
-            </span>
-            <span className="sm:hidden">
-              Tap each card to learn more about the layout:
-            </span>
+            We keep the process straightforward so that you know what is
+            happening at each stage.
           </p>
         </motion.div>
 

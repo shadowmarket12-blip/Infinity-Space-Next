@@ -8,35 +8,27 @@ export default function InteriorExpertiseSection() {
   const items = [
     {
       title: "Personalized Interior Concepts",
-      link: "/services#residential-interior",
     },
     {
       title: "3D Interior Design Visualization",
-      link: "/services#modular-kitchen",
     },
     {
       title: "Turnkey Interior Execution",
-      link: "/services#turnkey-solutions",
     },
     {
       title: "Smart Space Planning",
-      link: "/services#customized-furniture",
     },
     {
       title: "Premium Material Selection",
-      link: "/services#false-ceiling",
     },
     {
       title: "Residential & Commercial Expertise",
-      link: "/services#commercial-office",
     },
     {
       title: "Transparent Project Management",
-      link: "/services#turnkey-solutions",
     },
     {
       title: "Organized Execution Workflow",
-      link: "/services#turnkey-solutions",
     },
   ];
 
@@ -135,11 +127,9 @@ export default function InteriorExpertiseSection() {
               {/* CONTENT */}
               <div className="relative z-10 flex items-center gap-3">
                 <div className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-green-700 to-emerald-500" />
-                <Link href={item.link} className="block">
-                  <p className="text-sm font-semibold text-gray-800 hover:text-green-700 transition-colors sm:text-base">
-                    {item.title}
-                  </p>
-                </Link>
+                <p className="text-sm font-semibold text-gray-800 transition-colors sm:text-base">
+                  {item.title}
+                </p>
               </div>
             </motion.div>
           ))}
