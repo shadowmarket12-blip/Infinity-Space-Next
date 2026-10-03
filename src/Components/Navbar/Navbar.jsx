@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -8,100 +8,6 @@ import { FiMenu, FiX, FiArrowRight, FiInstagram } from "react-icons/fi";
 import { FaFacebookF, FaPinterestP, FaYoutube } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import Image from "next/image";
-
-/* ================= NAVLINKS (outside component = created once) ================= */
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about-us" },
-  {
-    name: "Services",
-    path: "/services/overview",
-    dropdown: [
-      { name: "Overview", path: "/services/overview" },
-      {
-        name: "Residential Interior Design",
-        path: "/services/residential-interior-design",
-      },
-      {
-        name: "Living Room Interior Design",
-        path: "/services/living-room-interior-design",
-      },
-      {
-        name: "Bedroom Interior Design",
-        path: "/services/bedroom-interior-design",
-      },
-      {
-        name: "Modular Kitchen Design",
-        path: "/services/modular-kitchen-design",
-      },
-      {
-        name: "Pooja Room Interior Design",
-        path: "/services/pooja-room-interior-design",
-      },
-      {
-        name: "Kids Room Interior Design",
-        path: "/services/kids-room-interior-design",
-      },
-      {
-        name: "Commercial & Office Interior Design",
-        path: "/services/commercial-office-interior-design",
-      },
-      {
-        name: "Customized Furniture Solutions",
-        path: "/services/customized-furniture-solutions",
-      },
-      {
-        name: "False Ceiling & Decorative Interior Design",
-        path: "/services/false-ceiling-decorative-interior-design",
-      },
-      {
-        name: "Turnkey Interior Solutions",
-        path: "/services/turnkey-interior-solutions",
-      },
-    ],
-  },
-  { name: "Projects", path: "/projects" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Contact", path: "/contact" },
-];
-
-/* ================= SOCIAL ICONS ================= */
-const socialLinks = [
-  {
-    icon: <FaFacebookF />,
-    link: "https://www.facebook.com/profile.php?id=61587564103214",
-  },
-  {
-    icon: <FiInstagram />,
-    link: "https://www.instagram.com/infinityspace.co/",
-  },
-  { icon: <RiTwitterXLine />, link: "https://x.com/InfinitySpaceCo" },
-  {
-    icon: <FaYoutube />,
-    link: "https://www.youtube.com/@InfinitySpaceOfficial",
-  },
-  {
-    icon: <FaPinterestP />,
-    link: "https://in.pinterest.com/infinityspaceodisha/",
-  },
-];
-
-// All routes we want ready before the user clicks
-const allRoutes = navLinks.flatMap((l) =>
-  l.dropdown ? l.dropdown.map((d) => d.path) : [l.path],
-);
-
-// Smooth spring for the drawer sliding in/out
-const drawerTransition = { type: "spring", stiffness: 320, damping: 32 };
-
-const accordionListVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.045, delayChildren: 0.05 } },
-};
-const accordionItemVariants = {
-  hidden: { opacity: 0, x: -12 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.28, ease: "easeOut" } },
-};
 
 export default function Navbar() {
   const router = useRouter();
@@ -111,36 +17,100 @@ export default function Navbar() {
   const [serviceOpen, setServiceOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  /* ================= PREFETCH ALL PAGES (FIX FOR SLOW LOADING) ================= */
-  useEffect(() => {
-    const run = () => allRoutes.forEach((path) => router.prefetch(path));
-    // wait until the browser is idle so first paint isn't affected
-    if ("requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(run, { timeout: 2000 });
-      return () => window.cancelIdleCallback(id);
-    } else {
-      const t = setTimeout(run, 1200);
-      return () => clearTimeout(t);
-    }
-  }, [router]);
-
-  // Extra prefetch the moment user hovers/touches a link
-  const prefetchRoute = useCallback(
-    (path) => {
-      router.prefetch(path);
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
+    {
+      name: "Services",
+      path: "/services/overview",
+      dropdown: [
+        { name: "Overview", path: "/services/overview" },
+        {
+          name: "Residential Interior Design",
+          path: "/services/residential-interior-design",
+        },
+        {
+          name: "Living Room Interior Design",
+          path: "/services/living-room-interior-design",
+        },
+        {
+          name: "Bedroom Interior Design",
+          path: "/services/bedroom-interior-design",
+        },
+        {
+          name: "Modular Kitchen Design",
+          path: "/services/modular-kitchen-design",
+        },
+        {
+          name: "Pooja Room Interior Design",
+          path: "/services/pooja-room-interior-design",
+        },
+        {
+          name: "Kids Room Interior Design",
+          path: "/services/kids-room-interior-design",
+        },
+        {
+          name: "Commercial & Office Interior Design",
+          path: "/services/commercial-office-interior-design",
+        },
+        {
+          name: "Customized Furniture Solutions",
+          path: "/services/customized-furniture-solutions",
+        },
+        {
+          name: "False Ceiling & Decorative Interior Design",
+          path: "/services/false-ceiling-decorative-interior-design",
+        },
+        {
+          name: "Turnkey Interior Solutions",
+          path: "/services/turnkey-interior-solutions",
+        },
+      ],
     },
-    [router],
-  );
+    { name: "Projects", path: "/projects" },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  /* ================= SOCIAL ICONS ================= */
+  const socialLinks = [
+    {
+      icon: <FaFacebookF />,
+      link: "https://www.facebook.com/profile.php?id=61587564103214",
+    },
+    {
+      icon: <FiInstagram />,
+      link: "https://www.instagram.com/infinityspace.co/",
+    },
+    {
+      icon: <RiTwitterXLine />,
+      link: "https://x.com/InfinitySpaceCo",
+    },
+    {
+      icon: <FaYoutube />,
+      link: "https://www.youtube.com/@InfinitySpaceOfficial",
+    },
+    {
+      icon: <FaPinterestP />,
+      link: "https://in.pinterest.com/infinityspaceodisha/",
+    },
+  ];
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   /* ================= BODY LOCK ================= */
   useEffect(() => {
-    document.body.style.overflow = mobileMenu ? "hidden" : "auto";
+    if (mobileMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -157,7 +127,6 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [dropdownOpen]);
 
-  // Reset mobile accordion when drawer closes
   useEffect(() => {
     if (!mobileMenu) {
       const t = setTimeout(() => setServiceOpen(false), 300);
@@ -169,7 +138,9 @@ export default function Navbar() {
 
   const containerClass =
     "flex h-[70px] items-center justify-between sm:h-[75px] lg:h-[100px]";
+
   const navClass = "hidden items-center gap-1 lg:flex";
+
   const socialContainerClass = "hidden items-center gap-2 lg:flex";
 
   const socialButtonClass =
@@ -183,6 +154,25 @@ export default function Navbar() {
 
   const backdropClass =
     "fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden";
+
+  // Smooth spring for the drawer sliding in/out
+  const drawerTransition = { type: "spring", stiffness: 320, damping: 32 };
+
+  // Stagger container/item variants for the mobile accordion links
+  const accordionListVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.045, delayChildren: 0.05 },
+    },
+  };
+  const accordionItemVariants = {
+    hidden: { opacity: 0, x: -12 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.28, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -209,7 +199,7 @@ export default function Navbar() {
 
             {/* DESKTOP NAV */}
             <nav className={navClass}>
-              {navLinks.map((link) => {
+              {navLinks.map((link, index) => {
                 const isActive = pathname === link.path;
 
                 if (link.dropdown) {
@@ -260,8 +250,6 @@ export default function Navbar() {
                                 <Link
                                   key={item.path}
                                   href={item.path}
-                                  prefetch={true}
-                                  onMouseEnter={() => prefetchRoute(item.path)}
                                   onClick={() => {
                                     setDropdownOpen(false);
                                     setMobileMenu(false);
@@ -290,8 +278,6 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.path}
-                    prefetch={true}
-                    onMouseEnter={() => prefetchRoute(link.path)}
                     className={`relative rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${isActive ? "bg-green-50 text-green-700" : "text-gray-700 hover:font-bold"}`}
                   >
                     {link.name}
@@ -397,19 +383,17 @@ export default function Navbar() {
                                   animate="show"
                                   className="ml-4 mt-2 space-y-2 pb-1"
                                 >
-                                  {link.dropdown.map((item) => (
+                                  {link.dropdown.map((item, idx) => (
                                     <motion.div
-                                      key={item.path}
+                                      key={`${item.path}-${idx}`}
                                       variants={accordionItemVariants}
                                     >
                                       <Link
                                         href={item.path}
-                                        prefetch={true}
-                                        onTouchStart={() =>
-                                          prefetchRoute(item.path)
-                                        }
-                                        /* FIX: removed router.push() – it caused double navigation */
-                                        onClick={() => setMobileMenu(false)}
+                                        onClick={() => {
+                                          setMobileMenu(false);
+                                          router.push(item.path);
+                                        }}
                                         className="flex items-center justify-between rounded-xl border border-green-100 bg-white px-3 py-2 text-sm text-gray-700 transition-all duration-300 hover:bg-green-50 hover:text-green-700"
                                       >
                                         {item.name}
@@ -432,7 +416,6 @@ export default function Navbar() {
                       >
                         <Link
                           href={link.path}
-                          prefetch={true}
                           onClick={() => {
                             setMobileMenu(false);
                             setServiceOpen(false);
