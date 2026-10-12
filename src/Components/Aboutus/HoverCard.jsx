@@ -1,5 +1,3 @@
-// src/app/about-us/NewService.jsx
-
 "use client";
 
 import React, { useRef, useState } from "react";
