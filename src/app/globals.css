@@ -21,21 +21,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-/* Add to your global CSS file */
-.swiper-pagination-bullet {
-  background: rgba(1, 101, 63, 0.3) !important;
-  opacity: 1 !important;
-  width: 10px !important;
-  height: 10px !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: rgba(1, 101, 63, 1) !important;
-  width: 30px !important;
-  border-radius: 5px !important;
-}
-
-.swiper-pagination {
-  position: relative !important;
-  margin-top: 40px !important;
-}
