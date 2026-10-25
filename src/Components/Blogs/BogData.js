@@ -1469,8 +1469,7 @@ const blogsData = [
     },
     date: "2026-10-25",
     readTime: 8,
-    image:
-      "/blogs/Trusted-Interior-Design-Company-for-Office-Interiors-in-Bhubaneswar.webp",
+    image: "/blogs/Infinity-Space-office.avif",
     tags: [
       "trusted-interior-design-company-for-office-interiors-in-bhubaneswar",
       "best-interior-designers-for-office-interiors-in-bhubaneswar",
