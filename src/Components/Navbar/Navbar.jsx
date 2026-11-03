@@ -232,7 +232,7 @@ export default function Navbar() {
                   alt="Infinity Space Logo"
                   width={135}
                   height={40}
-                  className="w-[105px] object-contain sm:w-[130px] lg:w-[135px]"
+                  className="w-[105px] object-contain sm:w-[130px] lg:w-[115px]"
                   priority
                 />
               </motion.div>

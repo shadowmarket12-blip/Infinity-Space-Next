@@ -13,43 +13,44 @@ const OfficeRoomServices = () => {
       title: "Office Space Planning and Layout",
       description:
         "The layout influences how people move through an office and how comfortably they can work. We plan the arrangement of workstations, cabins, meeting areas, reception, storage and circulation paths according to the floor plan and project requirements. The aim is to reduce awkward movement, avoid overcrowded zones and make each area serve a clear purpose.",
-      image: "/office-interior-design/Space-Planning-Layout.webp",
+      image: "/Office Page Images/Office-Space-Planning-and-Layout.webp",
     },
     {
       title: "Reception and Waiting Area Design",
       description:
         "The reception is often the first point of contact for visitors. A well-considered reception can bring together the front desk, seating, lighting, signage and brand elements in a way that feels welcoming and professional. The design should also account for visitor movement and the amount of space available.",
-      image: "/office-interior-design/Reception-Front-Office.webp",
+      image: "/Office Page Images/Reception-and-Waiting-Area-Design.webp",
     },
     {
       title: "Workstations and Employee Areas",
       description:
         "Workstations should provide useful desk space, comfortable circulation and practical access to power and data points. Depending on your team and floor plan, the layout may use individual desks, shared workstation clusters or a combination of open and more private work areas. Furniture dimensions, cable management and storage should be considered early.",
-      image: "/office-interior-design/Workstations-Furniture.webp",
+      image: "/Office Page Images/Workstations-and-Employee-Areas.webp",
     },
     {
       title: "Cabins and Meeting Rooms",
       description:
         "Private cabins and meeting rooms need to support focused work, conversations and presentations. Their design may involve suitable partitions, furniture, lighting, storage and coordination with meeting technology. Privacy or noise concerns should be identified during planning.",
-      image: "/office-interior-design/Cabins-Meeting-Rooms.webp",
+      image: "/Office Page Images/Cabins-and-Meeting-Rooms.webp",
     },
     {
       title: "Storage and Utility Areas",
       description:
         "Files, supplies, equipment and everyday items need defined storage locations. Built-in cabinets and storage units can help keep work surfaces clear and make better use of the available footprint. We consider the type and volume of items to be stored so the solution is useful rather than simply decorative.",
-      image: "/office-interior-design/Lighting-Electrical-Planning.webp",
+      image: "/Office Page Images/Storage-and-Utility-Areas.webp",
     },
     {
       title: "Lighting, Finishes and Interior Details",
       description:
         "Lighting and finishes affect how an office feels throughout the working day. The design should account for available daylight, task requirements, surface maintenance and the overall look of the business. We help bring together suitable colour palettes, wall finishes, flooring, ceiling treatments and lighting concepts based on the project scope.",
-      image: "/office-interior-design/Storage-Utility-Zones.webp",
+      image: "/Office Page Images/Lighting-Finishes-and-Interior-Details.webp",
     },
     {
       title: "Corporate Office Interior Design in Bhubaneswar",
       description:
         "Corporate office interiors need to express a clear identity while supporting day-to-day operations. The reception, workstations, leadership cabins, meeting rooms and shared spaces should feel connected, even when each area has a different purpose.",
-      image: "/office-interior-design/Free-3D-Office-Renders.webp",
+      image:
+        "/Office Page Images/Corporate-Office-Interior-Design-for-Different-Workplaces.webp",
     },
   ];
 

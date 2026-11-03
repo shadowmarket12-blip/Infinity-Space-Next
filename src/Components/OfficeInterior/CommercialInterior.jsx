@@ -1,27 +1,24 @@
 import Tilt from "./Tilt";
 
-const img = (id, w = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 const spaces = [
   {
     name: "Workplaces",
-    src: "photo-1497215728101-856f4ea42174",
+    src: "/Office Page Images/Commercial-Interior-Design-in-Bhubaneswar-1.webp",
     alt: "Workplace interior",
   },
   {
     name: "Clinics",
-    src: "photo-1519494026892-80bbd2d6fd0d",
+    src: "/Office Page Images/Commercial-Interior-Design-in-Bhubaneswar-3.webp",
     alt: "Clinic interior",
   },
   {
     name: "Retail units",
-    src: "photo-1441986300917-64674bd600d8",
+    src: "/Office Page Images/Commercial-Interior-Design-in-Bhubaneswar.webp",
     alt: "Retail unit interior",
   },
   {
     name: "Customer-facing premises",
-    src: "photo-1556761175-5973dc0f32e7",
+    src: "/Office Page Images/customer_facing_interior_showroom.webp",
     alt: "Customer-facing premises interior",
   },
 ];
@@ -99,7 +96,7 @@ export default function CommercialInterior() {
               <Tilt max={10}>
                 <figure className="group relative aspect-[3/4] overflow-hidden bg-gray-200 shadow-[0_30px_50px_-25px_rgba(0,0,0,0.5)] [transform-style:preserve-3d]">
                   <img
-                    src={img(s.src)}
+                    src={s.src}
                     alt={s.alt}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none"

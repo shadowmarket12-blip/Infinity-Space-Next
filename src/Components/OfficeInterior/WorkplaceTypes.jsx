@@ -1,36 +1,33 @@
 import Tilt from "./Tilt";
 
-const img = (id, w = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 const types = [
   {
     text: "Small offices that need to make effective use of limited floor space.",
-    src: "photo-1497215728101-856f4ea42174",
+    src: "/Office Page Images/Small-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Compact office with efficient layout",
     span: "lg:col-span-3",
   },
   {
     text: "Growing teams that need workstations and storage arranged efficiently.",
-    src: "photo-1462826303086-329426d1aef5",
+    src: "/Office Page Images/Growing-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Open workstations for a growing team",
     span: "lg:col-span-3",
   },
   {
     text: "Corporate offices with reception, cabins, meeting rooms and shared areas.",
-    src: "photo-1431540015161-0bf868a2d407",
+    src: "/Office Page Images/Corporate-Office-Interior-Design-in-Bhubaneswar.webp",
     alt: "Corporate office reception and meeting areas",
     span: "lg:col-span-2",
   },
   {
     text: "Professional service offices where client conversations and privacy matter.",
-    src: "photo-1604328698692-f76ea9498e76",
+    src: "/Office Page Images/Professional-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Private client consultation room",
     span: "lg:col-span-2",
   },
   {
     text: "Renovation projects where some existing furniture, finishes or services may be retained.",
-    src: "photo-1517502884422-41eaead166d4",
+    src: "/Office Page Images/Renovation-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Renovated office retaining existing elements",
     span: "lg:col-span-2",
   },
@@ -57,7 +54,7 @@ export default function WorkplaceTypes() {
               <Tilt className="h-full" max={6}>
                 <article className="group relative h-full min-h-[320px] overflow-hidden bg-[#14211C] shadow-[0_30px_60px_-30px_rgba(20,33,28,0.7)] [transform-style:preserve-3d] sm:min-h-[380px]">
                   <img
-                    src={img(t.src)}
+                    src={t.src}
                     alt={t.alt}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105 motion-reduce:transition-none"

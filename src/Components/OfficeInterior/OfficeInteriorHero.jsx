@@ -10,7 +10,7 @@ export default function OfficeInteriorHero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/office-interior-design/office-interior-design.webp"
+          src="/Office Page Images/Office-Interior-Design-in-Bhubaneswar.webp"
           alt="Office Interior Background"
           fill
           className="object-cover"

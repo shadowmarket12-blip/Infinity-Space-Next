@@ -1,7 +1,11 @@
 import Tilt from "./Tilt";
 
-const img = (id, w = 1400) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+// Images from public/images folder
+const IMAGES = {
+  main: "/Office Page Images/Office-Interiors-Planned-Around-Your-Business-1.webp",
+  meeting:
+    "/Office Page Images/Office-Interiors-Planned-Around-Your-Business.webp",
+};
 
 export default function OfficeIntro() {
   return (
@@ -60,7 +64,7 @@ export default function OfficeIntro() {
               {/* Main image */}
               <div className="absolute inset-y-0 right-0 w-[82%] overflow-hidden bg-[#C9D2CC] shadow-[0_50px_100px_-30px_rgba(20,33,28,0.55)]">
                 <img
-                  src={img("photo-1497366216548-37526070297c")}
+                  src={IMAGES.main}
                   alt="Modern office interior with natural light"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -82,7 +86,7 @@ export default function OfficeIntro() {
                 style={{ transform: "translateZ(80px)" }}
               >
                 <img
-                  src={img("photo-1524758631624-e2822e304c36", 800)}
+                  src={IMAGES.meeting}
                   alt="Private meeting room with refined finishes"
                   className="h-full w-full object-cover"
                   loading="lazy"

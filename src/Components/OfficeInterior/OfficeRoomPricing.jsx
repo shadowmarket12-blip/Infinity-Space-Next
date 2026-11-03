@@ -31,7 +31,7 @@ const OfficeRoomPricing = () => {
         "Basic storage",
         "Standard finishes",
       ],
-      image: "/office-interior-design/Essential-Office-Interiors.webp",
+      image: "/Office Page Images/Essential-Office-Interiors.webp",
       popular: false,
     },
     "Professional Office Interiors": {
@@ -48,7 +48,8 @@ const OfficeRoomPricing = () => {
         "Cabins & meeting spaces",
         "Coordinated finishes",
       ],
-      image: "/office-interior-design/Professional-Office-Interiors.webp",
+      image:
+        "/Office Page Images/Professional-Office-Interior-Design-for-Different-Workplaces.webp",
       popular: false,
     },
     "Premium Corporate Interiors": {
@@ -61,7 +62,7 @@ const OfficeRoomPricing = () => {
         "Glass cabins",
         "Tailored furniture",
       ],
-      image: "/office-interior-design/Premium-Corporate-Interiors.webp",
+      image: "/Office Page Images/Premium-Corporate-Interiors.webp",
       popular: true,
     },
   };

@@ -66,9 +66,12 @@ export default function Footer() {
   const companyLinkClass =
     "bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text font-semibold text-transparent transition-opacity duration-300 hover:opacity-80 ml-2";
 
-  // Service tile styles
-  const serviceTileClass =
-    "block rounded-xl border border-white/20 bg-white/5 px-2 py-3 text-sm text-white/80 transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white";
+  // Service links styles (simple small text, no border)
+  const serviceListClass = "mt-5 space-y-2.5";
+  const serviceLinkClass =
+    "group flex items-center gap-2 text-[13px] leading-snug text-white/75 transition-all duration-300 hover:translate-x-1 hover:text-white";
+  const serviceArrowClass =
+    "text-[10px] text-green-300 transition-transform duration-300 group-hover:translate-x-0.5";
 
   const services = [
     {
@@ -91,6 +94,22 @@ export default function Footer() {
       name: "Pooja Interior Design",
       path: "/services/pooja-room-interior-design",
     },
+    {
+      name: "Office Interior Design",
+      path: "/services/commercial-office-interior-design",
+    },
+    // {
+    //   name: "Wardrobe Design",
+    //   path: "/services/wardrobe-design",
+    // },
+    // {
+    //   name: "False Ceiling Design",
+    //   path: "/services/false-ceiling-design",
+    // },
+    // {
+    //   name: "Bathroom Interior Design",
+    //   path: "/services/bathroom-interior-design",
+    // },
   ];
 
   return (
@@ -150,17 +169,16 @@ export default function Footer() {
           {/* OUR SERVICES – new column */}
           <div>
             <h4 className="text-xl font-bold">Our Services</h4>
-            <div className="mt-5 space-y-3">
+            <ul className={serviceListClass}>
               {services.map((service) => (
-                <Link
-                  key={service.name}
-                  href={service.path}
-                  className={serviceTileClass}
-                >
-                  {service.name}
-                </Link>
+                <li key={service.name}>
+                  <Link href={service.path} className={serviceLinkClass}>
+                    <span className={serviceArrowClass}>▶</span>
+                    {service.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* OFFICE */}

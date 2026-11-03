@@ -1,7 +1,11 @@
 import Tilt from "./Tilt";
 
-const img = (id, w = 1400) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+// Images from public/images folder
+const IMAGES = {
+  main: "/Office Page Images/Why-Consider-Infinity-Space-for-Your-Office-Interiors-2.webp",
+  meeting:
+    "/Office Page Images/Why-Consider-Infinity-Space-for-Your-Office-Interiors.webp",
+};
 
 const points = [
   [
@@ -42,7 +46,7 @@ export default function WhyInfinitySpace() {
               <div className="relative aspect-[4/5] [transform-style:preserve-3d]">
                 <div className="absolute inset-0 overflow-hidden bg-gray-100 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)]">
                   <img
-                    src={img("photo-1497366811353-6870744d04b2", 1200)}
+                    src={IMAGES.main}
                     alt="Luxury workplace with coordinated finishes and lighting"
                     className="h-full w-full object-cover"
                     loading="lazy"
@@ -54,7 +58,7 @@ export default function WhyInfinitySpace() {
                   style={{ transform: "translateZ(80px)" }}
                 >
                   <img
-                    src={img("photo-1556761175-5973dc0f32e7", 800)}
+                    src={IMAGES.meeting}
                     alt="Team discussion in a planned meeting space"
                     className="aspect-[4/3] w-full object-cover"
                     loading="lazy"

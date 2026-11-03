@@ -1,7 +1,11 @@
 import Tilt from "./Tilt";
 
-const img = (id, w = 1400) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+// Images from public/images folder
+const IMAGES = {
+  main: "/Office Page Images/Plan-Your-Office-Interiors-With-Infinity-Space-2.webp",
+  detail:
+    "/Office Page Images/Plan-Your-Office-Interiors-With-Infinity-Space.webp",
+};
 
 const details = [
   "Office location",
@@ -68,7 +72,7 @@ export default function PlanYourOffice() {
             <div className="relative aspect-[5/5] [transform-style:preserve-3d] sm:aspect-[6/5]">
               <div className="absolute inset-y-0 left-0 w-[88%] overflow-hidden bg-gray-100 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)]">
                 <img
-                  src={img("photo-1497366216548-37526070297c")}
+                  src={IMAGES.main}
                   alt="Well-planned modern office interior"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -98,7 +102,7 @@ export default function PlanYourOffice() {
                 style={{ transform: "translateZ(50px)" }}
               >
                 <img
-                  src={img("photo-1524758631624-e2822e304c36", 600)}
+                  src={IMAGES.detail}
                   alt="Refined office detail"
                   className="aspect-[3/4] w-full object-cover"
                   loading="lazy"

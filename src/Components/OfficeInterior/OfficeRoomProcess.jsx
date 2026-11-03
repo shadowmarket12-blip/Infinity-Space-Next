@@ -14,7 +14,8 @@ const OfficeRoomProcess = () => {
       icon: "🤝",
       description:
         "We begin by understanding the business, the people who will use the office, the available space, the project timeline and the priorities for the design. Existing drawings or a floor plan are useful starting points; a site review may be needed to confirm dimensions and conditions.",
-      image: "/Residentialimages/Free Consultation-Site Visit.webp",
+      image:
+        "/Office Page Images/Requirement-Discussion-and-Site-Understanding.webp",
     },
     {
       step: "02",
@@ -22,7 +23,7 @@ const OfficeRoomProcess = () => {
       icon: "🎨",
       description:
         "The next step is to establish the main layout and design direction. This includes identifying primary work zones, circulation, furniture needs and the overall visual approach. Key decisions are discussed before they move forward.",
-      image: "/Residentialimages/Design Concept-Free 3D Visualisation.webp",
+      image: "/Office Page Images/Space-Planning-and-Design-Direction.webp",
     },
     {
       step: "03",
@@ -30,7 +31,7 @@ const OfficeRoomProcess = () => {
       icon: "📋",
       description:
         "Material and finish choices are reviewed alongside the proposed scope and budget. The specification should be clear enough to understand what is included and to compare alternatives where adjustments are needed.",
-      image: "/Residentialimages/Material Selection.webp",
+      image: "/Office Page Images/Materials-Finishes-and-Budget-Review.webp",
     },
     {
       step: "04",
@@ -38,7 +39,7 @@ const OfficeRoomProcess = () => {
       icon: "🔨",
       description:
         "Once the scope and design decisions are approved, the required work can be coordinated according to the agreed project arrangement. Depending on the scope, this may involve carpentry, furniture installation, electrical work, painting, ceiling work and other finishing tasks. Responsibilities, exclusions and dependencies should be documented before work begins.",
-      image: "/Residentialimages/Execution.webp",
+      image: "/Office Page Images/Execution-Coordination.webp",
     },
     {
       step: "05",
@@ -46,7 +47,7 @@ const OfficeRoomProcess = () => {
       icon: "✨",
       description:
         "Before the space is handed over, the completed work should be reviewed against the agreed scope. Any outstanding items should be recorded and addressed according to the project agreement.",
-      image: "/Quality-Walkthrough-Handover.webp",
+      image: "/Office Page Images/Final-Checks-and-Handover.webp",
     },
   ];
 
