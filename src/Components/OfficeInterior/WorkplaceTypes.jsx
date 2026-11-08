@@ -1,33 +1,34 @@
 import Tilt from "./Tilt";
 
+// (spaces in the folder name are URL-encoded so images load reliably on all devices)
 const types = [
   {
     text: "Small offices that need to make effective use of limited floor space.",
-    src: "/Office Page Images/Small-Office-Interior-Design-for-Different-Workplaces.webp",
+    src: "/Office%20Page%20Images/Small-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Compact office with efficient layout",
     span: "lg:col-span-3",
   },
   {
     text: "Growing teams that need workstations and storage arranged efficiently.",
-    src: "/Office Page Images/Growing-Office-Interior-Design-for-Different-Workplaces.webp",
+    src: "/Office%20Page%20Images/Growing-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Open workstations for a growing team",
     span: "lg:col-span-3",
   },
   {
     text: "Corporate offices with reception, cabins, meeting rooms and shared areas.",
-    src: "/Office Page Images/Corporate-Office-Interior-Design-in-Bhubaneswar.webp",
+    src: "/Office%20Page%20Images/Corporate-Office-Interior-Design-in-Bhubaneswar.webp",
     alt: "Corporate office reception and meeting areas",
     span: "lg:col-span-2",
   },
   {
     text: "Professional service offices where client conversations and privacy matter.",
-    src: "/Office Page Images/Professional-Office-Interior-Design-for-Different-Workplaces.webp",
+    src: "/Office%20Page%20Images/Professional-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Private client consultation room",
     span: "lg:col-span-2",
   },
   {
     text: "Renovation projects where some existing furniture, finishes or services may be retained.",
-    src: "/Office Page Images/Renovation-Office-Interior-Design-for-Different-Workplaces.webp",
+    src: "/Office%20Page%20Images/Renovation-Office-Interior-Design-for-Different-Workplaces.webp",
     alt: "Renovated office retaining existing elements",
     span: "lg:col-span-2",
   },
@@ -37,11 +38,13 @@ export default function WorkplaceTypes() {
   return (
     <section className="relative overflow-hidden bg-white py-20 text-[#14211C] sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-end gap-8 lg:grid-cols-12">
-          <h2 className="mb-4 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px] lg:col-span-6">
-            Office Interior Design for Different Workplaces
+        {/* Centered heading + intro paragraph */}
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
+            Office Interior Design
+            <span className="text-emerald-700"> for Different Workplaces</span>
           </h2>
-          <p className="max-w-xl text-[15px] leading-7 text-[#3B4A44] sm:text-base sm:leading-8 lg:col-span-6 lg:col-start-7">
+          <p className="mx-auto max-w-3xl text-[15px] leading-7 text-[#3B4A44] sm:text-base sm:leading-8">
             Office needs vary by team size, business activity and how often
             clients or partners visit the premises. Depending on the project,
             planning may need to account for:

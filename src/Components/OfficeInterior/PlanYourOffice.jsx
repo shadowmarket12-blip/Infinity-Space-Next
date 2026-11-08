@@ -1,10 +1,11 @@
 import Tilt from "./Tilt";
 
 // Images from public/images folder
+// (spaces in the folder name are URL-encoded so images load reliably on all devices)
 const IMAGES = {
-  main: "/Office Page Images/Plan-Your-Office-Interiors-With-Infinity-Space-2.webp",
+  main: "/Office%20Page%20Images/Plan-Your-Office-Interiors-With-Infinity-Space-2.webp",
   detail:
-    "/Office Page Images/Plan-Your-Office-Interiors-With-Infinity-Space.webp",
+    "/Office%20Page%20Images/Plan-Your-Office-Interiors-With-Infinity-Space.webp",
 };
 
 const details = [
@@ -31,7 +32,11 @@ export default function PlanYourOffice() {
         {/* Copy */}
         <div className="lg:col-span-6">
           <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
-            Plan Your Office Interiors With Infinity Space
+            Plan Your Office{" "}
+            <span className="text-emerald-700">
+              {" "}
+              Interiors With Infinity Space
+            </span>
           </h2>
 
           <div className="max-w-xl space-y-4 text-[13px] leading-6 text-gray-700 sm:text-[14px] sm:leading-7">
@@ -54,7 +59,7 @@ export default function PlanYourOffice() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center bg-black px-7 py-3.5 text-[13px] font-semibold text-white transition hover:bg-[#B8935A] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8935A]"
+              className="inline-flex items-center justify-center bg-black px-7 py-3.5 text-[13px] font-semibold text-white transition hover:bg-green-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8935A]"
             >
               Contact Infinity Space
             </a>
@@ -68,9 +73,10 @@ export default function PlanYourOffice() {
 
         {/* 3D visual with brief card */}
         <div className="lg:col-span-6">
-          <Tilt className="mx-auto max-w-[560px]" max={7}>
-            <div className="relative aspect-[5/5] [transform-style:preserve-3d] sm:aspect-[6/5]">
-              <div className="absolute inset-y-0 left-0 w-[88%] overflow-hidden bg-gray-100 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)]">
+          <Tilt className="mx-auto w-full max-w-[560px]" max={7}>
+            <div className="relative w-full sm:aspect-[6/5] sm:[transform-style:preserve-3d]">
+              {/* Main image: full-width on mobile, layered on sm+ */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)] sm:absolute sm:inset-y-0 sm:left-0 sm:aspect-auto sm:w-[88%]">
                 <img
                   src={IMAGES.main}
                   alt="Well-planned modern office interior"
@@ -79,9 +85,10 @@ export default function PlanYourOffice() {
                 />
               </div>
 
+              {/* Details card: below image on mobile, overlapping on sm+ */}
               <div
-                className="absolute -bottom-6 right-0 w-[78%] max-w-[300px] border border-black/10 bg-white p-5 shadow-2xl sm:-right-4"
-                style={{ transform: "translateZ(90px)" }}
+                className="relative mt-4 w-full border border-black/10 bg-white p-5 shadow-xl sm:absolute sm:-bottom-6 sm:-right-4 sm:mt-0 sm:w-[78%] sm:max-w-[300px] sm:shadow-2xl sm:[transform:translateZ(var(--z))]"
+                style={{ "--z": "90px" }}
               >
                 <p className="text-[14px] font-bold text-black">
                   Details to share with us
@@ -97,9 +104,10 @@ export default function PlanYourOffice() {
                 </ul>
               </div>
 
+              {/* Small detail image: tablet and up */}
               <div
-                className="absolute left-4 top-6 hidden overflow-hidden border-[5px] border-white bg-gray-100 shadow-xl sm:block sm:w-[30%]"
-                style={{ transform: "translateZ(50px)" }}
+                className="absolute left-4 top-6 hidden overflow-hidden border-[5px] border-white bg-gray-100 shadow-xl sm:block sm:w-[30%] sm:[transform:translateZ(var(--z))]"
+                style={{ "--z": "50px" }}
               >
                 <img
                   src={IMAGES.detail}
