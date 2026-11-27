@@ -10,7 +10,7 @@ export default function FalseCeilingHero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/Office Page Images/Office-Interior-Design-in-Bhubaneswar.webp"
+          src="/Ceilling page image/False-Ceiling-Design-Service-Provider-in-Bhubaneswar.webp"
           alt="Office Interior Background"
           fill
           className="object-cover"

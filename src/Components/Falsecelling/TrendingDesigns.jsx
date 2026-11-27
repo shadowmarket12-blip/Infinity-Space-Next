@@ -3,7 +3,7 @@ import Tilt, { ImageSlot } from "./Slotimage";
 const styles = [
   {
     title: "Minimalist False Ceiling Design",
-    image: "/images/ceiling/style-minimalist.jpg",
+    image: "/Ceilling page image/Minimalist-False-Ceiling-Design.webp",
     body: [
       "Minimalist false ceilings use simple lines, clean edges and limited decorative detailing. They are suitable for contemporary homes where the objective is to maintain an uncluttered appearance.",
       "A simple gypsum border with carefully positioned lights can provide a finished look without introducing too many ceiling levels.",
@@ -11,7 +11,7 @@ const styles = [
   },
   {
     title: "Cove Lighting False Ceiling",
-    image: "/images/ceiling/style-cove.jpg",
+    image: "/Ceilling page image/Cove-Lighting-False-Ceiling.webp",
     body: [
       "Cove lighting uses concealed LED strip lights placed within a recessed ceiling section or perimeter profile. It creates a soft glow that can make the room feel more comfortable, especially in living rooms and bedrooms.",
       "The light colour, brightness and placement should be selected according to the room's purpose.",
@@ -19,7 +19,7 @@ const styles = [
   },
   {
     title: "Multi-Level False Ceiling Design",
-    image: "/images/ceiling/style-multilevel.jpg",
+    image: "/Ceilling page image/Multi-Level-False-Ceiling-Design.webp",
     body: [
       "Multi-level false ceilings use different ceiling heights to introduce depth and visual interest. They can be used to highlight specific areas, such as the living room seating zone or dining space.",
       "However, these designs require sufficient ceiling height and careful planning to prevent the room from feeling compressed.",
@@ -27,14 +27,14 @@ const styles = [
   },
   {
     title: "Geometric False Ceiling Design",
-    image: "/images/ceiling/style-geometric.jpg",
+    image: "/Ceilling page image/Geometric-False-Ceiling-Design.webp",
     body: [
       "Rectangular patterns, straight lines, recessed sections and symmetrical layouts are commonly used in contemporary ceiling designs. These patterns work particularly well with modern furniture, clean wall finishes and linear lighting.",
     ],
   },
   {
     title: "POP False Ceiling Design",
-    image: "/images/ceiling/style-pop.jpg",
+    image: "/Ceilling page image/POP-False-Ceiling-Design.webp",
     body: [
       "POP false ceilings allow decorative shapes, mouldings and selected ceiling details. They can be considered for interiors that require a more detailed or traditional finish.",
       "The amount of decoration should be proportionate to the room size and the overall design theme.",
@@ -42,7 +42,7 @@ const styles = [
   },
   {
     title: "Wooden and Wood-Finish False Ceiling",
-    image: "/images/ceiling/style-wooden.jpg",
+    image: "/Ceilling page image/Wooden-False-Ceiling.webp",
     body: [
       "Wooden battens and wood-finish ceiling panels can introduce warmth and texture. They can be used as selected ceiling accents in living rooms, bedrooms and other interior spaces.",
       "Rather than covering the entire ceiling, wood-finish elements can be introduced in specific sections to create a balanced design.",

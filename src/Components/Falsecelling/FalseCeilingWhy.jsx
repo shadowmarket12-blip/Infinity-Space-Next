@@ -1,31 +1,30 @@
 import Tilt from "../OfficeInterior/Tilt";
 
 const IMAGES = {
-  main: "/Office%20Page%20Images/Why-Consider-Infinity-Space-for-Your-Office-Interiors-2.webp",
-  meeting:
-    "/Office%20Page%20Images/Why-Consider-Infinity-Space-for-Your-Office-Interiors.webp",
+  main: "/Ceilling page image/Modern Blue-Toned Open-Plan Office.webp",
+  meeting: "/Ceilling page image/Modern Teal Lounge Office.webp",
 };
 
 const points = [
   [
-    "Requirement-led planning",
-    "design decisions begin with how the office will be used.",
+    "Design Coordination",
+    "we consider how the ceiling will work with the room's furniture, wall finishes, lighting and other interior elements.",
   ],
   [
-    "Practical use of space",
-    "workstations, meeting rooms, storage and circulation are considered together.",
+    "Space-Based Planning",
+    "ceiling height, room dimensions and existing site conditions guide our design recommendations.",
   ],
   [
-    "Coordinated finishes",
-    "materials, lighting and furniture are planned to create a consistent workplace.",
+    "Material Guidance",
+    "we help you compare suitable materials and finishes based on the desired appearance and project requirements.",
   ],
   [
-    "Budget awareness",
-    "scope and specifications are discussed so you can make informed choices.",
+    "3D Visualisation",
+    "where included in the project scope, 3D visualisation helps you review the proposed ceiling design before execution.",
   ],
   [
-    "Clear project communication",
-    "decisions, inclusions and changes should be discussed and documented.",
+    "Organised Project Coordination",
+    "we discuss design, material selection and execution requirements as part of the project scope to support a more organised process.",
   ],
 ];
 
@@ -41,17 +40,14 @@ export default function FalseCeilingWhy() {
         {/* Centered heading + intro paragraph */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-4 mt-6 text-[18px] font-black leading-[1.2] text-black sm:text-[32px] lg:text-[40px]">
-            Why Consider Infinity Space
-            <span className="text-emerald-700">
-              {" "}
-              for Your Office Interiors?
-            </span>
+            Why Choose Infinity Space
+            <span className="text-emerald-700"> for False Ceiling Design?</span>
           </h2>
           <p className="mx-auto max-w-3xl text-[13px] leading-6 text-gray-700 sm:text-[14px] sm:leading-7">
-            Choosing an interior design partner is about more than selecting a
-            visual style. You need a team that listens to your business
-            requirements, explains design decisions and helps clarify the scope
-            before execution.
+            A false ceiling should complement the complete interior, not compete
+            with it. At Infinity Space, we focus on planning ceiling designs
+            that are visually balanced and suitable for the way each space is
+            used.
           </p>
         </div>
 
@@ -90,7 +86,7 @@ export default function FalseCeilingWhy() {
                       Infinity Space
                     </p>
                     <p className="text-[12px] text-gray-600">
-                      Office interiors, Bhubaneswar
+                      for False Ceiling Design?
                     </p>
                   </div>
                 </div>
@@ -119,12 +115,8 @@ export default function FalseCeilingWhy() {
 
             <div className="mt-8 border border-black/10 bg-gray-50 p-5 sm:p-7">
               <p className="max-w-2xl text-[13px] leading-6 text-gray-700 sm:text-[14px] sm:leading-7">
-                If you are comparing the best interior designers in Bhubaneswar
-                for office interior, review relevant work, clarify who will
-                manage each part of the project and ask for a written scope
-                before making a decision. Infinity Space welcomes a discussion
-                about your requirements so we can understand whether the
-                proposed project is a suitable fit.
+                Our aim is to make sure the ceiling feels like a natural part of
+                your interior rather than an additional decorative layer.
               </p>
               <a
                 href="#contact"

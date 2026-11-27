@@ -6,7 +6,7 @@ const rooms = [
   {
     tab: "Living Room",
     title: "Living Room False Ceiling Design",
-    image: "/images/ceiling/room-living.jpg",
+    image: "/Ceilling page image/Living-Room-False-Ceiling-Design.webp",
     body: [
       "The living room is often one of the main areas where a false ceiling can create a visual focal point. A gypsum border, recessed ceiling panel or layered design with concealed LED lighting can define the seating area and complement the TV unit or feature wall.",
       "For larger living rooms, geometric ceiling patterns and multi-level designs can introduce depth. In smaller living spaces, a simple perimeter ceiling with subtle cove lighting may create a cleaner appearance without making the room feel visually heavy.",
@@ -16,7 +16,7 @@ const rooms = [
   {
     tab: "Bedroom",
     title: "Bedroom False Ceiling Design",
-    image: "/images/ceiling/room-bedroom.jpg",
+    image: "/Ceilling page image/Bedroom-False-Ceiling-Design.webp",
     body: [
       "A bedroom ceiling should contribute to a comfortable and relaxing atmosphere. Instead of using too many decorative elements, we generally explore simple ceiling profiles, warm LED lighting and subtle recessed details.",
       "A false ceiling with cove lighting can provide soft ambient illumination, while selected recessed lights can be positioned for practical lighting requirements. Ceiling details can also be coordinated with the headboard wall and wardrobe finishes.",
@@ -25,7 +25,7 @@ const rooms = [
   {
     tab: "Dining Area",
     title: "Dining Area False Ceiling Design",
-    image: "/images/ceiling/room-dining.jpg",
+    image: "/Ceilling page image/Dining-Area-False-Ceiling-Design.webp",
     body: [
       "A false ceiling can help define the dining space, particularly in homes where the living and dining areas share an open layout. A recessed ceiling section, linear design or selected lighting feature can distinguish the dining zone without requiring a full partition.",
       "The design should work with the dining table, pendant lighting and surrounding furniture.",
@@ -34,7 +34,8 @@ const rooms = [
   {
     tab: "Office and Commercial",
     title: "Office and Commercial False Ceiling Design",
-    image: "/images/ceiling/room-office.jpg",
+    image:
+      "/Ceilling page image/Office-and-Commercial-False-Ceiling-Design.webp",
     body: [
       "Commercial spaces require a different approach to ceiling planning. Offices, clinics, retail outlets and other workspaces may need organised lighting, access to electrical services and a clean professional appearance.",
       "We consider the purpose of the space, lighting requirements and interior layout before suggesting a suitable ceiling concept.",

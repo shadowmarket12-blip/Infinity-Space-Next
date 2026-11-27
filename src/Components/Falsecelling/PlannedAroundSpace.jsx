@@ -55,7 +55,7 @@ export default function PlannedAroundSpace() {
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] border border-[#B8924F]/60 sm:translate-x-5 sm:translate-y-5" />
             <Tilt>
               <ImageSlot
-                src="/aboutus.webp"
+                src="/Ceilling page image/False-Ceiling-Design-Planned-Around-Your-Space-two.webp"
                 alt="False ceiling with concealed cove lighting"
                 className="aspect-[4/3] rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(14,43,39,0.55)]"
               />
@@ -65,7 +65,7 @@ export default function PlannedAroundSpace() {
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] border border-[#B8924F]/60 sm:translate-x-5 sm:translate-y-5" />
             <Tilt>
               <ImageSlot
-                src="/aboutus.webp"
+                src="/Ceilling page image/False-Ceiling-Design-Planned-Around-Your-Space-one.webp"
                 alt="Modern false ceiling design with profile lighting"
                 className="aspect-[4/3] rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(14,43,39,0.55)]"
               />

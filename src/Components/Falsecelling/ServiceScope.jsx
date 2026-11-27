@@ -63,7 +63,7 @@ export default function ServiceScope() {
               {/* Green glow behind */}
               <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-green-100/70 to-transparent blur-xl" />
               <ImageSlot
-                src="/images/ceiling/service-1.jpg"
+                src="/Ceilling page image/False-Ceiling-Design-Planned-Around-Your-Space-two.webp"
                 alt="Ceiling layout planning"
                 className="relative aspect-[3/4] rounded-[1.75rem] shadow-[0_40px_70px_-25px_rgba(14,43,39,0.45)] ring-1 ring-black/5"
               />
@@ -98,7 +98,7 @@ export default function ServiceScope() {
               {/* Green glow behind */}
               <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-green-100/70 to-transparent blur-xl" />
               <ImageSlot
-                src="/images/ceiling/service-2.jpg"
+                src="/Ceilling page image/False-Ceiling-Design-Planned-Around-Your-Space-one.webp"
                 alt="3D visualisation of a ceiling"
                 className="relative aspect-[4/5] rounded-[1.75rem] border-4 border-white shadow-[0_40px_70px_-25px_rgba(14,43,39,0.5)] ring-1 ring-black/5"
               />

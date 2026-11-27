@@ -14,8 +14,7 @@ const FalseCeilingProcess = () => {
       icon: "🤝",
       description:
         "We understand which rooms need a false ceiling, your preferred style, lighting expectations and approximate budget.",
-      image:
-        "/Office Page Images/Requirement-Discussion-and-Site-Understanding.webp",
+      image: "/Ceilling page image/Requirement-Discussion.webp",
     },
     {
       step: "02",
@@ -23,7 +22,7 @@ const FalseCeilingProcess = () => {
       icon: "🎨",
       description:
         "We review room measurements, ceiling height, existing conditions and the positions of electrical and other service points.",
-      image: "/Office Page Images/Space-Planning-and-Design-Direction.webp",
+      image: "/Ceilling page image/Site-Assessment.webp",
     },
     {
       step: "03",
@@ -31,7 +30,7 @@ const FalseCeilingProcess = () => {
       icon: "📋",
       description:
         "We develop a suitable ceiling concept based on the available space and overall interior theme. 3D visualisation can be used to help you understand the proposed design.",
-      image: "/Office Page Images/Materials-Finishes-and-Budget-Review.webp",
+      image: "/Ceilling page image/Design-Planning-and-3D-Visualisation.webp",
     },
     {
       step: "04",
@@ -39,7 +38,7 @@ const FalseCeilingProcess = () => {
       icon: "🔨",
       description:
         "We discuss suitable materials, ceiling profiles, finishes and lighting arrangements before finalising the design.",
-      image: "/Office Page Images/Execution-Coordination.webp",
+      image: "/Ceilling page image/Material-and-Lighting-Selection.webp",
     },
     {
       step: "05",
@@ -47,7 +46,7 @@ const FalseCeilingProcess = () => {
       icon: "✨",
       description:
         "The project scope, material choices and execution requirements are shared for review and approval.",
-      image: "/Office Page Images/Final-Checks-and-Handover.webp",
+      image: "/Ceilling page image/Quotation-and-Approval.webp",
     },
     {
       step: "06",
@@ -55,7 +54,7 @@ const FalseCeilingProcess = () => {
       icon: "✨",
       description:
         "Once approved, the work is coordinated according to the agreed scope, followed by a review of the ceiling's finishing details.",
-      image: "/Office Page Images/Final-Checks-and-Handover.webp",
+      image: "/Ceilling page image/Execution-and-Finishing.webp",
     },
   ];
 
